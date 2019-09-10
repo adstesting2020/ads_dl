@@ -1,0 +1,32 @@
+executionTime: 16131
+lineScreenCaptures:
+- executionTime: 592
+  path: /Users/ondor/Desktop/testisms/sahagin-intermediate-data/captures/android.TestAndroid/testAndroid/001.png
+  stackLines:
+  - {methodKey: android.TestAndroid.testAndroid-void, codeBodyIndex: 0, line: 42}
+- executionTime: 364
+  path: /Users/ondor/Desktop/testisms/sahagin-intermediate-data/captures/android.TestAndroid/testAndroid/002.png
+  stackLines:
+  - {methodKey: android.TestAndroid.testAndroid-void, codeBodyIndex: 3, line: 45}
+- executionTime: 325
+  path: /Users/ondor/Desktop/testisms/sahagin-intermediate-data/captures/android.TestAndroid/testAndroid/003.png
+  stackLines:
+  - {methodKey: android.TestAndroid.testAndroid-void, codeBodyIndex: 4, line: 46}
+- executionTime: 2523
+  path: /Users/ondor/Desktop/testisms/sahagin-intermediate-data/captures/android.TestAndroid/testAndroid/004.png
+  stackLines:
+  - {methodKey: android.TestAndroid.testAndroid-void, codeBodyIndex: 5, line: 47}
+- executionTime: 2444
+  path: /Users/ondor/Desktop/testisms/sahagin-intermediate-data/captures/android.TestAndroid/testAndroid/005.png
+  stackLines:
+  - {methodKey: android.TestAndroid.testAndroid-void, codeBodyIndex: 6, line: 48}
+- executionTime: 2359
+  path: /Users/ondor/Desktop/testisms/sahagin-intermediate-data/captures/android.TestAndroid/testAndroid/006.png
+  stackLines:
+  - {methodKey: android.TestAndroid.testAndroid-void, codeBodyIndex: 7, line: 49}
+- executionTime: 2381
+  path: /Users/ondor/Desktop/testisms/sahagin-intermediate-data/captures/android.TestAndroid/testAndroid/007.png
+  stackLines:
+  - {methodKey: android.TestAndroid.testAndroid-void, codeBodyIndex: 8, line: 50}
+formatVersion: 0.9.2
+rootMethodKey: android.TestAndroid.testAndroid-void

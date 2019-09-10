@@ -1,0 +1,247 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>testIOS</title>
+    <script src="../../js/share/common-utils.js"></script>
+    <script src="../../js/share/capture-style.js"></script>
+    <script src="../../js/share/yaml/js-yaml.min.js"></script>
+    <script src="../../js/share/yaml/yaml-utils.js"></script>
+    <script src="../../js/share/srctree/code/code.js"></script>
+    <script src="../../js/share/srctree/code/string-code.js"></script>
+    <script src="../../js/share/srctree/code/method-argument.js"></script>
+    <script src="../../js/share/srctree/code/unknown-code.js"></script>
+    <script src="../../js/share/srctree/code/sub-method-invoke.js"></script>
+    <script src="../../js/share/srctree/code/local-var.js"></script>
+    <script src="../../js/share/srctree/code/field.js"></script>
+    <script src="../../js/share/srctree/code/var-assign.js"></script>
+    <script src="../../js/share/srctree/code/class-instance.js"></script>
+    <script src="../../js/share/srctree/code/test-step.js"></script>
+    <script src="../../js/share/srctree/code/test-step-label.js"></script>
+    <script src="../../js/share/srctree/code/code-line.js"></script>
+    <script src="../../js/share/srctree/test-class.js"></script>
+    <script src="../../js/share/srctree/page-class.js"></script> 
+    <script src="../../js/share/srctree/test-field.js"></script>
+    <script src="../../js/share/srctree/test-field-table.js"></script>
+    <script src="../../js/share/srctree/test-method.js"></script>
+    <script src="../../js/share/srctree/test-method-table.js"></script>
+    <script src="../../js/share/srctree/test-class-table.js"></script>
+    <script src="../../js/share/srctree/src-tree.js"></script>
+    <script src="../../js/share/testdoc-resolver.js"></script>
+
+    <link href="../../css/perfect-scrollbar.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/jquery.treetable.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/jquery.treetable.theme.default.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/jquery.bxslider.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/report.css" rel="stylesheet" type="text/css" />
+
+    <script src="../../js/report/jquery-1.11.1.min.js"></script>
+    <script src="../../js/report/perfect-scrollbar.min.js"></script>
+    <script src="../../js/report/jquery.treetable.js"></script>
+    <script src="../../js/report/jquery.bxslider.min.js"></script>
+    <script src="../../js/report/src-tree-yaml.js"></script>
+    <script src="../../js/report/report.js"></script>
+    <script>
+      sahagin.errLineTtId = "";
+    </script>
+  </head>
+  <body>
+    <header>
+            <div>ios.TestFuc</div>
+                  <div>testIOS</div>
+                  <div>13.5 sec</div>
+          </header>
+    <div id="main_container">
+      <div id="button_container">
+        <div id="showSrcButton" onclick="showSrcInfo()"><u>show code &gt;&gt;</u></div>
+        <div id="hide_button_container">
+          <span id="hideSrcButton" onclick="hideSrcInfo()"><u>&lt;&lt; hide code</u></span>
+          <span id="time_unit">(sec)</span>
+        </div>
+      </div>
+      <div id="left_container">
+        <div id="outer_script_table_container" class="noCode">
+          <div class="scrollContainer" id="script_table_container">
+            <table border="1" cellpadding="1" cellspacing="1" id="script_table">
+              <tbody>
+                                                                                                                                                                <tr data-tt-id="0"  data-image-id="0" data-method-key="" class="successLine ">
+                  <td>-</td>
+                  <td>go to the page 'http://www.test-arts.cn/isms/'</td>
+                  <td class="srcInfo">driver.get("http://www.test-arts.cn/isms/");</td>
+                  <td class="srcInfo numeric_cell">2.5</td>
+                </tr>
+                                                                                                                                                                <tr data-tt-id="1"  data-image-id="1" data-method-key="" class="successLine ">
+                  <td>-</td>
+                  <td>- hidden -</td>
+                  <td class="srcInfo">LoginPage lp=new LoginPage(driver);</td>
+                  <td class="srcInfo numeric_cell">-</td>
+                </tr>
+                                                                                                                                                                <tr data-tt-id="2"  data-image-id="2" data-method-key="" class="successLine ">
+                  <td>-</td>
+                  <td>- hidden -</td>
+                  <td class="srcInfo">HomePage hp=new HomePage(driver);</td>
+                  <td class="srcInfo numeric_cell">-</td>
+                </tr>
+                                                                                                                                                                <tr data-tt-id="3"  data-image-id="3" data-method-key="pages.LoginPage.setUserId-String" class="successLine ">
+                  <td>login page</td>
+                  <td>set ID</td>
+                  <td class="srcInfo">lp.setUserId("test");</td>
+                  <td class="srcInfo numeric_cell">0.3</td>
+                </tr>
+                                                                                                                                                                <tr data-tt-id="3_0" data-tt-parent-id="3" data-image-id="3_0" data-method-key="org.openqa.selenium.WebElement.sendKeys" class="successLine ">
+                  <td>-</td>
+                  <td>send keys 'test' to element 'id = j_username'</td>
+                  <td class="srcInfo">driver.findElementById("j_username").sendKeys(value);</td>
+                  <td class="srcInfo numeric_cell">-</td>
+                </tr>
+                                                                                                                                                                <tr data-tt-id="4"  data-image-id="4" data-method-key="pages.LoginPage.setPassword-String" class="successLine ">
+                  <td>login page</td>
+                  <td>set PSW</td>
+                  <td class="srcInfo">lp.setPassword("test");</td>
+                  <td class="srcInfo numeric_cell">0.2</td>
+                </tr>
+                                                                                                                                                                <tr data-tt-id="4_0" data-tt-parent-id="4" data-image-id="4_0" data-method-key="org.openqa.selenium.WebElement.sendKeys" class="successLine ">
+                  <td>-</td>
+                  <td>send keys 'test' to element 'id = j_password'</td>
+                  <td class="srcInfo">driver.findElementById("j_password").sendKeys(value);</td>
+                  <td class="srcInfo numeric_cell">-</td>
+                </tr>
+                                                                                                                                                                <tr data-tt-id="5"  data-image-id="5" data-method-key="pages.LoginPage.okBtnClick-void" class="successLine ">
+                  <td>login page</td>
+                  <td>click ok button</td>
+                  <td class="srcInfo">lp.okBtnClick();</td>
+                  <td class="srcInfo numeric_cell">2.2</td>
+                </tr>
+                                                                                                                                                                <tr data-tt-id="5_0" data-tt-parent-id="5" data-image-id="5_0" data-method-key="org.openqa.selenium.WebElement.click" class="successLine ">
+                  <td>-</td>
+                  <td>click element 'id = loginBtn'</td>
+                  <td class="srcInfo">driver.findElementById("loginBtn").click();</td>
+                  <td class="srcInfo numeric_cell">-</td>
+                </tr>
+                                                                                                                                                                <tr data-tt-id="5_1" data-tt-parent-id="5" data-image-id="5_1" data-method-key="" class="successLine ">
+                  <td>-</td>
+                  <td>- hidden -</td>
+                  <td class="srcInfo">Thread.sleep(2000);</td>
+                  <td class="srcInfo numeric_cell">-</td>
+                </tr>
+                                                                                                                                                                <tr data-tt-id="6"  data-image-id="6" data-method-key="pages.HomePage.showHistoryBtnClick-void" class="successLine ">
+                  <td>home page</td>
+                  <td>click showHistory button</td>
+                  <td class="srcInfo">hp.showHistoryBtnClick();</td>
+                  <td class="srcInfo numeric_cell">2.1</td>
+                </tr>
+                                                                                                                                                                <tr data-tt-id="6_0" data-tt-parent-id="6" data-image-id="6_0" data-method-key="org.openqa.selenium.WebElement.click" class="successLine ">
+                  <td>-</td>
+                  <td>click element 'id = showHistoryBtn'</td>
+                  <td class="srcInfo">driver.findElementById("showHistoryBtn").click();</td>
+                  <td class="srcInfo numeric_cell">-</td>
+                </tr>
+                                                                                                                                                                <tr data-tt-id="6_1" data-tt-parent-id="6" data-image-id="6_1" data-method-key="" class="successLine ">
+                  <td>-</td>
+                  <td>- hidden -</td>
+                  <td class="srcInfo">Thread.sleep(2000);</td>
+                  <td class="srcInfo numeric_cell">-</td>
+                </tr>
+                                                                                                                                                                <tr data-tt-id="7"  data-image-id="7" data-method-key="pages.HomePage.analysBtnClick-void" class="successLine ">
+                  <td>home page</td>
+                  <td>click analys button</td>
+                  <td class="srcInfo">hp.analysBtnClick();</td>
+                  <td class="srcInfo numeric_cell">2.1</td>
+                </tr>
+                                                                                                                                                                <tr data-tt-id="7_0" data-tt-parent-id="7" data-image-id="7_0" data-method-key="org.openqa.selenium.WebElement.click" class="successLine ">
+                  <td>-</td>
+                  <td>click element 'id = analysBtn0'</td>
+                  <td class="srcInfo">driver.findElementById("analysBtn0").click();</td>
+                  <td class="srcInfo numeric_cell">-</td>
+                </tr>
+                                                                                                                                                                <tr data-tt-id="7_1" data-tt-parent-id="7" data-image-id="7_1" data-method-key="" class="successLine ">
+                  <td>-</td>
+                  <td>- hidden -</td>
+                  <td class="srcInfo">Thread.sleep(2000);</td>
+                  <td class="srcInfo numeric_cell">-</td>
+                </tr>
+                                                                                                                                                                <tr data-tt-id="8"  data-image-id="8" data-method-key="pages.HomePage.historyBtnClick-void" class="successLine ">
+                  <td>home page</td>
+                  <td>click history button</td>
+                  <td class="srcInfo">hp.historyBtnClick();</td>
+                  <td class="srcInfo numeric_cell">2.1</td>
+                </tr>
+                                                                                                                                                                <tr data-tt-id="8_0" data-tt-parent-id="8" data-image-id="8_0" data-method-key="org.openqa.selenium.WebElement.click" class="successLine ">
+                  <td>-</td>
+                  <td>click element 'id = historyBtn0'</td>
+                  <td class="srcInfo">driver.findElementById("historyBtn0").click();</td>
+                  <td class="srcInfo numeric_cell">-</td>
+                </tr>
+                                                                                                                                                                <tr data-tt-id="8_1" data-tt-parent-id="8" data-image-id="8_1" data-method-key="" class="successLine ">
+                  <td>-</td>
+                  <td>- hidden -</td>
+                  <td class="srcInfo">Thread.sleep(2000);</td>
+                  <td class="srcInfo numeric_cell">-</td>
+                </tr>
+                              </tbody>
+            </table>
+          </div>
+        </div>
+        <br/>
+        <div id="msg_container">
+                  </div>
+      </div>
+      <div id="right_container">
+        <div id="bxslider_container">
+        <ul class="bxslider">
+                    <li>
+            <div data-image-id="noImage" data-image-width="736" data-image-height="455" execution-time="0" class="scrollContainer">
+              <img src="../../images/noImage.png" />
+            </div>
+          </li>
+                    <li>
+            <div data-image-id="0" data-image-width="1125" data-image-height="2001" execution-time="2507" class="scrollContainer">
+              <img src="../../captures/ios.TestFuc/testIOS/001.png" />
+            </div>
+          </li>
+                    <li>
+            <div data-image-id="3" data-image-width="1125" data-image-height="2001" execution-time="273" class="scrollContainer">
+              <img src="../../captures/ios.TestFuc/testIOS/002.png" />
+            </div>
+          </li>
+                    <li>
+            <div data-image-id="4" data-image-width="1125" data-image-height="2001" execution-time="179" class="scrollContainer">
+              <img src="../../captures/ios.TestFuc/testIOS/003.png" />
+            </div>
+          </li>
+                    <li>
+            <div data-image-id="5" data-image-width="1125" data-image-height="2001" execution-time="2154" class="scrollContainer">
+              <img src="../../captures/ios.TestFuc/testIOS/004.png" />
+            </div>
+          </li>
+                    <li>
+            <div data-image-id="6" data-image-width="1125" data-image-height="2001" execution-time="2097" class="scrollContainer">
+              <img src="../../captures/ios.TestFuc/testIOS/005.png" />
+            </div>
+          </li>
+                    <li>
+            <div data-image-id="7" data-image-width="1125" data-image-height="2001" execution-time="2109" class="scrollContainer">
+              <img src="../../captures/ios.TestFuc/testIOS/006.png" />
+            </div>
+          </li>
+                    <li>
+            <div data-image-id="8" data-image-width="1125" data-image-height="2001" execution-time="2121" class="scrollContainer">
+              <img src="../../captures/ios.TestFuc/testIOS/007.png" />
+            </div>
+          </li>
+                  </ul>
+      </div>
+    </div>
+    <div id="methodArgTestDocs">
+                      <div class="hiddenMethodArgTestDoc" data-tt-id="0">http://www.test-arts.cn/isms/</div>
+                                                          <div class="hiddenMethodArgTestDoc" data-tt-id="3">test</div>
+                              <div class="hiddenMethodArgTestDoc" data-tt-id="3_0">test</div>
+                              <div class="hiddenMethodArgTestDoc" data-tt-id="4">test</div>
+                              <div class="hiddenMethodArgTestDoc" data-tt-id="4_0">test</div>
+                                                                                                                                                                                          </div>
+    <div id="localeData">
+      <div id="codeLineWithoutTestDoc">hidden</div>
+      <div id="jsLocalVar">variable '{0}'</div>
+      <div id="jsVarAssign">set '{0}' to '{1}'</div>
+    </div>
+  </body>
+</html>

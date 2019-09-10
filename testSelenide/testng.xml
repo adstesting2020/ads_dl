@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+        <listener class-name="testSelenide.src.test.java.util.TestngListener"/>
+    </listeners>
+	<test thread-count="5" name="Test" useDefaultListeners="false">
+		<classes>
+			<class name="chrome.TestChrome" />
+			<methods>
+				<include name="testChrome" />
+			</methods>
+		</classes>
+	</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

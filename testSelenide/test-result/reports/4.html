@@ -1,0 +1,74 @@
+<html><head>
+<title>ホーム</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/isms.js"></script>
+</head>
+<body style="background-color:#FFF5EE;">
+<form method="POST" name="main_form" style="text-align: center;">
+	<table class="fix" style="width:100%;">
+		<tbody><tr><td colspan="2"><font size="18" color="red">E-Learning</font>　テスト　様　</td></tr>
+		<tr>
+			<td>
+				
+			</td>
+			<td align="right">
+				<input type="button" id="homeBtn" class="button" value="ホーム" onclick="home()" disabled="">
+				<input type="button" id="changePswBtn" class="button" value="パスワード変更" onclick="changePsw()">
+				<input type="button" id="showHistoryBtn" class="button" value="自己学習履歴" onclick="studyHistoryList()">
+				<input type="button" id="logoutBtn" class="button" value="ログアウト" onclick="logout()">
+			</td>
+		</tr>
+		<tr><td colspan="2"><hr></td></tr>
+		<tr>
+			<td style="vertical-align: top;">
+				<table style="table-layout: fixed; border-collapse:collapse;">
+					<tbody><tr>
+						<td style="width:200px;">&nbsp;</td>
+						<td style="width:230px;">&nbsp;</td>
+						<td style="width:57px;">&nbsp;</td>
+						<td style="width:103px;">&nbsp;</td>
+					</tr>
+					<tr><td colspan="4" style="width:590px;font-size:12;border-width:1px;border-style:solid;color:blue;border-color:#AAAAAA;text-align:left;background-color:#ADFF2F;height:30px;"><b>学習中コース</b></td></tr>
+					<tr><td colspan="4">&nbsp;</td></tr>
+					<tr>
+						<td style="font-size:12;border-width:1px;border-style:solid;color:#C71585;border-color:#AAAAAA;text-align:center;background-color:#FFE4B5;height:30px;">開催名</td>
+						<td style="font-size:12;border-width:1px;border-style:solid;color:#C71585;border-color:#AAAAAA;text-align:center;background-color:#FFE4B5;">開催期間</td>
+						<td style="font-size:12;border-width:1px;border-style:solid;color:#C71585;border-color:#AAAAAA;text-align:center;background-color:#FFE4B5;">状況</td>
+						<td style="font-size:12;border-width:1px;border-style:solid;color:#C71585;border-color:#AAAAAA;text-align:center;background-color:#FFE4B5;">&nbsp;</td>
+					</tr>
+					<tr><td style="font-size:12;border-width:1px;border-style:solid;border-color:#AAAAAA;text-align:left;height:30px;">情報セキュリティ2016年度版</td><td style="font-size:12;border-width:1px;border-style:solid;border-color:#AAAAAA;text-align:center;">2001-01-01 ～ 2001-03-31</td><td style="font-size:12;border-width:1px;border-style:solid;border-color:#AAAAAA;text-align:center;">学習中</td><td style="font-size:12;border-width:1px;border-style:solid;border-color:#AAAAAA;text-align:center;"><input type="button" id="studyBtn_00" class="button" value="学習" onclick="doStudy('1')"></td></tr><tr><td style="font-size:12;border-width:1px;border-style:solid;border-color:#AAAAAA;text-align:left;height:30px;">ISMS(ISO27001)2016年度版</td><td style="font-size:12;border-width:1px;border-style:solid;border-color:#AAAAAA;text-align:center;">2002-01-01 ～ 2002-03-31</td><td style="font-size:12;border-width:1px;border-style:solid;border-color:#AAAAAA;text-align:center;">学習中</td><td style="font-size:12;border-width:1px;border-style:solid;border-color:#AAAAAA;text-align:center;"><input type="button" id="studyBtn_01" class="button" value="学習" onclick="doStudy('2')"></td></tr><tr><td style="font-size:12;border-width:1px;border-style:solid;border-color:#AAAAAA;text-align:left;height:30px;">個人情報保護2016年度版</td><td style="font-size:12;border-width:1px;border-style:solid;border-color:#AAAAAA;text-align:center;">2003-01-01 ～ 2003-03-31</td><td style="font-size:12;border-width:1px;border-style:solid;border-color:#AAAAAA;text-align:center;">学習中</td><td style="font-size:12;border-width:1px;border-style:solid;border-color:#AAAAAA;text-align:center;"><input type="button" id="studyBtn_02" class="button" value="学習" onclick="doStudy('3')"></td></tr>
+					<tr><td colspan="4">&nbsp;</td></tr>
+					<tr><td colspan="4" style="text-align:center;">「学習」ボタンをクリックし、学習を開始してください。</td></tr>
+				</tbody></table>
+			</td>
+			<td style="text-align:left; vertical-align: top;">
+				<table style="table-layout: fixed; border-collapse:collapse;">
+					<tbody><tr>
+						<td style="width:307px;">&nbsp;</td>
+						<td style="width:100px;">&nbsp;</td>
+						<td style="width:90px;">&nbsp;</td>
+					</tr>
+					<tr><td colspan="3" style="width:560px;font-size:12;border-width:1px;border-style:solid;color:blue;border-color:#AAAAAA;text-align:left;background-color:#ADFF2F;height:30px;"><b>システムについてのお知らせ</b></td></tr>
+					<tr><td colspan="3">&nbsp;</td></tr>
+					<tr>
+						<td style="width:370px;font-size:12;border-width:1px;border-style:solid;color:#C71585;border-color:#AAAAAA;text-align:center;background-color:#FFE4B5;height:30px;">内容</td>
+						<td style="width:100px;font-size:12;border-width:1px;border-style:solid;color:#C71585;border-color:#AAAAAA;text-align:center;background-color:#FFE4B5;">発信者</td>
+						<td style="width:90px; font-size:12;border-width:1px;border-style:solid;color:#C71585;border-color:#AAAAAA;text-align:center;background-color:#FFE4B5;">発信日</td>
+					</tr>
+
+					<tr><td style="font-size:12;border-width:1px;border-style:solid;border-color:#AAAAAA;text-align:left;height:30px;">各コース順番で学習してください。</td><td style="font-size:12;border-width:1px;border-style:solid;border-color:#AAAAAA;text-align:center;">aaa</td><td style="font-size:12;border-width:1px;border-style:solid;border-color:#AAAAAA;text-align:center;"></td></tr><tr><td style="font-size:12;border-width:1px;border-style:solid;border-color:#AAAAAA;text-align:left;height:30px;">ISMS試験正式スタートtemp</td><td style="font-size:12;border-width:1px;border-style:solid;border-color:#AAAAAA;text-align:center;">管理者</td><td style="font-size:12;border-width:1px;border-style:solid;border-color:#AAAAAA;text-align:center;"></td></tr>
+				</tbody></table>
+			</td>
+		</tr>
+		<tr><td colspan="2" align="right">(C)2001-2016 Sept Corporation All rights reserved.</td></tr>
+	</tbody></table>
+
+	<input type="hidden" id="hCourseId" name="hCourseId" value="">
+</form>
+
+
+</body></html>

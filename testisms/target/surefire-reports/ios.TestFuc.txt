@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: ios.TestFuc
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 94.096 sec <<< FAILURE! - in ios.TestFuc
+testIOS on testIOS(ios.TestFuc)(ios.TestFuc)  Time elapsed: 83.62 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ondornoMac-mini.local', ip: 'fe80:0:0:0:869:117f:8c82:a6e%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '1.8.0_221'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {automationName: XCUITest, browserName: Safari, databaseEnabled: false, deviceName: qqq, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, platform: MAC, platformName: iOS, platformVersion: 12.4, startIWDP: true, takesScreenshot: true, udid: 3e8187d8de743223d039740cacf..., webStorageEnabled: false}
+Session ID: 471b61a5-f40a-4b8a-b54d-f058af8ba88a
+*** Element info: {Using=xpath, value=(//XCUIElementTypeButton[@text='次へ'])[1]}
+	at ios.TestFuc.testIOS(TestFuc.java:65)
+

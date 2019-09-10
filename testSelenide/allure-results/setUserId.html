@@ -1,0 +1,100 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>ログイン</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+//ログイン
+function login() {
+	if(isNull(document.getElementById("j_username").value)){
+		alert("ユーザーIDを入力してください。");
+		return;
+	}
+	if(isNull(document.getElementById("j_password").value)){
+		alert("パスワードを入力してください。");
+		return;
+	}
+	main_form.method = "POST";
+	main_form.action = "servlet/login";
+	main_form.submit();
+}
+
+//クリア
+function loginClear() {
+	document.getElementById("j_username").value = "";
+	document.getElementById("j_password").value = "";
+}
+
+//
+function checkEnter(){
+	if (!e) var e = window.event;
+
+	if(e.keyCode == 13){
+		login();
+	}
+}
+
+function checkUser(){
+	if (!e) var e = window.event;
+
+	if(e.keyCode == 13){
+		document.getElementById("j_password").focus();
+	}
+}
+</script>
+</head>
+<body>
+<form name="main_form" style="text-align: center;">
+	<div style="text-align: center; margin-top: 3em;"><br /><br /><br /><img src="img/topimage.png" width="728" height="194" alt="ISMS E-Learning System" /></div>
+	<br />
+	<table style="margin-left:auto; margin-right:auto;">
+		<tbody><tr>
+			<td>
+				<table style="width: 700px; border: solid 1px #aaaaff; background-color: #eeeeff;">
+					<tbody><tr>
+						<td>
+							<table style="width:250px;background-color: #eeeeff;">
+								<tbody><tr><td style="width:25px"></td><td style="width:200px"></td></tr>
+								<tr><td></td><td><img src="img/LoginPhrase.gif" /></td></tr>
+							</tbody></table>
+						</td>
+						<td>
+							<table style="width:450px;background-color: #eeeeff;">
+								<tbody><tr>
+									<td style="width:50px"></td>
+									<td style="width:100px; height: 15px;"></td>
+									<td style="width:200px;"></td>
+									<td style="width:100px;"></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td class="login" style="text-align: center;">ユーザーID:</td>
+									<td class="login"><input type="text" style="background-color:#FFFFFF;ime-mode:disabled;width: 100%;" id="j_username" name="j_username" onkeypress="checkUser()" /></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td class="login" style="text-align: center;">パスワード:</td>
+									<td class="login"><input type="password" id="j_password" name="j_password" style="width: 100%; background-color:#FFFFFF" onkeypress="checkEnter()" /></td>
+									<td></td>
+								</tr>
+								<tr><td colspan="4" style="height: 10px;"></td></tr>
+								<tr>
+									<td></td>
+									<td class="login" style="text-align: center;" colspan="2">
+										<input type="button" id="loginBtn" value="ログイン" class="button" onclick="login();" />
+										<input type="button" id="clearBtn" value="クリア" class="button" onclick="loginClear();" />
+									</td>
+									<td></td>
+								</tr>
+								<tr><td colspan="2" style="height: 10px;"></td></tr>
+							</tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+	</tbody></table>
+</form>
+
+</body></html>

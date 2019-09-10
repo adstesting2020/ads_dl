@@ -1,0 +1,32 @@
+executionTime: 13463
+lineScreenCaptures:
+- executionTime: 2507
+  path: /Users/ondor/Desktop/testisms/sahagin-intermediate-data/captures/ios.TestFuc/testIOS/001.png
+  stackLines:
+  - {methodKey: ios.TestFuc.testIOS-void, codeBodyIndex: 0, line: 51}
+- executionTime: 273
+  path: /Users/ondor/Desktop/testisms/sahagin-intermediate-data/captures/ios.TestFuc/testIOS/002.png
+  stackLines:
+  - {methodKey: ios.TestFuc.testIOS-void, codeBodyIndex: 3, line: 57}
+- executionTime: 179
+  path: /Users/ondor/Desktop/testisms/sahagin-intermediate-data/captures/ios.TestFuc/testIOS/003.png
+  stackLines:
+  - {methodKey: ios.TestFuc.testIOS-void, codeBodyIndex: 4, line: 58}
+- executionTime: 2154
+  path: /Users/ondor/Desktop/testisms/sahagin-intermediate-data/captures/ios.TestFuc/testIOS/004.png
+  stackLines:
+  - {methodKey: ios.TestFuc.testIOS-void, codeBodyIndex: 5, line: 59}
+- executionTime: 2097
+  path: /Users/ondor/Desktop/testisms/sahagin-intermediate-data/captures/ios.TestFuc/testIOS/005.png
+  stackLines:
+  - {methodKey: ios.TestFuc.testIOS-void, codeBodyIndex: 6, line: 60}
+- executionTime: 2109
+  path: /Users/ondor/Desktop/testisms/sahagin-intermediate-data/captures/ios.TestFuc/testIOS/006.png
+  stackLines:
+  - {methodKey: ios.TestFuc.testIOS-void, codeBodyIndex: 7, line: 61}
+- executionTime: 2121
+  path: /Users/ondor/Desktop/testisms/sahagin-intermediate-data/captures/ios.TestFuc/testIOS/007.png
+  stackLines:
+  - {methodKey: ios.TestFuc.testIOS-void, codeBodyIndex: 8, line: 62}
+formatVersion: 0.9.2
+rootMethodKey: ios.TestFuc.testIOS-void
