@@ -2,6 +2,7 @@ package caseList;
 
 import java.util.ArrayList;
 
+import common.SlideScreen;
 import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
@@ -25,6 +26,14 @@ public class Test001 {
 		lp.setPassword("test");
 		lp.okBtnClick();
 		Thread.sleep(2000);
+		driver.findElementById("studyBtn_00").click();
+		Thread.sleep(2000);
+		driver.findElementByXPath("//*[@id=\"scroll\"]/a[3]").click();
+		Thread.sleep(5000);
+		SlideScreen ss = new SlideScreen(driver);
+		ss.slideUp(driver);
+		Thread.sleep(2000);
+		
 	}
 
 	public static void setDataInfo(String msg, String img) {
