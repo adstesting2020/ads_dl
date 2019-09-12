@@ -1,4 +1,4 @@
-package cases.iphone6plus;
+package cases.task07.s01;
 
 import common.TXCase;
 import io.appium.java_client.AppiumDriver;
