@@ -8,9 +8,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import cases.iphone6plus.Case001;
-import cases.iphone6plus.Case002;
-import cases.iphone6plus.Case003;
+import cases.iphone6plus.CaseS01_001;
+import cases.iphone6plus.CaseS01_002;
+import cases.iphone6plus.CaseS01_003;
 import common.Const;
 import dto.DataBean;
 import io.appium.java_client.AppiumDriver;
@@ -19,41 +19,36 @@ import io.appium.java_client.ios.IOSDriver;
 
 public class TestAction {
 	private AppiumDriver driver;
-	
-	/**
-	 * 
-	 * 1 - Android 5.0
-	 * 2 - Android 6.0
-	 * 3 - Android 7.0
-	 * 4 - Android 8.0
-	 * 5 - Android 9.0
-	 * 6 - iPhone7Plus
-	 * 7 - iPhone8
-	 * 8 - iPhoneX
-	 * 9 - Win7-IE
-	 * 10 - Win7-Chrome
-	 * 11 - Win10-IE
-	 * 12 - Win10-Chrome
-	 * 13 - Win10-Edge
-	 * 14 - Mac-Safari
-	 * 15 - Mac-Chrome
-	 * 
-	 * */
 
+//	  1 - Android 5.0 
+//	  2 - Android 6.0 
+//	  3 - Android 7.0 
+//	  4 - Android 8.0 
+//	  5 - Android 9.0 
+//	  6 - iPhone7Plus 
+//	  7 - iPhone8 
+//	  8 - iPhoneX 
+//	  9 - Win7-IE 
+//	  10 - Win7-Chrome 
+//	  11 - Win10-IE 
+//	  12 - Win10-Chrome 
+//	  13 - Win10-Edge 
+//	  14 - Mac-Safari 
+//	  15 - Mac-Chrome
 	@Before
 	public void setup() throws Exception {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 
-		switch(Const.TESTKIND) {
+		switch (Const.TESTKIND) {
 		case 1:
 			break;
 		case 2:
 			capabilities.setCapability("platformName", "Android");
-	        capabilities.setCapability("deviceName", "72V7N16C20002047"); 
-	        capabilities.setCapability("browserName", "Chrome");
-	        capabilities.setCapability("newCommandTimeout", 400);
+			capabilities.setCapability("deviceName", "72V7N16C20002047");
+			capabilities.setCapability("browserName", "Chrome");
+			capabilities.setCapability("newCommandTimeout", 400);
 //	        capabilities.setCapability("unicodeKeyboard", "true");
-	        driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 			break;
 		case 3:
 			break;
@@ -111,7 +106,6 @@ public class TestAction {
 		}
 	}
 
-
 	@After
 	public void tearDown() throws Exception {
 		driver.quit();
@@ -121,16 +115,15 @@ public class TestAction {
 	public void testIOS() throws Exception {
 		driver.get("https://keiyaku.kepco.jp/switch/switch_01");
 		Thread.sleep(100000);
-		
-		//1-1
-		new Case001().action(driver);
-		
-		//1-2
-		new Case002().action(driver);
-		
-		//1-3
-		new Case003().action(driver);
-		
-        
+
+		// S01-1-1
+		new CaseS01_001().action(driver, "S01-1-1");
+
+		// S01-1-2
+		new CaseS01_002().action(driver, "S01-1-2");
+
+		// S01-1-3
+		new CaseS01_003().action(driver, "S01-1-3");
+
 	}
 }

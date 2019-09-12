@@ -5,10 +5,10 @@ import io.appium.java_client.AppiumDriver;
 import model.OutputReport;
 import pages.IOSHomePage;
 
-public class Case002 extends TXCase {
-	public void action(AppiumDriver driver) throws Exception {
+public class CaseS01_002 extends TXCase {
+	public void action(AppiumDriver driver, String caseId) throws Exception {
 		IOSHomePage s1 = new IOSHomePage(driver);
 		s1.switchContractMsg();
-		new OutputReport().outputExls("1-2", Case002.DATALIST);
+		new OutputReport().outputExls(caseId, CaseS01_002.DATALIST);
 	}
 }

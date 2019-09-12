@@ -6,7 +6,7 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 
-import cases.iphone6plus.Case001;
+import cases.iphone6plus.CaseS01_001;
 import common.SlideScreen;
 import dto.ElementBean;
 import io.appium.java_client.AppiumDriver;
@@ -31,7 +31,7 @@ public class IOSHomePage {
 		File screenShot = driver.getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "currentContractConditions.jpg"));
-			Case001.setDataInfo("「現在のご契約状況」ラベルを確認する。", "currentContractConditions.jpg");
+			CaseS01_001.setDataInfo("「現在のご契約状況」ラベルを確認する。", "currentContractConditions.jpg");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -44,7 +44,7 @@ public class IOSHomePage {
 		File screenShot = driver.getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "switchContractMsg.jpg"));
-			Case001.setDataInfo("契約変更を希望されるご住所の、現在の電気とガスのご契約先を選択してください。」ラベルを確認する。", "switchContractMsg.jpg");
+			CaseS01_001.setDataInfo("契約変更を希望されるご住所の、現在の電気とガスのご契約先を選択してください。」ラベルを確認する。", "switchContractMsg.jpg");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -58,7 +58,7 @@ public class IOSHomePage {
 		File screenShot = driver.getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "electricityContract.jpg"));
-			Case001.setDataInfo("「電気のご契約」ラベルを確認する。", "electricityContract.jpg");
+			CaseS01_001.setDataInfo("「電気のご契約」ラベルを確認する。", "electricityContract.jpg");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -86,11 +86,12 @@ public class IOSHomePage {
 	 * 点击他社按钮
 	 */
 	public void setOtherShrines() {
-		driver.findElementByXPath("//*[@id=\"Container\"]/form/section/div[2]/div/div[1]/label[1]/input").click();
+		driver.findElementByXPath("//*[@id=\"Container\"]/form/section/div[2]/div/div[1]/label[1]/input").click();;
+		
 		File screenShot = driver.getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "setOtherShrines.jpg"));
-			Case001.setDataInfo("click OtherShrines radio", "setOtherShrines.jpg");
+			CaseS01_001.setDataInfo("click OtherShrines radio", "setOtherShrines.jpg");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
