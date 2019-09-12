@@ -1,18 +1,16 @@
 package test;
 
 import java.net.URL;
-import java.util.ArrayList;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import cases.iphone6plus.CaseS01_001;
-import cases.iphone6plus.CaseS01_002;
-import cases.iphone6plus.CaseS01_003;
+import cases.task07.s01.CaseS01_001;
+import cases.task07.s01.CaseS01_002;
+import cases.task07.s01.CaseS01_003;
 import common.Const;
-import dto.DataBean;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
