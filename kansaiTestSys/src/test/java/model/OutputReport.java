@@ -1,5 +1,12 @@
 package model;
 
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.GraphicsConfiguration;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+import java.awt.HeadlessException;
+import java.awt.Transparency;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -7,6 +14,7 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
@@ -19,7 +27,6 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import common.Const;
 import common.ExcelUtil;
-import common.FileUtil;
 import dto.DataBean;
 import dto.KindBean;
 
@@ -29,32 +36,77 @@ public class OutputReport {
 	public OutputReport() {
 	}
 
-	public void outputExls(String caseId,ArrayList<DataBean> dataList) {
-//		new FileUtil().moveFile(Const.COPYPICFROM, Const.COPYPICTO);
+	// 解决图片失真，变为红色
+	private BufferedImage toBufferedImage(java.awt.Image image) {
+		if (image instanceof BufferedImage) {
+			return (BufferedImage) image;
+		}
+		// This code ensures that all the pixels in the image are loaded
+		image = new ImageIcon(image).getImage();
+		BufferedImage bimage = null;
+		GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+		try {
+			int transparency = Transparency.OPAQUE;
+			GraphicsDevice gs = ge.getDefaultScreenDevice();
+			GraphicsConfiguration gc = gs.getDefaultConfiguration();
+			bimage = gc.createCompatibleImage(image.getWidth(null), image.getHeight(null), transparency);
+		} catch (HeadlessException e) {
+			// The system does not have a screen
+		}
+		if (bimage == null) {
+			// Create a buffered image using the default color model
+			int type = BufferedImage.TYPE_INT_RGB;
+			bimage = new BufferedImage(image.getWidth(null), image.getHeight(null), type);
+		}
+		// Copy image to buffered image
+		Graphics g = bimage.createGraphics();
+		// Paint the image onto the buffered image
+		g.drawImage(image, 0, 0, null);
+		g.dispose();
+		return bimage;
+	}
+
+	// 解决图片背景变为黑色
+	private BufferedImage toBufferedImage1(File file) {
+		try {
+			BufferedImage bimage = ImageIO.read(file);
+			int width = bimage.getWidth();
+			int height = bimage.getHeight();
+			double pid = (double) 140 / (double) width;
+
+			width = (int) (width * pid);
+			height = (int) (height * pid);
+
+			BufferedImage buffer = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+
+			Graphics2D g = buffer.createGraphics();
+
+			buffer = g.getDeviceConfiguration().createCompatibleImage(width, height, Transparency.TRANSLUCENT);
+
+			g.dispose();
+			g = buffer.createGraphics();
+			java.awt.Image small = bimage.getScaledInstance(width, height, java.awt.Image.SCALE_AREA_AVERAGING);
+			g.drawImage(small, 0, 0, null);
+			g.dispose();
+			return buffer;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	public void outputExls(String caseId, ArrayList<DataBean> dataList) {
 		KindBean kb = new KindBean();
-		
 
 		kb.setTestCaseId(caseId);
-		
+
 		/**
-		 * 1 - Android 5.0
-		 * 2 - Android 6.0
-		 * 3 - Android 7.0
-		 * 4 - Android 8.0
-		 * 5 - Android 9.0
-		 * 6 - iPhone7Plus
-		 * 7 - iPhone8
-		 * 8 - iPhoneX
-		 * 9 - Win7-IE
-		 * 10 - Win7-Chrome
-		 * 11 - Win10-IE
-		 * 12 - Win10-Chrome
-		 * 13 - Win10-Edge
-		 * 14 - Mac-Safari
-		 * 15 - Mac-Chrome
-		 * */
-		
-		switch(Const.TESTKIND) {
+		 * 1 - Android 5.0 2 - Android 6.0 3 - Android 7.0 4 - Android 8.0 5 - Android
+		 * 9.0 6 - iPhone7Plus 7 - iPhone8 8 - iPhoneX 9 - Win7-IE 10 - Win7-Chrome 11 -
+		 * Win10-IE 12 - Win10-Chrome 13 - Win10-Edge 14 - Mac-Safari 15 - Mac-Chrome
+		 */
+
+		switch (Const.TESTKIND) {
 		case 1:
 			kb.setKind1("スマホ");
 			kb.setKind2("Android 5.0");
@@ -67,36 +119,36 @@ public class OutputReport {
 			kb.setBrower("Chrome");
 			kb.setTestKind("Appium");
 			break;
-		case 3:break;
-		case 4:break;
-		case 5:break;
+		case 3:
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
 		case 6:
 			kb.setKind1("スマホ");
 			kb.setKind2("iOS 12.4");
 			kb.setBrower("Safari");
 			kb.setTestKind("Appium");
 			break;
-		case 7:break;
-		case 8:break;
-		case 9:break;
-		case 10:break;
-		case 12:break;
-		case 13:break;
-		case 14:break;
-		case 15:break;
+		case 7:
+			break;
+		case 8:
+			break;
+		case 9:
+			break;
+		case 10:
+			break;
+		case 12:
+			break;
+		case 13:
+			break;
+		case 14:
+			break;
+		case 15:
+			break;
 		}
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		String reportFileName = "Report_" + kb.getTestCaseId() + ".xlsx";
 
 		XSSFColor color1 = new XSSFColor(new java.awt.Color(64, 224, 208));
@@ -171,14 +223,15 @@ public class OutputReport {
 						rowIndex + 2 + Const.PICHEIGHT);
 
 //				anchor.setAnchorType(3);
-				
+
 				rowIndex = rowIndex + Const.PICHEIGHT;
 
 				ByteArrayOutputStream byteOutPut = new ByteArrayOutputStream();
 
-				String imgPath = System.getProperty("user.dir")+ separator +Const.COPYPICFROM + separator + dto.getImgPath();
+				String imgPath = System.getProperty("user.dir") + separator + Const.COPYPICFROM + separator
+						+ dto.getImgPath();
 				System.out.println(imgPath);
-				
+
 				BufferedImage bufferImage = ImageIO.read(new File(imgPath));
 
 				ImageIO.write(bufferImage, "jpg", byteOutPut);
