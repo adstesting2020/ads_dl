@@ -6,11 +6,9 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 
-import cases.iphone6plus.CaseS01_001;
+import cases.task07.s01.CaseS01_001;
 import common.SlideScreen;
-import dto.ElementBean;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.ios.IOSDriver;
 
 public class IOSHomePage {
 	private AppiumDriver driver;
