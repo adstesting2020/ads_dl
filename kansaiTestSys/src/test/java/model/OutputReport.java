@@ -6,6 +6,7 @@ import java.awt.GraphicsConfiguration;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
 import java.awt.HeadlessException;
+import java.awt.Toolkit;
 import java.awt.Transparency;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
@@ -214,9 +215,18 @@ public class OutputReport {
 
 				DataBean dto = (DataBean) dataList.get(i);
 
-				// set message
+				// コメント設定
 				xlsInstance.createCell(style3, rowT, 0, 0, (String) dto.getMsg());
 
+	            // 图片处理
+	            ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
+	            
+	            String imgPath = System.getProperty("user.dir") + separator + Const.COPYPICFROM + separator + dto.getImgPath();
+	            
+	            java.awt.Image src = Toolkit.getDefaultToolkit().getImage(imgPath);
+	            BufferedImage bufferImg = this.toBufferedImage(src);//Image to BufferedImage
+	            ImageIO.write(bufferImg, "jpg", byteArrayOut);
+	            
 				XSSFDrawing patriarch = sheet.createDrawingPatriarch();
 
 				XSSFClientAnchor anchor = new XSSFClientAnchor(100, 100, 255, 255, 1, rowIndex + 2, 1 + Const.PICWIDTH,
@@ -224,20 +234,9 @@ public class OutputReport {
 
 //				anchor.setAnchorType(3);
 
-				rowIndex = rowIndex + Const.PICHEIGHT;
-
-				ByteArrayOutputStream byteOutPut = new ByteArrayOutputStream();
-
-				String imgPath = System.getProperty("user.dir") + separator + Const.COPYPICFROM + separator
-						+ dto.getImgPath();
-				System.out.println(imgPath);
-
-				BufferedImage bufferImage = ImageIO.read(new File(imgPath));
-
-				ImageIO.write(bufferImage, "jpg", byteOutPut);
-
-				patriarch.createPicture(anchor,
-						wb.addPicture(byteOutPut.toByteArray(), XSSFWorkbook.PICTURE_TYPE_JPEG));
+				rowIndex = rowIndex + Const.PICHEIGHT;	
+				
+				patriarch.createPicture(anchor, wb.addPicture(byteArrayOut.toByteArray(), XSSFWorkbook.PICTURE_TYPE_JPEG));
 			}
 
 			//
@@ -250,5 +249,4 @@ public class OutputReport {
 			ex.printStackTrace();
 		}
 	}
-
 }
