@@ -8,19 +8,15 @@ import org.openqa.selenium.OutputType;
 
 import cases.task07.s01.CaseS01_001;
 import common.SlideScreen;
+import dto.ElementBean;
 import io.appium.java_client.AppiumDriver;
 
 public class IOSHomePage {
 	private AppiumDriver driver;
-//	private IOSDriver iosDriver;
 
 	public IOSHomePage(AppiumDriver _driver) {
 		this.driver = _driver;
 	}
-
-//	public IOSHomePage(IOSDriver dv) {
-//		this.iosDriver = dv;
-//	}
 
 	/**
 	 * 現在のご契約状況确认
@@ -62,17 +58,14 @@ public class IOSHomePage {
 		}
 	}
 
-	
-	
 //	public void test123() {
-//		ElementBean eb = new ElementBean("","","","");
+//		ElementBean eb = new ElementBean();
+//		eb.setIdAtr("");
 //		
-//		
-//		ssss(eb);
-//	}
+//		testFunc(eb);
+//	}	
 //	
-//	
-//	public void ssss(ElementBean eb) {
+//	public void testFunc(ElementBean eb) {
 //		if (!"".equals(eb.getIdAtr())) {
 //			driver.findElementByXPath(eb.getIdAtr()).click();
 //		} else if (!"".equals(eb.getNameAtr())) {

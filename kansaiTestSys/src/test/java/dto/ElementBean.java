@@ -6,11 +6,7 @@ public class ElementBean {
 	private String classNameAtr;
 	private String xpathAtr;
 
-	public ElementBean(String _id, String _name, String _className, String _xpath) {
-		this.idAtr = _id;
-		this.nameAtr = _name;
-		this.classNameAtr = _className;
-		this.xpathAtr = _xpath;
+	public ElementBean() {
 	}
 
 	public String getIdAtr() {
