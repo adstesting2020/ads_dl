@@ -43,8 +43,11 @@ public class TestMobileAction {
 
 		kb.setWidth(Const.MOBILE_PICWIDTH);
 		kb.setHeight(Const.MOBILE_PICHEIGHT);
+		
+		//
+		kb.setTestFlg("6");
 
-		switch (Const.TESTKIND) {
+		switch (Integer.parseInt(kb.getTestFlg())) {
 		case 1:
 			kb.setKind1("スマホ");
 			kb.setKind2("Android 5.0");
@@ -167,7 +170,7 @@ public class TestMobileAction {
 //		new CaseS01_002().action(driver, kb);
 
 		// S01-1-3
-		kb.setTestCaseId("S01-2-3");
+		kb.setTestCaseId("S01-2-1");
 		new CaseS01_004().action(driver, kb);
 
 	}

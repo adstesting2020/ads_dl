@@ -46,7 +46,10 @@ public class TestWebAction {
 		kb.setWidth(Const.WEB_PICWIDTH);
 		kb.setHeight(Const.WEB_PICHEIGHT);
 		
-		switch (Const.TESTKIND) {
+		//
+		kb.setTestFlg("15");
+
+		switch (Integer.parseInt(kb.getTestFlg())) {
 		case 1:
 			kb.setKind1("スマホ");
 			kb.setKind2("Android 5.0");

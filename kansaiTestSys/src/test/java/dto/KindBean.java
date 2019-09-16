@@ -3,7 +3,9 @@ package dto;
 public class KindBean {
 	private int width;
 	private int height;
-	
+
+	private String testFlg;
+
 	private String kind1;
 	private String kind2;
 	private String brower;
@@ -12,7 +14,15 @@ public class KindBean {
 
 	public KindBean() {
 	}
-	
+
+	public String getTestFlg() {
+		return testFlg;
+	}
+
+	public void setTestFlg(String testFlg) {
+		this.testFlg = testFlg;
+	}
+
 	public int getWidth() {
 		return width;
 	}
