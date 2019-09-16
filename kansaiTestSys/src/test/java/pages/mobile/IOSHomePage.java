@@ -9,6 +9,9 @@ import org.openqa.selenium.OutputType;
 import cases.task07.mobile.s01.*;
 
 import cases.task07.mobile.s02.*;
+
+import cases.task07.mobile.s03.*;
+
 import common.SlideScreen;
 import dto.DataBean;
 import io.appium.java_client.AppiumDriver;
@@ -79,13 +82,13 @@ public class IOSHomePage {
 	/**
 	 * 点击他社按钮
 	 */
-	public void setOtherShrines() {
+	public void setOtherShrines(String msg) {
 		driver.findElementByXPath("//*[@id=\"Container\"]/form/section/div[2]/div/div[1]/label[1]/input").click();;
 		
 		File screenShot = driver.getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "setOtherShrines.jpg"));
-			CaseS01_001.setDataInfo("click OtherShrines radio", "setOtherShrines.jpg");
+			CaseS03_001.setDataInfo(msg, "setOtherShrines.jpg");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -503,6 +506,102 @@ public class IOSHomePage {
 		try {
 			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "kansaiElectricPower.jpg"));
 			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	/**
+	 * 点击关西电力
+	 * 
+	 * @throws InterruptedException
+	 */
+	public void setKansaiElectricPower(String msg) throws InterruptedException {
+		new SlideScreen().slideUp(driver, 400, 200);
+		driver.findElementByXPath("//*[@id=\"Container\"]/form/section/div[2]/div/div[1]/label[2]").click();
+		;
+		// Thread.sleep(2000);
+		File screenShot = driver.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "setKansaiElectricPower.jpg"));
+			CaseS03_002.setDataInfo(msg, "setKansaiElectricPower.jpg");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 点击 点击他社按钮
+	 * 
+	 * @throws InterruptedException
+	 */
+	public void setOtherShrines1(String msg) throws InterruptedException {
+		
+		driver.findElementByXPath("//*[@id=\"Container\"]/form/section/div[2]/div/div[4]/label[1]").click();
+		;
+		new SlideScreen().slideUp(driver, 400, 200);
+		Thread.sleep(1000);
+		new SlideScreen().slideUp(driver, 400, 200);
+		Thread.sleep(1000);
+		new SlideScreen().slideUp(driver, 400, 200);
+		Thread.sleep(1000);
+		new SlideScreen().slideUp(driver, 400, 200);
+		Thread.sleep(1000);
+		new SlideScreen().slideUp(driver, 400, 200);
+		Thread.sleep(1000);
+		new SlideScreen().slideUp(driver, 400, 200);
+		Thread.sleep(1000);
+		new SlideScreen().slideUp(driver, 400, 200);
+		Thread.sleep(1000);
+		new SlideScreen().slideUp(driver, 400, 200);
+		Thread.sleep(1000);
+		
+		File screenShot = driver.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "setOtherShrines1.jpg"));
+			CaseS03_003.setDataInfo(msg, "setOtherShrines1.jpg");
+			CaseS03_005.setDataInfo(msg, "setOtherShrines1.jpg");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 点击关西电力
+	 * 
+	 * @throws InterruptedException
+	 */
+	public void setKansaiElectricPower1(String msg) throws InterruptedException {
+		new SlideScreen().slideUp(driver, 400, 200);
+		driver.findElementByXPath("//*[@id=\"Container\"]/form/section/div[2]/div/div[4]/label[2]").click();
+		;
+		// Thread.sleep(2000);
+		File screenShot = driver.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "setKansaiElectricPower1.jpg"));
+			CaseS03_004.setDataInfo(msg, "setKansaiElectricPower1.jpg");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 点击输入号码
+	 * 
+	 * @throws InterruptedException
+	 */
+	public void setemployee(String msg) throws InterruptedException {
+		new SlideScreen().slideUp(driver, 400, 200);
+		driver.findElementByXPath("//*[@id=\"div_agreement\"]/div/label").click();
+		;
+		// Thread.sleep(2000);
+		File screenShot = driver.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "setemployee.jpg"));
+			CaseS03_006.setDataInfo(msg, "setemployee.jpg");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

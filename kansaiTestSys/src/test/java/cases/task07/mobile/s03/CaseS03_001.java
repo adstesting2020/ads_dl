@@ -14,8 +14,8 @@ public class CaseS03_001 extends TXCase {
 	 * */
 	public void action(AppiumDriver driver, KindBean kb,DataBean dataBean) throws Exception {
 		dataBean.setMsg("「電気のご契約」-「他社（関西電力以外）」ラジオボタンを選択する。");
-		IOSHomePage s1 = new IOSHomePage(driver);
-		s1.currentContractConditions(dataBean.getMsg());
+		IOSHomePage s3 = new IOSHomePage(driver);
+		s3.setOtherShrines(dataBean.getMsg());
 		new OutputReport().outputExls(kb, CaseS03_001.DATALIST);
 	}
 }
