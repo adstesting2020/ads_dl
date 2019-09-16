@@ -7,7 +7,9 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 
 import cases.task07.mobile.s01.*;
+
 import cases.task07.mobile.s02.*;
+
 import common.SlideScreen;
 import dto.DataBean;
 import io.appium.java_client.AppiumDriver;
@@ -104,6 +106,8 @@ public class IOSHomePage {
 			e.printStackTrace();
 		}
 	}
+	
+	
 	
 	/**
 	 * 「電気のご契約」-「関西電力」ラジオボタンを選択する。
@@ -334,5 +338,35 @@ public class IOSHomePage {
 		}
 	}
 	
-
+	/**
+	 *「ガスのご契約」ラベルのを確認する。
+	 */
+	
+	public void gasContactlabel(String msg) {
+		driver.findElementByXPath("/html/body/div[18]/div").click();
+		File screenShot = driver.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "currentContractConditions.jpg"));
+			CaseS02_008.setDataInfo(msg, "currentContractConditions.jpg");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 *「お客さま番号を入力する」ラジオボタンを確認する。
+	 */
+	
+	public void customerId(String msg) {
+		driver.findElementByXPath("//*[@id=\"Container\"]/form/section/div[2]/div/div[1]/label[2]").click();
+		driver.findElementByXPath("//*[@id=\"Container\"]/form/section/div[2]/div/div[4]/label[1]").click();
+		File screenShot = driver.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "currentContractConditions.jpg"));
+			CaseS02_013.setDataInfo(msg, "currentContractConditions.jpg");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 }

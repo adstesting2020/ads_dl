@@ -74,6 +74,18 @@ public class TestMobileAction {
 		case 4:
 			break;
 		case 5:
+			kb.setKind1("スマホ");
+			kb.setKind2("Android 9.0");
+			kb.setBrower("Chrome");
+			kb.setTestKind("Appium");
+			
+			capabilities.setCapability("platformName", "Android");
+			capabilities.setCapability("deviceName", "X5LG97f5bb7f");
+			capabilities.setCapability("browserName", "Chrome");
+			capabilities.setCapability("newCommandTimeout", 600);
+			capabilities.setCapability("recreateChromeDriverSessions", true);
+//	        capabilities.setCapability("unicodeKeyboard", "true");
+			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 			break;
 		case 6:
 			kb.setKind1("スマホ");
