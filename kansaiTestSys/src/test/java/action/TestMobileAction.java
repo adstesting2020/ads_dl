@@ -2,6 +2,7 @@ package action;
 
 import java.net.URL;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -9,7 +10,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.testng.ScreenShooter;
 
-import cases.task07.mobile.s01.*;
+import cases.task07.mobile.s01.CaseS01_003;
 import common.Const;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -105,7 +106,7 @@ public class TestMobileAction {
 	        Configuration.reportsFolder = "IMG";
 			break;
 		case 15:
-			System.setProperty("webdriver.chrome.driver","bin/chromedriver");
+			System.setProperty("webdriver.chrome.driver","driver/chromedriver");
 	        Configuration.timeout = 6000;
 	        Configuration.browser = "chrome";
 //	        Configuration.browserSize ="1920x1080";
@@ -116,7 +117,7 @@ public class TestMobileAction {
 		}
 	}
 
-//	@After
+	@After
 	public void tearDown() throws Exception {
 		driver.quit();
 	}

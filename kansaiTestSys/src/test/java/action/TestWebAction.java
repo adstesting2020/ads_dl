@@ -1,5 +1,6 @@
 package action;
 
+import static com.codeborne.selenide.Selenide.close;
 import static com.codeborne.selenide.Selenide.open;
 
 import java.net.URL;
@@ -107,7 +108,7 @@ public class TestWebAction {
 	        Configuration.reportsFolder = "IMG";
 			break;
 		case 15:
-			System.setProperty("webdriver.chrome.driver","bin/chromedriver");
+			System.setProperty("webdriver.chrome.driver","driver/chromedriver");
 	        Configuration.timeout = 6000;
 	        Configuration.browser = "chrome";
 //	        Configuration.browserSize ="1920x1080";
@@ -122,6 +123,7 @@ public class TestWebAction {
 	public void testIOS() throws Exception {
 		open("http://www.test-arts.cn/isms/");
 		new CaseS04_001().action("S04-2-1");
+		 close();
 
 	}
 }
