@@ -7,9 +7,11 @@ public class Const {
 
 	public static final String COPYPICFROM = "IMG";
 
-	public static final int PICWIDTH = 18;
+//	public static final int PICWIDTH = 18;
+	public static final int PICWIDTH = 22;
 
-	public static final int PICHEIGHT = 134;
+//	public static final int PICHEIGHT = 134;
+	public static final int PICHEIGHT = 57;
 
 	// 1 - Android 5.0
 	// 2 - Android 6.0
@@ -26,6 +28,6 @@ public class Const {
 	// 13 - Win10-Edge
 	// 14 - Mac-Safari
 	// 15 - Mac-Chrome
-	public static final int TESTKIND = 6;
+	public static final int TESTKIND = 14;
 
 }

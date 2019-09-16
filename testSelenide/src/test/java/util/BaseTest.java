@@ -36,8 +36,8 @@ public class BaseTest {
 //        Configuration.browserSize ="1920x1080";
         Configuration.startMaximized = true;
         ScreenShooter.captureSuccessfulTests = true;
-        Configuration.reportsFolder = "allure-results";
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(false));
+        Configuration.reportsFolder = "report";
+        
         
     }
     

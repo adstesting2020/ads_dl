@@ -145,8 +145,16 @@ public class OutputReport {
 		case 13:
 			break;
 		case 14:
+			kb.setKind1("Mac");
+			kb.setKind2("12.1.2");
+			kb.setBrower("Safari");
+			kb.setTestKind("Selenide");
 			break;
 		case 15:
+			kb.setKind1("Mac");
+			kb.setKind2("76");
+			kb.setBrower("Chrome");
+			kb.setTestKind("Selenide");
 			break;
 		}
 
