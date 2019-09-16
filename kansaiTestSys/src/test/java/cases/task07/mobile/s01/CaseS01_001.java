@@ -7,9 +7,9 @@ import pages.mobile.IOSHomePage;
 
 public class CaseS01_001 extends TXCase {
 	/*
-	 * 2019-09-11
-	 * Qin.SQ
-	 * **/
+	 * @author:Qin.SQ
+	 * @date:2019-09-11
+	 * */
 	public void action(AppiumDriver driver, String caseId) throws Exception {
 		IOSHomePage s1 = new IOSHomePage(driver);
 		s1.currentContractConditions();

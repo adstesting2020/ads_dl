@@ -6,6 +6,10 @@ import model.OutputReport;
 import pages.mobile.IOSHomePage;
 
 public class CaseS01_003 extends TXCase {
+	/*
+	 * @author:Qin.SQ
+	 * @date:2019-09-11
+	 * */
 	public void action(AppiumDriver driver, String caseId) throws Exception {
 		IOSHomePage s1 = new IOSHomePage(driver);
 		s1.electricityContract();
