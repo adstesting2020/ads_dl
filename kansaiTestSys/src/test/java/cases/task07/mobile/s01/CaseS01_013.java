@@ -4,7 +4,7 @@ import common.TXCase;
 import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
-import model.OutputReport;
+import model.ReportCmd;
 import pages.mobile.IOSHomePage;
 
 public class CaseS01_013 extends TXCase {
@@ -13,6 +13,6 @@ public class CaseS01_013 extends TXCase {
 		IOSHomePage s1 = new IOSHomePage(driver);
 		
 
-		new OutputReport().outputExls(kb, CaseS01_013.DATALIST);
+		new ReportCmd().outputExls(kb, CaseS01_013.DATALIST);
 	}	
 }

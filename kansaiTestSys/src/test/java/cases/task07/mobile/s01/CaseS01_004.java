@@ -4,7 +4,7 @@ import common.TXCase;
 import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
-import model.OutputReport;
+import model.ReportCmd;
 import pages.mobile.IOSHomePage;
 
 /*
@@ -18,6 +18,6 @@ public class CaseS01_004 extends TXCase {
 		//
 		pageObj.currentContractConditions("「電気のご契約」ラベル横のアイコンを確認する。");
 		
-		new OutputReport().outputExls(kb, CaseS01_004.DATALIST);
+		new ReportCmd().outputExls(kb, CaseS01_004.DATALIST);
 	}
 }

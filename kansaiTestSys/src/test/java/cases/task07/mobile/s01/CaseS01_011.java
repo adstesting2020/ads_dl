@@ -3,7 +3,7 @@ import common.TXCase;
 import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
-import model.OutputReport;
+import model.ReportCmd;
 import pages.mobile.IOSHomePage;
 
 	public class CaseS01_011 extends TXCase {
@@ -11,7 +11,7 @@ import pages.mobile.IOSHomePage;
 			dataBean.setMsg("「他社（関西電力以外）」ラジオボタンを確認する。");
 			IOSHomePage s1 = new IOSHomePage(driver);
 			s1.radioButon(dataBean.getMsg());
-			new OutputReport().outputExls(kb, CaseS01_011.DATALIST);
+			new ReportCmd().outputExls(kb, CaseS01_011.DATALIST);
 		}
 	}
 

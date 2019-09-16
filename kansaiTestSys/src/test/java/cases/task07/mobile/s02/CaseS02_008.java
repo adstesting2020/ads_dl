@@ -4,7 +4,7 @@ import common.TXCase;
 import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
-import model.OutputReport;
+import model.ReportCmd;
 import pages.mobile.IOSHomePage;
 
 public class CaseS02_008 extends TXCase {
@@ -16,7 +16,7 @@ public class CaseS02_008 extends TXCase {
 		dataBean.setMsg("「ガスのご契約」ラベルのを確認する。");
 		IOSHomePage s1 = new IOSHomePage(driver);
 		s1.gasContactlabel(dataBean.getMsg());
-		new OutputReport().outputExls(kb, CaseS02_008.DATALIST);
+		new ReportCmd().outputExls(kb, CaseS02_008.DATALIST);
 	}
 }
 

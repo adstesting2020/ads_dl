@@ -4,7 +4,7 @@ import common.TXCase;
 import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
-import model.OutputReport;
+import model.ReportCmd;
 import pages.mobile.IOSHomePage;
 
 
@@ -13,6 +13,6 @@ public class CaseS03_003 extends TXCase{
 		dataBean.setMsg("「ガスのご契約」-「他社（関西電力以外）」ラジオボタンを選択する");
 		IOSHomePage s3 = new IOSHomePage(driver);
 		s3.setOtherShrines1(dataBean.getMsg());
-		new OutputReport().outputExls(kb, CaseS03_003.DATALIST);
+		new ReportCmd().outputExls(kb, CaseS03_003.DATALIST);
 	}
 }

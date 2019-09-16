@@ -4,7 +4,7 @@ import common.TXCase;
 import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
-import model.OutputReport;
+import model.ReportCmd;
 import pages.mobile.IOSHomePage;
 
 public class CaseS03_005 extends TXCase{
@@ -14,7 +14,7 @@ public class CaseS03_005 extends TXCase{
 		IOSHomePage s3 = new IOSHomePage(driver);
 		s3.setKansaiElectricPower(dataBean.getMsg());
 		s3.setOtherShrines1(dataBean.getMsg());
-		new OutputReport().outputExls(kb, CaseS03_005.DATALIST);
+		new ReportCmd().outputExls(kb, CaseS03_005.DATALIST);
 	}
 
 }

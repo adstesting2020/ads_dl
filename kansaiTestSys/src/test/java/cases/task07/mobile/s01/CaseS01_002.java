@@ -4,7 +4,7 @@ import common.TXCase;
 import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
-import model.OutputReport;
+import model.ReportCmd;
 import pages.mobile.IOSHomePage;
 
 /*
@@ -15,6 +15,6 @@ public class CaseS01_002 extends TXCase {
 	public void action(AppiumDriver driver, KindBean kb) throws Exception {
 		IOSHomePage s1 = new IOSHomePage(driver);
 		s1.currentContractConditions("「契約変更を希望されるご住所の、現在の電気とガスのご契約先を選択してください。」ラベルを確認する。");
-		new OutputReport().outputExls(kb, CaseS01_002.DATALIST);
+		new ReportCmd().outputExls(kb, CaseS01_002.DATALIST);
 	}
 }

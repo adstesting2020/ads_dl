@@ -4,7 +4,7 @@ import common.TXCase;
 import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
-import model.OutputReport;
+import model.ReportCmd;
 import pages.mobile.IOSHomePage;
 
 public class CaseS02_013 extends TXCase {
@@ -16,7 +16,7 @@ public class CaseS02_013 extends TXCase {
 		dataBean.setMsg("「関西電力の電気の　お客さま番号 または 「はぴeみる電」のID・パスワード を入力してください。」ラベルを確認する。");
 		IOSHomePage s1 = new IOSHomePage(driver);
 		s1.customerId(dataBean.getMsg());
-		new OutputReport().outputExls(kb, CaseS02_013.DATALIST);
+		new ReportCmd().outputExls(kb, CaseS02_013.DATALIST);
 	}
 }
 

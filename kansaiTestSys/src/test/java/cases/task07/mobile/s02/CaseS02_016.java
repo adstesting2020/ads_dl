@@ -4,7 +4,7 @@ import common.TXCase;
 import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
-import model.OutputReport;
+import model.ReportCmd;
 import pages.mobile.IOSHomePage;
 
 public class CaseS02_016 extends TXCase {
@@ -19,6 +19,6 @@ public class CaseS02_016 extends TXCase {
 		s1.setOtherShrines2();
 		s1.enterCustomerNumber();
 		s1.enter(dataBean.getMsg());
-		new OutputReport().outputExls(kb, CaseS02_016.DATALIST);
+		new ReportCmd().outputExls(kb, CaseS02_016.DATALIST);
 	}
 }

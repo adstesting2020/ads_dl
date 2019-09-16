@@ -5,7 +5,7 @@ import common.TXCase;
 import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
-import model.OutputReport;
+import model.ReportCmd;
 import pages.mobile.IOSHomePage;
 
 public class CaseS02_015 extends TXCase {
@@ -17,6 +17,6 @@ public class CaseS02_015 extends TXCase {
 		dataBean.setMsg("「「はぴeみる電」のID・パスワードを入力する」ラジオボタンを確認する。");
 		IOSHomePage s1 = new IOSHomePage(driver);
 		s1.currentContractConditions(dataBean.getMsg());
-		new OutputReport().outputExls(kb, CaseS01_001.DATALIST);
+		new ReportCmd().outputExls(kb, CaseS01_001.DATALIST);
 	}
 }

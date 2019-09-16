@@ -2,7 +2,7 @@ package cases.task07.web.s04;
 
 import common.TXCase;
 import dto.KindBean;
-import model.OutputReport;
+import model.ReportCmd;
 import pages.web.ChromeHomePage;
 
 public class CaseS04_002 extends TXCase {
@@ -15,6 +15,6 @@ public class CaseS04_002 extends TXCase {
 		chp.setUserId("test");
 		chp.setPassword("test");
 		chp.okBtnClick();
-		new OutputReport().outputExls(kb, CaseS04_002.DATALIST);
+		new ReportCmd().outputExls(kb, CaseS04_002.DATALIST);
 	}
 }

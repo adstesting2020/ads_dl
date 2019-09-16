@@ -4,7 +4,7 @@ import common.TXCase;
 import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
-import model.OutputReport;
+import model.ReportCmd;
 import pages.mobile.IOSHomePage;
 
 public class CaseS02_005 extends TXCase {
@@ -16,6 +16,6 @@ public class CaseS02_005 extends TXCase {
 		dataBean.setMsg("「電気のご契約」ラベル横の必須マークを確認する。");
 		IOSHomePage s1 = new IOSHomePage(driver);
 		s1.confirmS02005(dataBean.getMsg());
-		new OutputReport().outputExls(kb, CaseS02_005.DATALIST);
+		new ReportCmd().outputExls(kb, CaseS02_005.DATALIST);
 	}
 }

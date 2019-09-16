@@ -4,7 +4,7 @@ import common.TXCase;
 import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
-import model.OutputReport;
+import model.ReportCmd;
 import pages.mobile.IOSHomePage;
 
 
@@ -21,6 +21,6 @@ public class CaseS01_023 extends TXCase {
 		s1.clickGasContractOtherCompanies();
 		s1.clickSelectCustomerNumber();
 		s1.InputIntoPlace(dataBean.getMsg(),"14");
-		new OutputReport().outputExls(kb, CaseS01_023.DATALIST);
+		new ReportCmd().outputExls(kb, CaseS01_023.DATALIST);
 	}
 }

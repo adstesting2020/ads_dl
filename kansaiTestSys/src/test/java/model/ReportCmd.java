@@ -31,10 +31,10 @@ import common.ExcelUtil;
 import dto.DataBean;
 import dto.KindBean;
 
-public class OutputReport {
+public class ReportCmd {
 	private String separator = java.io.File.separator;
 
-	public OutputReport() {
+	public ReportCmd() {
 	}
 
 	// 解决图片失真，变为红色

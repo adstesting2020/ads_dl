@@ -3,7 +3,7 @@ package cases.task07.mobile.s02;
 import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
-import model.OutputReport;
+import model.ReportCmd;
 import pages.mobile.IOSHomePage;
 
 public class CaseS02_020 {
@@ -18,6 +18,6 @@ public class CaseS02_020 {
 		s1.setOtherShrines2();
 		s1.enterCustomerNumber();
 		s1.enter(dataBean.getMsg());
-		new OutputReport().outputExls(kb, CaseS02_016.DATALIST);
+		new ReportCmd().outputExls(kb, CaseS02_016.DATALIST);
 	}
 }

@@ -3,7 +3,7 @@ package cases.task07.mobile.s02;
 import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
-import model.OutputReport;
+import model.ReportCmd;
 import pages.mobile.IOSHomePage;
 
 public class CaseS02_022 {
@@ -21,6 +21,6 @@ public class CaseS02_022 {
 		s1.InputIntoPlace();
 		s1.InputIntoPhone();
 		s1.enter2(dataBean.getMsg());
-		new OutputReport().outputExls(kb, CaseS02_016.DATALIST);
+		new ReportCmd().outputExls(kb, CaseS02_016.DATALIST);
 	}
 }
