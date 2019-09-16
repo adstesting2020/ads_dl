@@ -22,11 +22,11 @@ public class IOSHomePage {
 	/**
 	 * 現在のご契約状況确认
 	 */
-	public void currentContractConditions(String Msg) {
+	public void currentContractConditions(String msg) {
 		File screenShot = driver.getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "currentContractConditions.jpg"));
-			CaseS01_001.setDataInfo(dataBean.getMsg(), "currentContractConditions.jpg");
+			CaseS01_001.setDataInfo(msg, "currentContractConditions.jpg");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -89,5 +89,22 @@ public class IOSHomePage {
 			e.printStackTrace();
 		}
 	}
+	
+//	「関西電力」ラジオボタンを確認する。
+	public void radioButon(String msg) {
+		driver.findElementByXPath("//*[@id=\"Container\"]/form/section/div[2]/div/div[4]/label[2]/span").click();;
+		
+		File screenShot = driver.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "clickTest.jpg"));
+			CaseS01_001.setDataInfo(msg, "setOtherShrines.jpg");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
 
 }
