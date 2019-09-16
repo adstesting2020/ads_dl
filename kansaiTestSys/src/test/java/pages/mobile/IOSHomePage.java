@@ -9,7 +9,6 @@ import org.openqa.selenium.OutputType;
 import cases.task07.mobile.s01.*;
 
 import cases.task07.mobile.s02.*;
-
 import common.SlideScreen;
 import dto.DataBean;
 import io.appium.java_client.AppiumDriver;
@@ -369,4 +368,144 @@ public class IOSHomePage {
 		}
 	}
 	
+	/**
+	 * 点击他社按钮2
+	 */
+	public void setOtherShrines2() {
+		driver.findElementByXPath("//*[@id=\"Container\"]/form/section/div[2]/div/div[4]/label[1]").click();;
+
+		File screenShot = driver.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "setOtherShrines2.jpg"));
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 点击「関西電力」按钮2
+	 */
+	public void kansaiElectricPower2() {
+		driver.findElementByXPath("//*[@id=\"Container\"]/form/section/div[2]/div/div[4]/label[2]").click();;
+		File screenShot = driver.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "kansaiElectricPower2.jpg"));
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	/**
+	 * 点击「お客さま番号を入力する」
+	 */
+	public void enterCustomerNumber() {
+
+		driver.findElementByXPath("//*[@id=\"div_agreement\"]/div/label").click();;
+		File screenShot = driver.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "enterCustomerNumber.jpg"));
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+		
+	/**
+	 * 点击
+	 * */
+	public void enter(String msg) throws InterruptedException{
+		driver.findElementByXPath("/html/body/div[18]/div").click();;
+		File screenShot = driver.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "enter.jpg"));	
+			CaseS02_016.setDataInfo(msg, "enter2.jpg");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 「日程」入力欄に"01"を入力する。
+	 * @throws InterruptedException 
+	 */
+	public void InputIntoSchedule() throws InterruptedException {
+		driver.findElementByXPath("//*[@id=\"Container\"]/form/section/div[2]/div/div[11]/dl[1]/dd/input").sendKeys("01");
+		File screenShot = driver.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "InputIntoSchedule.jpg"));
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 「所」入力欄に"14"を入力する。
+	 * @throws InterruptedException 
+	 */
+	public void InputIntoPlace() throws InterruptedException {
+		driver.findElementByXPath("//*[@id=\"Container\"]/form/section/div[2]/div/div[11]/dl[2]/dd/input").sendKeys("14");
+		File screenShot = driver.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "InputIntoPlace.jpg"));
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 「番号」入力欄に"5122"-"130533"を入力する。
+	 * @throws InterruptedException 
+	 */
+	public void InputIntoPhone() throws InterruptedException {
+		driver.findElementByXPath("//*[@id=\"Container\"]/form/section/div[2]/div/div[11]/dl[3]/dd/input").sendKeys("5122");
+		driver.findElementByXPath("//*[@id=\"Container\"]/form/section/div[2]/div/div[11]/dl[4]/dd/input").sendKeys("130533");
+		File screenShot = driver.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "InputIntoPlace.jpg"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	/**
+	 * 点击
+	 * */
+	public void enter2(String msg) throws InterruptedException {
+		driver.findElementByXPath("//*[@id=\"Container\"]/form/section/div[2]/div/h4[4]/span[1]").click();;
+		Thread.sleep(2000);
+		File screenShot = driver.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "enter2.jpg"));
+			CaseS02_016.setDataInfo(msg, "enter2.jpg");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 点击「関西電力」按钮
+	 */
+	public void kansaiElectricPower() {
+
+		driver.findElementByXPath("//*[@id=\"Container\"]/form/section/div[2]/div/div[1]/label[2]").click();;		
+		File screenShot = driver.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "kansaiElectricPower.jpg"));
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }
