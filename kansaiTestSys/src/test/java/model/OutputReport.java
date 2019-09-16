@@ -68,7 +68,7 @@ public class OutputReport {
 	}
 
 	// 解决图片背景变为黑色
-	private BufferedImage toBufferedImage1(File file) {
+	private BufferedImage toBufferedImage(File file) {
 		try {
 			BufferedImage bimage = ImageIO.read(file);
 			int width = bimage.getWidth();
@@ -100,12 +100,6 @@ public class OutputReport {
 		KindBean kb = new KindBean();
 
 		kb.setTestCaseId(caseId);
-
-		/**
-		 * 1 - Android 5.0 2 - Android 6.0 3 - Android 7.0 4 - Android 8.0 5 - Android
-		 * 9.0 6 - iPhone7Plus 7 - iPhone8 8 - iPhoneX 9 - Win7-IE 10 - Win7-Chrome 11 -
-		 * Win10-IE 12 - Win10-Chrome 13 - Win10-Edge 14 - Mac-Safari 15 - Mac-Chrome
-		 */
 
 		switch (Const.TESTKIND) {
 		case 1:
