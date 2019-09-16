@@ -8,10 +8,12 @@ import org.openqa.selenium.OutputType;
 
 import cases.task07.mobile.s01.CaseS01_001;
 import common.SlideScreen;
+import dto.DataBean;
 import io.appium.java_client.AppiumDriver;
 
 public class IOSHomePage {
 	private AppiumDriver driver;
+	private DataBean dataBean;
 
 	public IOSHomePage(AppiumDriver _driver) {
 		this.driver = _driver;
@@ -20,11 +22,11 @@ public class IOSHomePage {
 	/**
 	 * 現在のご契約状況确认
 	 */
-	public void currentContractConditions() {
+	public void currentContractConditions(String Msg) {
 		File screenShot = driver.getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "currentContractConditions.jpg"));
-			CaseS01_001.setDataInfo("「現在のご契約状況」ラベルを確認する。", "currentContractConditions.jpg");
+			CaseS01_001.setDataInfo(dataBean.getMsg(), "currentContractConditions.jpg");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

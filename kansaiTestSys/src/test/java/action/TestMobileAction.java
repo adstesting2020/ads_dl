@@ -12,6 +12,7 @@ import com.codeborne.selenide.testng.ScreenShooter;
 
 import cases.task07.mobile.s01.*;
 import common.Const;
+import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -20,6 +21,7 @@ import io.appium.java_client.ios.IOSDriver;
 public class TestMobileAction {
 	private AppiumDriver driver;
 	private KindBean kb;
+	private DataBean dataBean;
 
 //	  1 - Android 5.0 
 //	  2 - Android 6.0 
@@ -171,7 +173,7 @@ public class TestMobileAction {
 
 		// S01-1-3
 		kb.setTestCaseId("S01-2-1");
-		new CaseS01_004().action(driver, kb);
+		new CaseS01_004().action(driver, kb, dataBean);
 
 	}
 }
