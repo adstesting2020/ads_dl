@@ -8,14 +8,16 @@ public class TXCase {
 	public static ArrayList<DataBean> DATALIST = new ArrayList<DataBean>();
 
 	public TXCase() {
-		System.out.println("list clear");
+		System.out.println("data list clear");
 		DATALIST.clear();
 	}
 	
 	public static void setDataInfo(String msg, String img) {
-		DataBean d1 = new DataBean();
-		d1.setMsg(msg);
-		d1.setImgPath(img);
-		DATALIST.add(d1);
+		DataBean data = new DataBean();
+		
+		data.setMsg(msg);
+		data.setImgPath(img);
+		
+		DATALIST.add(data);
 	}
 }
