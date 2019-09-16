@@ -7,7 +7,7 @@ import model.OutputReport;
 import pages.mobile.IOSHomePage;
 
 	public class CaseS01_011 extends TXCase {
-		public void action(AppiumDriver driver, KindBean kb,DataBean dataBean) throws Exception {
+		public void action(AppiumDriver driver, KindBean kb, DataBean dataBean) throws Exception {
 			dataBean.setMsg("「他社（関西電力以外）」ラジオボタンを確認する。");
 			IOSHomePage s1 = new IOSHomePage(driver);
 			s1.radioButon(dataBean.getMsg());
