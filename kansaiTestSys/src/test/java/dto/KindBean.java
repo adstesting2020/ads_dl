@@ -1,6 +1,9 @@
 package dto;
 
 public class KindBean {
+	private int width;
+	private int height;
+	
 	private String kind1;
 	private String kind2;
 	private String brower;
@@ -8,6 +11,22 @@ public class KindBean {
 	private String testCaseId;
 
 	public KindBean() {
+	}
+	
+	public int getWidth() {
+		return width;
+	}
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
 	}
 
 	public String getTestCaseId() {

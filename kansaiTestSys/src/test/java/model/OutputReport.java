@@ -96,62 +96,7 @@ public class OutputReport {
 		}
 	}
 
-	public void outputExls(String caseId, ArrayList<DataBean> dataList) {
-		KindBean kb = new KindBean();
-
-		kb.setTestCaseId(caseId);
-
-		switch (Const.TESTKIND) {
-		case 1:
-			kb.setKind1("スマホ");
-			kb.setKind2("Android 5.0");
-			kb.setBrower("Chrome");
-			kb.setTestKind("Appium");
-			break;
-		case 2:
-			kb.setKind1("スマホ");
-			kb.setKind2("Android 6.0");
-			kb.setBrower("Chrome");
-			kb.setTestKind("Appium");
-			break;
-		case 3:
-			break;
-		case 4:
-			break;
-		case 5:
-			break;
-		case 6:
-			kb.setKind1("スマホ");
-			kb.setKind2("iOS 12.4");
-			kb.setBrower("Safari");
-			kb.setTestKind("Appium");
-			break;
-		case 7:
-			break;
-		case 8:
-			break;
-		case 9:
-			break;
-		case 10:
-			break;
-		case 12:
-			break;
-		case 13:
-			break;
-		case 14:
-			kb.setKind1("Mac");
-			kb.setKind2("12.1.2");
-			kb.setBrower("Safari");
-			kb.setTestKind("Selenide");
-			break;
-		case 15:
-			kb.setKind1("Mac");
-			kb.setKind2("76");
-			kb.setBrower("Chrome");
-			kb.setTestKind("Selenide");
-			break;
-		}
-
+	public void outputExls(KindBean kb, ArrayList<DataBean> dataList) {
 		String reportFileName = "Report_" + kb.getTestCaseId() + ".xlsx";
 
 		XSSFColor color1 = new XSSFColor(new java.awt.Color(64, 224, 208));
@@ -220,25 +165,27 @@ public class OutputReport {
 				// コメント設定
 				xlsInstance.createCell(style3, rowT, 0, 0, (String) dto.getMsg());
 
-	            // 图片处理
-	            ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
-	            
-	            String imgPath = System.getProperty("user.dir") + separator + Const.COPYPICFROM + separator + dto.getImgPath();
-	            
-	            java.awt.Image src = Toolkit.getDefaultToolkit().getImage(imgPath);
-	            BufferedImage bufferImg = this.toBufferedImage(src);//Image to BufferedImage
-	            ImageIO.write(bufferImg, "jpg", byteArrayOut);
-	            
+				// 图片处理
+				ByteArrayOutputStream byteArrayOut = new ByteArrayOutputStream();
+
+				String imgPath = System.getProperty("user.dir") + separator + Const.COPYPICFROM + separator
+						+ dto.getImgPath();
+
+				java.awt.Image src = Toolkit.getDefaultToolkit().getImage(imgPath);
+				BufferedImage bufferImg = this.toBufferedImage(src);// Image to BufferedImage
+				ImageIO.write(bufferImg, "jpg", byteArrayOut);
+
 				XSSFDrawing patriarch = sheet.createDrawingPatriarch();
 
-				XSSFClientAnchor anchor = new XSSFClientAnchor(100, 100, 255, 255, 1, rowIndex + 2, 1 + Const.PICWIDTH,
-						rowIndex + 2 + Const.PICHEIGHT);
+				XSSFClientAnchor anchor = new XSSFClientAnchor(100, 100, 255, 255, 1, rowIndex + 2, 1 + kb.getWidth(),
+						rowIndex + 2 + kb.getHeight());
 
 //				anchor.setAnchorType(3);
 
-				rowIndex = rowIndex + Const.PICHEIGHT;	
-				
-				patriarch.createPicture(anchor, wb.addPicture(byteArrayOut.toByteArray(), XSSFWorkbook.PICTURE_TYPE_JPEG));
+				rowIndex = rowIndex + kb.getHeight();
+
+				patriarch.createPicture(anchor,
+						wb.addPicture(byteArrayOut.toByteArray(), XSSFWorkbook.PICTURE_TYPE_JPEG));
 			}
 
 			//

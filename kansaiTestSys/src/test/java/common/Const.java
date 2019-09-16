@@ -2,16 +2,7 @@
 
 public class Const {
 	public Const() {
-
 	}
-
-	public static final String COPYPICFROM = "IMG";
-
-//	public static final int PICWIDTH = 18;
-	public static final int PICWIDTH = 22;
-
-//	public static final int PICHEIGHT = 134;
-	public static final int PICHEIGHT = 57;
 
 	// 1 - Android 5.0
 	// 2 - Android 6.0
@@ -28,6 +19,17 @@ public class Const {
 	// 13 - Win10-Edge
 	// 14 - Mac-Safari
 	// 15 - Mac-Chrome
-	public static final int TESTKIND = 14;
+	public static final int TESTKIND = 2;
+
+	//picture dictory
+	public static final String COPYPICFROM = "IMG";
+
+	//mobile picture width and height
+	public static final int MOBILE_PICWIDTH = 12;
+	public static final int MOBILE_PICHEIGHT = 73;
+	
+	//web picture width and height
+	public static final int WEB_PICWIDTH = 22;
+	public static final int WEB_PICHEIGHT = 57;
 
 }
