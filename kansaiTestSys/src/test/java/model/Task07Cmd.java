@@ -1,8 +1,7 @@
 package model;
 
-import cases.task07.mobile.s01.CaseS01_001;
-import cases.task07.mobile.s01.CaseS01_002;
-import cases.task07.mobile.s01.CaseS01_004;
+import cases.task07.mobile.s01.*;
+
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
 
@@ -26,7 +25,7 @@ public class Task07Cmd {
 
 		// S01-1-3 QsQ
 		kb.setTestCaseId("S01-1-3");
-		new CaseS01_004().action(driver, kb);
+		new CaseS01_003().action(driver, kb);
 
 		// S01-1-4 QsQ
 		kb.setTestCaseId("S01-1-4");
@@ -34,27 +33,27 @@ public class Task07Cmd {
 
 		// S01-1-5 QsQ
 		kb.setTestCaseId("S01-1-5");
-		new CaseS01_004().action(driver, kb);
+		new CaseS01_005().action(driver, kb);
 
 		// S01-1-6 QsQ
 		kb.setTestCaseId("S01-1-6");
-		new CaseS01_001().action(driver, kb);
+		new CaseS01_006().action(driver, kb);
 
 		// S01-1-7 QsQ
 		kb.setTestCaseId("S01-1-7");
-		new CaseS01_002().action(driver, kb);
+		new CaseS01_007().action(driver, kb);
 
 		// S01-1-8 QsQ
 		kb.setTestCaseId("S01-1-8");
-		new CaseS01_004().action(driver, kb);
+		new CaseS01_008().action(driver, kb);
 
 		// S01-1-9 QsQ
 		kb.setTestCaseId("S01-1-9");
-		new CaseS01_004().action(driver, kb);
+		new CaseS01_009().action(driver, kb);
 
 		// S01-1-10 QsQ
 		kb.setTestCaseId("S01-1-10");
-		new CaseS01_004().action(driver, kb);
+		new CaseS01_010().action(driver, kb);
 
 	}
 }
