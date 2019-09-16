@@ -12,10 +12,9 @@ import pages.mobile.IOSHomePage;
  * @date:2019-09-16
  * */
 public class CaseS01_001 extends TXCase {
-	public void action(AppiumDriver driver, KindBean kb,DataBean dataBean) throws Exception {
-		dataBean.setMsg("「現在のご契約状況」ラベルを確認する。");
+	public void action(AppiumDriver driver, KindBean kb) throws Exception {
 		IOSHomePage s1 = new IOSHomePage(driver);
-		s1.currentContractConditions(dataBean.getMsg());
+		s1.currentContractConditions("「現在のご契約状況」ラベルを確認する。");
 		new OutputReport().outputExls(kb, CaseS01_001.DATALIST);
 	}
 }

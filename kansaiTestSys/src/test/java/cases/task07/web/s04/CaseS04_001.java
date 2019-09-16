@@ -11,10 +11,12 @@ public class CaseS04_001 extends TXCase {
 	 * @date:2019-09-11
 	 * */
 	public void action(KindBean kb) throws Exception {
-		ChromeHomePage chp = new ChromeHomePage();
-		chp.setUserId("test");
-		chp.setPassword("test");
-		chp.okBtnClick();
+		ChromeHomePage pageObj = new ChromeHomePage();
+		
+		pageObj.setUserId("test");
+		pageObj.setPassword("test");
+		pageObj.okBtnClick();
+		
 		new OutputReport().outputExls(kb, CaseS04_001.DATALIST);
 	}
 }

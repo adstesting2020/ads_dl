@@ -30,8 +30,11 @@ public class IOSHomePage {
 	public void currentContractConditions(String msg) {
 		File screenShot = driver.getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "currentContractConditions.jpg"));
-			CaseS01_001.setDataInfo(msg, "currentContractConditions.jpg");
+			String imgName = "currentContractConditions.jpg";
+			
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + imgName));
+			
+			CaseS01_001.setDataInfo(msg, imgName);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
