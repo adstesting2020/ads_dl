@@ -1,6 +1,16 @@
 package model;
 
 import cases.task07.mobile.s01.*;
+import cases.task07.mobile.s02.CaseS02_006;
+import cases.task07.mobile.s02.CaseS02_007;
+import cases.task07.mobile.s02.CaseS02_008;
+import cases.task07.mobile.s02.CaseS02_009;
+import cases.task07.mobile.s02.CaseS02_010;
+import cases.task07.mobile.s02.CaseS02_011;
+import cases.task07.mobile.s02.CaseS02_012;
+import cases.task07.mobile.s02.CaseS02_013;
+import cases.task07.mobile.s02.CaseS02_014;
+import cases.task07.mobile.s02.CaseS02_015;
 import cases.task07.mobile.s02.CaseS02_016;
 import cases.task07.mobile.s02.CaseS02_017;
 import cases.task07.mobile.s02.CaseS02_018;
@@ -64,6 +74,46 @@ public class Task07Cmd {
 		// S01-1-10 QsQ
 		kb.setTestCaseId("S01-1-10");
 		new CaseS01_004().action(driver, kb);
+		
+		// S02-1-7 LjY
+		kb.setTestCaseId("S02-1-6");
+		new CaseS02_006().action(driver, kb);
+
+		// S02-1-7 LjY
+		kb.setTestCaseId("S02-1-7");
+		new CaseS02_007().action(driver, kb);
+
+		// S02-1-8 LjY
+		kb.setTestCaseId("S02-1-8");
+		new CaseS02_008().action(driver, kb);
+		
+		// S02-1-9 LjY
+		kb.setTestCaseId("S02-1-9");
+		new CaseS02_009().action(driver, kb);
+
+		// S02-1-10 LjY
+		kb.setTestCaseId("S02-1-10");
+		new CaseS02_010().action(driver, kb);
+
+		// S02-1-11 LjY
+		kb.setTestCaseId("S02-1-11");
+		new CaseS02_011().action(driver, kb);
+		
+		// S02-1-12 LjY
+		kb.setTestCaseId("S02-1-12");
+		new CaseS02_012().action(driver, kb);
+		
+		// S02-1-13 LjY
+		kb.setTestCaseId("S02-1-13");
+		new CaseS02_013().action(driver, kb);
+
+		// S02-1-14 LjY
+		kb.setTestCaseId("S02-1-14");
+		new CaseS02_014().action(driver, kb);
+
+		// S02-1-15 LjY
+		kb.setTestCaseId("S02-1-15");
+		new CaseS02_015().action(driver, kb);
 		
 		// S02-1-16 ZhN
 		kb.setTestCaseId("S02-1-16");

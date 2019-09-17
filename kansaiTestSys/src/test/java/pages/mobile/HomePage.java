@@ -334,8 +334,9 @@ public class HomePage {
 		driver.findElementByXPath("/html/body/div[18]/div").click();
 		File screenShot = driver.getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "currentContractConditions.jpg"));
-			CaseS02_008.setDataInfo(msg, "currentContractConditions.jpg");
+			String imgName = "currentContractConditions.jpg";
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + imgName));
+			CaseS02_008.setDataInfo(msg, imgName);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -350,8 +351,9 @@ public class HomePage {
 		driver.findElementByXPath("//*[@id=\"Container\"]/form/section/div[2]/div/div[4]/label[1]").click();
 		File screenShot = driver.getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "currentContractConditions.jpg"));
-			CaseS02_013.setDataInfo(msg, "currentContractConditions.jpg");
+			String imgName="currentContractConditions.jpg";
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + imgName));
+			CaseS02_013.setDataInfo(msg, imgName);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
