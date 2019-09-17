@@ -5,7 +5,7 @@ import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
 import model.ReportCmd;
-import pages.mobile.IOSHomePage;
+import pages.mobile.HomePage;
 
 
 /*
@@ -16,7 +16,7 @@ import pages.mobile.IOSHomePage;
 public class CaseS01_022 extends TXCase {
 	public void action(AppiumDriver driver, KindBean kb,DataBean dataBean) throws Exception {
 		dataBean.setMsg("「日程」入力欄に'01'を入力する。");
-		IOSHomePage s1 = new IOSHomePage(driver);
+		HomePage s1 = new HomePage(driver);
 		s1.clickElectricContractKansaiElectricPower();
 		s1.clickGasContractOtherCompanies();
 		s1.clickSelectCustomerNumber();

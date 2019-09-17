@@ -4,11 +4,11 @@ import common.TXCase;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
 import model.ReportCmd;
-import pages.mobile.IOSHomePage;
+import pages.mobile.HomePage;
 
 public class CaseS03_006 extends TXCase {
 	public void action(AppiumDriver driver, KindBean kb) throws Exception {
-		IOSHomePage pageObj = new IOSHomePage(driver);
+		HomePage pageObj = new HomePage(driver);
 
 		String msg = "「お客さま番号を入力する」ラジオボタンを選択する。";
 		

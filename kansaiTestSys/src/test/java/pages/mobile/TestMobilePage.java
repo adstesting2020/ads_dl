@@ -13,11 +13,11 @@ import cases.task07.mobile.s01.CaseS01_001;
 import cases.task07.web.s04.CaseS04_001;
 import io.appium.java_client.AppiumDriver;
 
-public class TestMobile {
+public class TestMobilePage {
 	
 	private AppiumDriver driver;
 
-	public TestMobile(AppiumDriver _driver) {
+	public TestMobilePage(AppiumDriver _driver) {
 		this.driver = _driver;
 	}
 

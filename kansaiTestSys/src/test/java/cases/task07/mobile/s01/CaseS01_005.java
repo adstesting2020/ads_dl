@@ -5,7 +5,7 @@ import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
 import model.ReportCmd;
-import pages.mobile.IOSHomePage;
+import pages.mobile.HomePage;
 
 /*
  * @author:Qin.SQ
@@ -14,7 +14,7 @@ import pages.mobile.IOSHomePage;
 public class CaseS01_005 extends TXCase {
 	public void action(AppiumDriver driver, KindBean kb) throws Exception {
 
-		IOSHomePage s1 = new IOSHomePage(driver);
+		HomePage s1 = new HomePage(driver);
 		s1.currentContractConditions("「電気のご契約」ラベル横の必須マークを確認する。");
 		new ReportCmd().outputExls(kb, CaseS01_005.DATALIST);
 	}

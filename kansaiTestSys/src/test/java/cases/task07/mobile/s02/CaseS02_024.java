@@ -4,7 +4,7 @@ import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
 import model.ReportCmd;
-import pages.mobile.IOSHomePage;
+import pages.mobile.HomePage;
 
 public class CaseS02_024 {
 	/*
@@ -13,7 +13,7 @@ public class CaseS02_024 {
 	 * */
 	public void action(AppiumDriver driver, KindBean kb,DataBean dataBean) throws Exception {
 		dataBean.setMsg("「番号」入力欄に\"5122\"-\"130533\"を入力する。");
-		IOSHomePage s1 = new IOSHomePage(driver);
+		HomePage s1 = new HomePage(driver);
 		s1.kansaiElectricPower();
 		s1.setOtherShrines2();
 		s1.enterCustomerNumber();

@@ -5,7 +5,7 @@ import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
 import model.ReportCmd;
-import pages.mobile.IOSHomePage;
+import pages.mobile.HomePage;
 
 /*
  * @author:Qin.SQ
@@ -14,7 +14,7 @@ import pages.mobile.IOSHomePage;
 public class CaseS01_007 extends TXCase {
 	public void action(AppiumDriver driver, KindBean kb) throws Exception {
 
-		IOSHomePage s1 = new IOSHomePage(driver);
+		HomePage s1 = new HomePage(driver);
 		s1.currentContractConditions("「関西電力」ラジオボタンを確認する。");
 		new ReportCmd().outputExls(kb, CaseS01_007.DATALIST);
 	}

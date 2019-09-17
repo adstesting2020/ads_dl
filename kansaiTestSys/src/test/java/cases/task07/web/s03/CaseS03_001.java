@@ -3,7 +3,7 @@ package cases.task07.web.s03;
 import common.TXCase;
 import dto.KindBean;
 import model.ReportCmd;
-import pages.web.ChromeHomePage;
+import pages.web.HomePage;
 
 public class CaseS03_001 extends TXCase {
 	/*
@@ -11,7 +11,7 @@ public class CaseS03_001 extends TXCase {
 	 * @date:2019-09-11
 	 * */
 	public void action(KindBean kb) throws Exception {
-		ChromeHomePage chp = new ChromeHomePage();
+		HomePage chp = new HomePage();
 		chp.setUserId("test");
 		chp.setPassword("test");
 		chp.okBtnClick();

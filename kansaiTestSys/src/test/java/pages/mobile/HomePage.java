@@ -16,11 +16,11 @@ import common.SlideScreen;
 import dto.DataBean;
 import io.appium.java_client.AppiumDriver;
 
-public class IOSHomePage {
+public class HomePage {
 	private AppiumDriver driver;
 	private DataBean dataBean;
 
-	public IOSHomePage(AppiumDriver _driver) {
+	public HomePage(AppiumDriver _driver) {
 		this.driver = _driver;
 	}
 
@@ -66,21 +66,6 @@ public class IOSHomePage {
 			e.printStackTrace();
 		}
 	}
-
-//	public void test123() {
-//		ElementBean eb = new ElementBean();
-//		eb.setIdAtr("");
-//		
-//		testFunc(eb);
-//	}	
-//	
-//	public void testFunc(ElementBean eb) {
-//		if (!"".equals(eb.getIdAtr())) {
-//			driver.findElementByXPath(eb.getIdAtr()).click();
-//		} else if (!"".equals(eb.getNameAtr())) {
-//			driver.findElementByName(eb.getNameAtr()).click();
-//		}
-//	}
 
 	/**
 	 * 点击他社按钮
@@ -610,4 +595,19 @@ public class IOSHomePage {
 			e.printStackTrace();
 		}
 	}
+
+//	public void test123() {
+//		ElementBean eb = new ElementBean();
+//		eb.setIdAtr("");
+//		
+//		testFunc(eb);
+//	}	
+//	
+//	public void testFunc(ElementBean eb) {
+//		if (!"".equals(eb.getIdAtr())) {
+//			driver.findElementByXPath(eb.getIdAtr()).click();
+//		} else if (!"".equals(eb.getNameAtr())) {
+//			driver.findElementByName(eb.getNameAtr()).click();
+//		}
+//	}
 }

@@ -4,13 +4,13 @@ import common.TXCase;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
 import model.ReportCmd;
-import pages.mobile.IOSHomePage;
+import pages.mobile.HomePage;
 
 public class CaseS03_005 extends TXCase{
 	public void action(AppiumDriver driver, KindBean kb) throws Exception {
 		String msg = "「電気のご契約」-「関西電力」ラジオボタンを選択する。\r\n「ガスのご契約」-「他社（関西電力以外）」ラジオボタンを選択する。";
 		
-		IOSHomePage pageObj = new IOSHomePage(driver);
+		HomePage pageObj = new HomePage(driver);
 		pageObj.setKansaiElectricPower(msg);
 		pageObj.setOtherShrines1(msg);
 		

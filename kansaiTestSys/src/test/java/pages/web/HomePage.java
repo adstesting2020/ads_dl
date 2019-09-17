@@ -9,7 +9,7 @@ import cases.task07.web.s04.*;
 
 
 
-public class ChromeHomePage {
+public class HomePage {
 	
 	public void setUserId(String value) throws IOException {
 		$("#j_username").setValue(value);
