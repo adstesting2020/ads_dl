@@ -1,7 +1,6 @@
 package cases.task07.mobile.s03;
 
 import common.TXCase;
-import dto.DataBean;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
 import model.ReportCmd;
