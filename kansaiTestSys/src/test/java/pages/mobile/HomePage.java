@@ -78,7 +78,6 @@ public class HomePage {
 			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "setOtherShrines.jpg"));
 			CaseS03_001.setDataInfo(msg, "setOtherShrines.jpg");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -92,7 +91,6 @@ public class HomePage {
 			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "clickTest.jpg"));
 			CaseS01_001.setDataInfo(msg, "setOtherShrines.jpg");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -370,7 +368,6 @@ public class HomePage {
 			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "setOtherShrines2.jpg"));
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -385,7 +382,6 @@ public class HomePage {
 			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "kansaiElectricPower2.jpg"));
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -402,7 +398,6 @@ public class HomePage {
 			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "enterCustomerNumber.jpg"));
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -417,7 +412,6 @@ public class HomePage {
 			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "enter.jpg"));	
 			CaseS02_016.setDataInfo(msg, "enter2.jpg");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -476,10 +470,10 @@ public class HomePage {
 		Thread.sleep(2000);
 		File screenShot = driver.getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "enter2.jpg"));
-			CaseS02_016.setDataInfo(msg, "enter2.jpg");
+			String imgName = "enter2.jpg";
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + imgName));
+			CaseS02_022.setDataInfo(msg, imgName);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -495,7 +489,6 @@ public class HomePage {
 			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "kansaiElectricPower.jpg"));
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -514,7 +507,6 @@ public class HomePage {
 			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "setKansaiElectricPower.jpg"));
 			CaseS03_002.setDataInfo(msg, "setKansaiElectricPower.jpg");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -551,7 +543,6 @@ public class HomePage {
 			CaseS03_003.setDataInfo(msg, "setOtherShrines1.jpg");
 			CaseS03_005.setDataInfo(msg, "setOtherShrines1.jpg");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -571,7 +562,6 @@ public class HomePage {
 			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "setKansaiElectricPower1.jpg"));
 			CaseS03_004.setDataInfo(msg, "setKansaiElectricPower1.jpg");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -591,23 +581,9 @@ public class HomePage {
 			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "setemployee.jpg"));
 			CaseS03_006.setDataInfo(msg, "setemployee.jpg");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
-//	public void test123() {
-//		ElementBean eb = new ElementBean();
-//		eb.setIdAtr("");
-//		
-//		testFunc(eb);
-//	}	
-//	
-//	public void testFunc(ElementBean eb) {
-//		if (!"".equals(eb.getIdAtr())) {
-//			driver.findElementByXPath(eb.getIdAtr()).click();
-//		} else if (!"".equals(eb.getNameAtr())) {
-//			driver.findElementByName(eb.getNameAtr()).click();
-//		}
-//	}
+
 }
