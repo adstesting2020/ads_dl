@@ -18,7 +18,7 @@ public class CaseS01_021 extends TXCase {
 		s1.clickElectricContractKansaiElectricPower();
 		s1.clickGasContractOtherCompanies();
 		s1.clickSelectCustomerNumber();
-		s1.ConfirmNumberLabel("「番号」ラベルを確認する。");
+		s1.ConfirmNumberLabel("「番号」ラベルを確認する。"); 
 		new ReportCmd().outputExls(kb, CaseS01_021.DATALIST);
 	}
 }
