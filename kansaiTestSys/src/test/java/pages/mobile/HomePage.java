@@ -409,8 +409,9 @@ public class HomePage {
 		driver.findElementByXPath("/html/body/div[18]/div").click();;
 		File screenShot = driver.getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + "enter.jpg"));	
-			CaseS02_016.setDataInfo(msg, "enter2.jpg");
+			String imgName="enter.jpg";
+			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + imgName));	
+			CaseS02_016.setDataInfo(msg, imgName);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import cases.task07.mobile.s02.CaseS02_016;
 import common.Const;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
@@ -132,9 +133,12 @@ public class TestMobileAction {
 			driver.get("http://www.test-arts.cn/isms/");
 			Thread.sleep(2000);
 
-			Task07Cmd cmd = new Task07Cmd(driver, kb);
+			//Task07Cmd cmd = new Task07Cmd(driver, kb);
 
-			cmd.testTask07();
+			//cmd.testTask07();
+			
+			kb.setTestCaseId("S02-1-16");
+			new CaseS02_016().action(driver, kb);
 			
 		} catch (Exception ex) {
 			ex.printStackTrace();
