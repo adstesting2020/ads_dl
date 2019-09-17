@@ -9,10 +9,9 @@ import pages.mobile.IOSHomePage;
 
 
 public class CaseS03_002 extends TXCase{
-	public void action(AppiumDriver driver, KindBean kb,DataBean dataBean) throws Exception {
-		dataBean.setMsg("「電気のご契約」-「関西電力」ラジオボタンを選択する");
-		IOSHomePage s3 = new IOSHomePage(driver);
-		s3.setKansaiElectricPower(dataBean.getMsg());
+	public void action(AppiumDriver driver, KindBean kb) throws Exception {
+		IOSHomePage pageObj = new IOSHomePage(driver);
+		pageObj.setKansaiElectricPower("「電気のご契約」-「関西電力」ラジオボタンを選択する");
 		new ReportCmd().outputExls(kb, CaseS03_002.DATALIST);
 	}
 }
