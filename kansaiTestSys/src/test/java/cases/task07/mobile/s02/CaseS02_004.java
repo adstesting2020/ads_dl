@@ -12,8 +12,8 @@ public class CaseS02_004 extends TXCase {
 	 * @date:2019-09-11
 	 * */
 	public void action(AppiumDriver driver, KindBean kb) throws Exception {
-		HomePage s1 = new HomePage(driver);
-		s1.confirmS02004("「電気のご契約」ラベル横のアイコンを確認する。");
+		HomePage hpObj = new HomePage(driver);
+		hpObj.confirmS02004("「電気のご契約」ラベル横のアイコンを確認する。");
 		new ReportCmd().outputExls(kb, CaseS02_004.DATALIST);
 	}
 }

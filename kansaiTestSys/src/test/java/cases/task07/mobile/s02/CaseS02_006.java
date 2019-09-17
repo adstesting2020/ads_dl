@@ -13,8 +13,8 @@ public class CaseS02_006 extends TXCase {
 	 * @date:2019-09-16
 	 * */
 	public void action(AppiumDriver driver, KindBean kb) throws Exception {
-		HomePage pageObj = new HomePage(driver);
-		pageObj.currentContractConditions("「他社（関西電力以外）」ラジオボタンを確認する。");
+		HomePage hpObj = new HomePage(driver);
+		hpObj.currentContractConditions("「他社（関西電力以外）」ラジオボタンを確認する。");
 		new ReportCmd().outputExls(kb, CaseS01_001.DATALIST);
 	}
 }

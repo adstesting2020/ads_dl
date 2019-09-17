@@ -8,7 +8,7 @@ import pages.mobile.HomePage;
 
 public class CaseS01_017 extends TXCase {
 	public void action(AppiumDriver driver, KindBean kb) throws Exception {
-		HomePage s1 = new HomePage(driver);
+		HomePage hpObj = new HomePage(driver);
 
 		new ReportCmd().outputExls(kb, CaseS01_017.DATALIST);
 	}

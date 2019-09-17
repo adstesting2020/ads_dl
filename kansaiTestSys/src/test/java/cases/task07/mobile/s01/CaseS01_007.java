@@ -13,9 +13,8 @@ import pages.mobile.HomePage;
  * */
 public class CaseS01_007 extends TXCase {
 	public void action(AppiumDriver driver, KindBean kb) throws Exception {
-
-		HomePage s1 = new HomePage(driver);
-		s1.currentContractConditions("「関西電力」ラジオボタンを確認する。");
+		HomePage hpObj = new HomePage(driver);
+		hpObj.currentContractConditions("「関西電力」ラジオボタンを確認する。");
 		new ReportCmd().outputExls(kb, CaseS01_007.DATALIST);
 	}
 }

@@ -6,7 +6,6 @@ import io.appium.java_client.AppiumDriver;
 import model.ReportCmd;
 import pages.mobile.HomePage;
 
-
 /*
  * @author:Liu.JW
  * @date:2019-09-16
@@ -14,11 +13,11 @@ import pages.mobile.HomePage;
 
 public class CaseS01_025 extends TXCase {
 	public void action(AppiumDriver driver, KindBean kb) throws Exception {
-		HomePage s1 = new HomePage(driver);
-		s1.clickElectricContractKansaiElectricPower();
-		s1.clickGasContractOtherCompanies();
-		s1.clickSelectCustomerNumber();
-		s1.ConfirmConfirmLabel("「確定」ボタンを確認する。");
+		HomePage hpObj = new HomePage(driver);
+		hpObj.clickElectricContractKansaiElectricPower();
+		hpObj.clickGasContractOtherCompanies();
+		hpObj.clickSelectCustomerNumber();
+		hpObj.ConfirmConfirmLabel("「確定」ボタンを確認する。");
 		new ReportCmd().outputExls(kb, CaseS01_025.DATALIST);
 	}
 }

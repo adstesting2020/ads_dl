@@ -13,9 +13,8 @@ import pages.mobile.HomePage;
  * */
 public class CaseS01_010 extends TXCase {
 	public void action(AppiumDriver driver, KindBean kb) throws Exception {
-
-		HomePage s1 = new HomePage(driver);
-		s1.currentContractConditions("「ガスのご契約」ラベル横の必須マークを確認する。");
+		HomePage hpObj = new HomePage(driver);
+		hpObj.currentContractConditions("「ガスのご契約」ラベル横の必須マークを確認する。");
 		new ReportCmd().outputExls(kb, CaseS01_010.DATALIST);
 	}
 }

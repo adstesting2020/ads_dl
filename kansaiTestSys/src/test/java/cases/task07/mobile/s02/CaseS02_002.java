@@ -12,8 +12,8 @@ public class CaseS02_002 extends TXCase {
 	 * @date:2019-09-11
 	 * */
 	public void action(AppiumDriver driver, KindBean kb) throws Exception {
-		HomePage s1 = new HomePage(driver);
-		s1.confirmS02002("「契約変更を希望されるご住所の、現在の電気とガスのご契約先を選択してください。」ラベルを確認する。");
+		HomePage hpObj = new HomePage(driver);
+		hpObj.confirmS02002("「契約変更を希望されるご住所の、現在の電気とガスのご契約先を選択してください。」ラベルを確認する。");
 		new ReportCmd().outputExls(kb, CaseS02_002.DATALIST);
 	}
 }
