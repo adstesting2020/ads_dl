@@ -12,7 +12,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.testng.ScreenShooter;
 
-import cases.task07.web.s04.*;
+import project.sw.cases.task07.web.s04.*;
 import common.Const;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;

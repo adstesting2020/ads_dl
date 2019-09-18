@@ -1,43 +1,57 @@
 package dto;
 
-public class ElementBean {
-	private String idAtr;
-	private String nameAtr;
-	private String classNameAtr;
-	private String xpathAtr;
+import common.BaseElement;
+import io.appium.java_client.AppiumDriver;
 
-	public ElementBean() {
+public class ElementBean extends BaseElement {
+	private AppiumDriver driver;
+
+	public ElementBean(AppiumDriver _driver) {
+		super(_driver);
+		this.driver = _driver;
 	}
 
-	public String getIdAtr() {
-		return idAtr;
+	private String title;// 标题
+	private String tab;// 标签
+	private String attr;// 定位属性值
+	private int minLen;
+	private int mzxLen;
+
+	public String getTitle() {
+		return title;
 	}
 
-	public void setIdAtr(String idAtr) {
-		this.idAtr = idAtr;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
-	public String getNameAtr() {
-		return nameAtr;
+	public String getTab() {
+		return tab;
 	}
 
-	public void setNameAtr(String nameAtr) {
-		this.nameAtr = nameAtr;
+	public void setTab(String tab) {
+		this.tab = tab;
 	}
 
-	public String getClassNameAtr() {
-		return classNameAtr;
+	public String getAttr() {
+		return attr;
 	}
 
-	public void setClassNameAtr(String classNameAtr) {
-		this.classNameAtr = classNameAtr;
+	public void setAttr(String attr) {
+		this.attr = attr;
 	}
 
-	public String getXpathAtr() {
-		return xpathAtr;
+	/*
+	 * 鼠标点击事件
+	 **/
+	public void click() {
+		driver.findElementByXPath(this.attr).click();
 	}
 
-	public void setXpathAtr(String xpathAtr) {
-		this.xpathAtr = xpathAtr;
+	/*
+	 * 键盘设值事件
+	 **/
+	public void sendKeys(String val) {
+		driver.findElementByXPath(this.attr).sendKeys(val);
 	}
 }
