@@ -1,10 +1,10 @@
 package project.isms.cases.task01.web.s04;
 
-import common.TXCase;
+import dto.BaseCase;
 import dto.KindBean;
 import project.sw.pages.web.HomePage;
 
-public class CaseS04_001 extends TXCase {
+public class CaseS04_001 extends BaseCase {
 	/*
 	 * @author:Qin.SQ
 	 * @date:2019-09-11

@@ -1,7 +1,7 @@
 package project.sw.cases.task07.mobile.s01;
 
-import common.TXCase;
-import dto.ElementBean;
+import dto.BaseCase;
+import dto.ElementMobile;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
 
@@ -9,23 +9,23 @@ import io.appium.java_client.AppiumDriver;
  * @author:Qin.SQ
  * @date:2019-09-16
  * */
-public class CaseS01_001 extends TXCase {
+public class CaseS01_001 extends BaseCase {
 
 	public void action(AppiumDriver driver, KindBean kb) throws Exception {
 		//
-		ElementBean userIdElem = new ElementBean(driver);
+		ElementMobile userIdElem = new ElementMobile(driver);
 		userIdElem.setTab("用户名");
 		userIdElem.setIdAttr("//*[@id=\\\"Container\\\"]/form/section/div[2]/div/div[1]/label[1]/input");
 		userIdElem.sendKeys("test");
 
 		//
-		ElementBean pswElem = new ElementBean(driver);
+		ElementMobile pswElem = new ElementMobile(driver);
 		pswElem.setTab("密码");
 		pswElem.setNameAttr("//*[@id=\\\"Container\\\"]/form/section/div[2]/div/div[1]/label[2]/input");
 		pswElem.sendKeys("test");
 
 		//
-		ElementBean okBtnElem = new ElementBean(driver);
+		ElementMobile okBtnElem = new ElementMobile(driver);
 		okBtnElem.setTab("登录");
 		okBtnElem.setXpathAttr("//*[@id=\\\"Container\\\"]/form/section/div[2]/div/div[1]/label[2]/input");
 		okBtnElem.click();

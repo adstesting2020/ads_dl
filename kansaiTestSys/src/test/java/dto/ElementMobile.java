@@ -2,10 +2,9 @@ package dto;
 
 import org.openqa.selenium.WebElement;
 
-import common.BaseElement;
 import io.appium.java_client.AppiumDriver;
 
-public class ElementBean extends BaseElement {
+public class ElementMobile extends BaseElementMobile {
 	private AppiumDriver driver;
 	
 	private String title;// 标题
@@ -16,8 +15,9 @@ public class ElementBean extends BaseElement {
 	private String nameAttr;// 通过name
 	private String xpathAttr;// 通过Xpath
 	private String linkTextAttr;// 通过链接文字
+	
 
-	public ElementBean(AppiumDriver _driver) {
+	public ElementMobile(AppiumDriver _driver) {
 		super(_driver);
 		this.driver = _driver;
 	}

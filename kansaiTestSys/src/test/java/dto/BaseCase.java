@@ -1,4 +1,4 @@
-package common;
+package dto;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -26,15 +26,17 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import common.Const;
+import common.ExcelUtil;
 import dto.DataBean;
 import dto.KindBean;
 
-public class TXCase {
+public class BaseCase {
 	private String separator = java.io.File.separator;
 	private ArrayList reportList = new ArrayList();
 	public static ArrayList<DataBean> DATALIST = new ArrayList<DataBean>();
 
-	public TXCase() {
+	public BaseCase() {
 		System.out.println("data list clear");
 		DATALIST.clear();
 	}

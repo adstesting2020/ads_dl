@@ -1,11 +1,11 @@
 package project.sw.cases.task07.mobile.s02;
 
-import common.TXCase;
+import dto.BaseCase;
 import dto.KindBean;
 import io.appium.java_client.AppiumDriver;
 import project.sw.pages.mobile.HomePage;
 
-public class CaseS02_002 extends TXCase {
+public class CaseS02_002 extends BaseCase {
 	/*
 	 * @author:Liu.JW
 	 * @date:2019-09-11

@@ -9,7 +9,6 @@ import org.openqa.selenium.OutputType;
 import project.sw.cases.task07.mobile.s01.*;
 import project.sw.cases.task07.mobile.s02.*;
 
-import common.SlideScreen;
 import dto.DataBean;
 import io.appium.java_client.AppiumDriver;
 import project.sw.cases.task07.mobile.s01.CaseS01_001;
