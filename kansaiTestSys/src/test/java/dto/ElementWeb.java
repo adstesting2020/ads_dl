@@ -1,8 +1,12 @@
 package dto;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByName;
 import org.openqa.selenium.WebElement;
 
-import io.appium.java_client.AppiumDriver;
+import com.codeborne.selenide.SelenideElement;
+
+import static com.codeborne.selenide.Selenide.$;
 
 public class ElementWeb extends BaseElementWeb {
 	private String title;// 标题
@@ -13,9 +17,14 @@ public class ElementWeb extends BaseElementWeb {
 	private String nameAttr;// 通过name
 	private String xpathAttr;// 通过Xpath
 	private String linkTextAttr;// 通过链接文字
-	
 
 	public ElementWeb() {
+		this.title = "";
+		this.tab = "";
+		this.idAttr = "";
+		this.nameAttr = "";
+		this.xpathAttr = "";
+		this.linkTextAttr = "";
 	}
 
 	public String getTitle() {
@@ -82,21 +91,22 @@ public class ElementWeb extends BaseElementWeb {
 		this.linkTextAttr = linkTextAttr;
 	}
 
-	
 	/**
 	 * 定位方式
+	 * @return 
+	 * 
 	 * @return
 	 */
-	private WebElement findElementBy() {
-//		if (!"".equals(idAttr)) {
-//			return driver.findElementById(idAttr);
-//		} else if (!"".equals(nameAttr)) {
-//			return driver.findElementByName(nameAttr);
-//		} else if (!"".equals(xpathAttr)) {
-//			return driver.findElementByXPath(xpathAttr);
-//		} else if (!"".equals(linkTextAttr)) {
-//			return driver.findElementByLinkText(linkTextAttr);
-//		}
+	private SelenideElement findElementBy() {
+		if (!"".equals(idAttr)) {
+			return $(idAttr);
+		} else if (!"".equals(nameAttr)) {
+			return $(By.name(nameAttr));
+		} else if (!"".equals(xpathAttr)) {
+			return $(By.xpath(xpathAttr));
+		} else if (!"".equals(linkTextAttr)) {
+			return $(By.linkText(linkTextAttr));
+		}
 		return null;
 	}
 

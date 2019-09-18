@@ -5,29 +5,37 @@ import static com.codeborne.selenide.Selenide.screenshot;
 
 import java.io.IOException;
 
+import dto.ElementWeb;
 import project.sw.cases.task07.web.s04.*;
 
 public class HomePage {
-	
+	public HomePage() {
+	}
+
+	ElementWeb userIdElem = new ElementWeb();
+	ElementWeb pswElem = new ElementWeb();
+	ElementWeb okBtnElem = new ElementWeb();
+
 	public void setUserId(String value) throws IOException {
-		$("#j_username").setValue(value);
-		screenshot("setUserId");
-		CaseS04_001.setDataInfo("setUserId sdsd sd s ds 111", "setUserId.png");
-
+		userIdElem.setTab("用户名");
+		userIdElem.setIdAttr("#j_username");
+		userIdElem.sendKeys("test");
 	}
 
-	public void setPassword(String value) throws IOException {
-		$("#j_password").setValue(value);
-		screenshot("setPassword");
-		CaseS04_001.setDataInfo("setUserId sdsd sd s ds 222", "setPassword.png");
+	public void setPassword(String value, String imgName) throws IOException {
+		pswElem.setTab("密码");
+		pswElem.setIdAttr("#j_password");
+		pswElem.sendKeys("test");
 
+		pswElem.screenShot(imgName);
 	}
 
-	public void okBtnClick() throws IOException {
-		$("#loginBtn").click(1, 1);
-		screenshot("okBtnClick");
-		CaseS04_001.setDataInfo("setUserId sdsd sd s ds 333", "okBtnClick.png");
+	public void okBtnClick(String imgName) throws IOException {
+		okBtnElem.setTab("登录");
+		okBtnElem.setIdAttr("#loginBtn");
+		okBtnElem.click();
 
+		okBtnElem.screenShot(imgName);
 	}
 
 }

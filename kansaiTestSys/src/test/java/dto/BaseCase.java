@@ -40,25 +40,25 @@ public class BaseCase {
 		System.out.println("data list clear");
 		DATALIST.clear();
 	}
-	
+
 	public static void setDataInfo(String msg, String img) {
 		DataBean data = new DataBean();
-		
+
 		data.setMsg(msg);
 		data.setImgPath(img);
-		
+
 		DATALIST.add(data);
 	}
-	
+
 	public void saveReportInfo(String msg, String img) {
 		DataBean data = new DataBean();
-		
+
 		data.setMsg(msg);
 		data.setImgPath(img);
-		
+
 		reportList.add(data);
 	}
-	
+
 	public void outputExls(KindBean kb) {
 		String reportFileName = "Report_" + kb.getTestCaseId() + ".xlsx";
 
@@ -134,6 +134,7 @@ public class BaseCase {
 				String imgPath = System.getProperty("user.dir") + separator + Const.COPYPICFROM + separator
 						+ dto.getImgPath();
 
+				System.out.println("imgPath-" + imgPath);
 				java.awt.Image src = Toolkit.getDefaultToolkit().getImage(imgPath);
 				BufferedImage bufferImg = this.toBufferedImage(src);// Image to BufferedImage
 				ImageIO.write(bufferImg, "jpg", byteArrayOut);

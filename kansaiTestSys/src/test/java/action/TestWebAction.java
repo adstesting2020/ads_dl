@@ -1,9 +1,7 @@
 package action;
 
-import static com.codeborne.selenide.Selenide.close;
 import static com.codeborne.selenide.Selenide.open;
-
-import java.net.URL;
+import static com.codeborne.selenide.Selenide.close;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -12,15 +10,12 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.testng.ScreenShooter;
 
-import project.sw.cases.task07.web.s04.*;
 import common.Const;
 import dto.KindBean;
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.ios.IOSDriver;
+
+import project.isms.cases.task01.web.s03.CaseS03_001;
 
 public class TestWebAction {
-	private AppiumDriver driver;
 	private KindBean kb;
 
 //	  1 - Win7-IE 
@@ -39,7 +34,7 @@ public class TestWebAction {
 		kb.setHeight(Const.WEB_PICHEIGHT);
 		
 		//
-		kb.setTestFlg("5");
+		kb.setTestFlg("7");
 
 		switch (Integer.parseInt(kb.getTestFlg())) {
 		case 1:
@@ -97,7 +92,7 @@ public class TestWebAction {
 	public void testIOS() throws Exception {
 		open("http://www.test-arts.cn/isms/");
 		kb.setTestCaseId("S04-1-1");
-		new CaseS04_001().action(kb);
+		new CaseS03_001().action(kb);
 		close();
 
 	}

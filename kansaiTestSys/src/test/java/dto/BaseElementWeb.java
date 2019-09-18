@@ -1,5 +1,7 @@
 package dto;
 
+import static com.codeborne.selenide.Selenide.screenshot;
+
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
@@ -76,11 +78,7 @@ public class BaseElementWeb {
 	}
 
 	public void screenShot(String imgName) {
-//		File screenShot = driver.getScreenshotAs(OutputType.FILE);
-//		try {
-//			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + imgName));
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+		
+		screenshot(imgName);
 	}
 }
