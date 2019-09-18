@@ -15,19 +15,19 @@ public class CaseS01_001 extends TXCase {
 		//
 		ElementBean userIdElem = new ElementBean(driver);
 		userIdElem.setTab("用户名");
-		userIdElem.setAttr("//*[@id=\\\"Container\\\"]/form/section/div[2]/div/div[1]/label[1]/input");
+		userIdElem.setIdAttr("//*[@id=\\\"Container\\\"]/form/section/div[2]/div/div[1]/label[1]/input");
 		userIdElem.sendKeys("test");
 
 		//
 		ElementBean pswElem = new ElementBean(driver);
 		pswElem.setTab("密码");
-		pswElem.setAttr("//*[@id=\\\"Container\\\"]/form/section/div[2]/div/div[1]/label[2]/input");
+		pswElem.setNameAttr("//*[@id=\\\"Container\\\"]/form/section/div[2]/div/div[1]/label[2]/input");
 		pswElem.sendKeys("test");
 
 		//
 		ElementBean okBtnElem = new ElementBean(driver);
 		okBtnElem.setTab("登录");
-		okBtnElem.setAttr("//*[@id=\\\"Container\\\"]/form/section/div[2]/div/div[1]/label[2]/input");
+		okBtnElem.setXpathAttr("//*[@id=\\\"Container\\\"]/form/section/div[2]/div/div[1]/label[2]/input");
 		okBtnElem.click();
 
 		//
