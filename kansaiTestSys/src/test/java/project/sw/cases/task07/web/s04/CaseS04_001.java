@@ -2,7 +2,6 @@ package project.sw.cases.task07.web.s04;
 
 import common.TXCase;
 import dto.KindBean;
-import model.ReportCmd;
 import project.sw.pages.web.HomePage;
 
 public class CaseS04_001 extends TXCase {
@@ -17,6 +16,6 @@ public class CaseS04_001 extends TXCase {
 		pageObj.setPassword("test");
 		pageObj.okBtnClick();
 		
-		new ReportCmd().outputExls(kb, CaseS04_001.DATALIST);
+//		new ReportCmd().outputExls(kb, CaseS04_001.DATALIST);
 	}
 }
