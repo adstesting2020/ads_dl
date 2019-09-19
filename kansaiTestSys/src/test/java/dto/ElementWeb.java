@@ -130,4 +130,11 @@ public class ElementWeb extends BaseElementWeb {
 	public void clear() {
 		findElementBy().clear();
 	}
+	
+	/*
+	 * 滑动到某个控件
+	 **/
+	public void scrollTo() {
+		findElementBy().scrollTo();
+	}
 }

@@ -4,18 +4,18 @@ import dto.BaseCase;
 import dto.KindBean;
 import project.sw.pages.web.HomePage;
 
-public class CaseS03_001 extends BaseCase {
+public class CaseS03_002 extends BaseCase {
 	/*
 	 * @author:Qin.SQ
 	 * @date:2019-09-11
 	 * */
 	public void action(KindBean kb) throws Exception {
 		HomePage cpObj = new HomePage();
-		cpObj.otherShrines1Click("otherShrines001");
+		cpObj.kansaiElectric1Click("kansaiElectric1002");
 		Thread.sleep(1000);
-		cpObj.kansaiElectric2Click("kansaiElectric2Click001");
-		saveReportInfo("既契約確認・エリア判定・申込みメニュー画面。", "kansaiElectric2Click001.png");
-		Thread.sleep(1000);
+		cpObj.otherShrines2Click("otherShrines2Click");
+		cpObj.idPasswordElemClick("idPasswordClick002");
+		saveReportInfo("既契約確認・エリア判定・申込みメニュー画面。", "idPasswordClick002.png");
 		super.outputExls(kb);
 	}
 }

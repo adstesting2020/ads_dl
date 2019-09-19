@@ -19,13 +19,13 @@ public class HomePage {
 	public void setUserId(String value) throws IOException {
 		userIdElem.setTab("用户名");
 		userIdElem.setIdAttr("#j_username");
-		userIdElem.sendKeys("test");
+		userIdElem.sendKeys(value);
 	}
 
 	public void setPassword(String value, String imgName) throws IOException {
 		pswElem.setTab("密码");
 		pswElem.setIdAttr("#j_password");
-		pswElem.sendKeys("test");
+		pswElem.sendKeys(value);
 
 		pswElem.screenShot(imgName);
 	}
