@@ -123,4 +123,11 @@ public class ElementWeb extends BaseElementWeb {
 	public void sendKeys(String val) {
 		findElementBy().sendKeys(val);
 	}
+	
+	/*
+	 * 清空
+	 **/
+	public void clear() {
+		findElementBy().clear();
+	}
 }
