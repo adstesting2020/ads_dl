@@ -10,7 +10,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import dto.ElementWeb;
-import project.sw.cases.task07.web.s04.*;
 
 public class HomePage {
 	private WebDriver webdriver;

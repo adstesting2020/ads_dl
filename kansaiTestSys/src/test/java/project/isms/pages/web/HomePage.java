@@ -6,7 +6,6 @@ import static com.codeborne.selenide.Selenide.screenshot;
 import java.io.IOException;
 
 import dto.ElementWeb;
-import project.sw.cases.task07.web.s04.*;
 
 public class HomePage {
 	public HomePage() {

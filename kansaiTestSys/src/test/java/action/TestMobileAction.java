@@ -131,9 +131,9 @@ public class TestMobileAction {
 			driver.get("http://www.test-arts.cn/isms/");
 			Thread.sleep(2000);
 
-			Task07Event cmd = new Task07Event(driver, kb);
-
-			cmd.testTask07();		
+//			Task07Event cmd = new Task07Event(driver, kb);
+//
+//			cmd.testTask07();		
 			
 			
 		} catch (Exception ex) {

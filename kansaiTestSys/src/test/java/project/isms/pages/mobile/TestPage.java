@@ -9,7 +9,6 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 
-import project.sw.cases.task07.web.s04.CaseS04_001;
 import io.appium.java_client.AppiumDriver;
 import project.sw.cases.task07.mobile.s01.CaseS01_001;
 
