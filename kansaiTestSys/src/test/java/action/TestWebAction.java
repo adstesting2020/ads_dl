@@ -13,6 +13,7 @@ import com.codeborne.selenide.testng.ScreenShooter;
 import common.Const;
 import dto.KindBean;
 import event.Task07Event;
+import event.TaskWeb;
 import project.sw.cases.task07.web.s03.CaseS03_001;
 import project.sw.cases.task07.web.s03.CaseS03_002;
 import project.sw.cases.task07.web.s03.CaseS03_003;
@@ -92,6 +93,6 @@ public class TestWebAction {
 
 	@Test
 	public void testIOS() throws Exception {
-		new Task07Event(kb).testTask07();
+		new TaskWeb(kb).runTask();
 	}
 }

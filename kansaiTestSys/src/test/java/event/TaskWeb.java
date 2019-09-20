@@ -9,11 +9,11 @@ import static com.codeborne.selenide.Selenide.open;
 import dto.BaseCase;
 import dto.KindBean;
 
-public class Task07Event extends BaseCase {
+public class TaskWeb extends BaseCase {
 
 	private KindBean kb;
 
-	public Task07Event(KindBean _kb) {
+	public TaskWeb(KindBean _kb) {
 		this.kb = _kb;
 	}
 
@@ -43,7 +43,7 @@ public class Task07Event extends BaseCase {
 		close();
 	}
 	
-	public void testTask07() throws Exception {
+	public void runTask() throws Exception {
 		open("https://keiyaku.kepco.jp/switch/switch_01");
 		Thread.sleep(2000);
 		// S01-01-25 QsQ
