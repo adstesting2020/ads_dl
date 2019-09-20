@@ -31,6 +31,8 @@ public class CaseS03_003 extends BaseCase {
 		saveReportInfo("既契約確認・エリア判定・申込みメニュー画面。", "number3.png");
 		cpObj.confirmElemClick("confirmElemClick");
 		saveReportInfo("既契約確認・エリア判定・申込みメニュー画面。", "confirmElemClick.png");
+		cpObj.scrollToContuct("scrollToContuct");
+		saveReportInfo("既契約確認・エリア判定・申込みメニュー画面。", "scrollToContuct.png");
 		super.outputExls(kb);
 	}
 }

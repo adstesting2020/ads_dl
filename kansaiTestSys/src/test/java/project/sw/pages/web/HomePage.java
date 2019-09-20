@@ -31,7 +31,7 @@ public class HomePage {
 	ElementWeb customerCodeElem = new ElementWeb();
 	ElementWeb confirmElem = new ElementWeb();
 	ElementWeb closeElem = new ElementWeb();
-	
+	ElementWeb contuctElem = new ElementWeb();
 
 	/**
 	 * 契約切替を希望されるご住所の、現在の電気とガスのご契約先を選択してください  为了截图证明前12个case
@@ -215,6 +215,14 @@ public class HomePage {
 		confirmElem.click();
 		Thread.sleep(3000);
 		confirmElem.screenShot(imgName);
+	}
+	
+	public void scrollToContuct(String imgName) throws IOException, InterruptedException {
+		contuctElem.setTab("電気契約のお客さま番号");
+		contuctElem.setXpathAttr("//*[@id=\"Container\"]/form/section/div[2]/div/h4[4]/span[1]");
+		contuctElem.scrollTo();
+		Thread.sleep(3000);
+		contuctElem.screenShot(imgName);
 	}
 
 }
