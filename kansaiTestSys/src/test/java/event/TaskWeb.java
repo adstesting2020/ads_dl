@@ -1,6 +1,7 @@
 package event;
 
 import project.sw.cases.task07.web.s01.*;
+import project.sw.cases.task07.web.s02.CaseS02_001;
 import project.sw.cases.task07.web.s03.*;
 
 import static com.codeborne.selenide.Selenide.close;
@@ -45,7 +46,7 @@ public class TaskWeb extends BaseCase {
 	
 	public void runTask01() throws Exception {
 		open("https://keiyaku.kepco.jp/switch/switch_01");
-		Thread.sleep(2000);
+		Thread.sleep(60000);
 		// S01-01-12 QsQ
 		kb.setTestCaseId("S01-01-12");
 		new CaseS01_001().action(kb);
@@ -62,11 +63,11 @@ public class TaskWeb extends BaseCase {
 	
 	public void runTask02() throws Exception {
 		open("https://keiyaku.kepco.jp/switch/switch_01");
-		Thread.sleep(2000);
+		Thread.sleep(60000);
 		
 		// S02-01-12 QsQ
 		kb.setTestCaseId("S02-01-12");
-		new CaseS01_001().action(kb);
+		new CaseS02_001().action(kb);
 
 		// S02-13-15 QsQ
 		kb.setTestCaseId("S02-13-15");

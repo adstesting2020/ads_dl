@@ -45,6 +45,16 @@ public class HomePage {
 	}
 
 	/**
+	 * 滚动到「ガスのご契約」-「他社（関西電力以外）」
+	 * @param imgName
+	 * @throws IOException
+	 */
+	public void scrollToOtherShrines2(String imgName) throws IOException {
+		otherShrinesElem2.setXpathAttr("//*[@id=\"Container\"]/form/section/div[2]/div/div[4]/label[1]");
+		otherShrinesElem2.scrollTo();
+		switchContractMsgElem.screenShot(imgName);
+	}
+	/**
 	 * 点击「電気のご契約」-「他社（関西電力以外）」
 	 * @param imgName
 	 * @throws IOException
