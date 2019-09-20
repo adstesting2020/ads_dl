@@ -27,12 +27,24 @@ public class TestWebAction {
 		// 5 - Win10-Edge
 		// 6 - Mac-Safari
 		// 7 - Mac-Chrome
-		kb.setTestFlg("7");
+		kb.setTestFlg("2");
 
 		switch (Integer.parseInt(kb.getTestFlg())) {
 		case 1:
 			break;
 		case 2:
+			kb.setKind1("Windows7");
+			kb.setKind2("76");
+			kb.setBrower("Chrome");
+			kb.setTestKind("Selenide");
+
+			System.setProperty("webdriver.chrome.driver", "D:\\work\\git\\ads_dl\\adsTesting\\driver\\chromedriver.exe");
+			Configuration.timeout = 6000;
+			Configuration.browser = "chrome";
+//	        Configuration.browserSize ="1920x1080";
+			Configuration.startMaximized = true;
+			ScreenShooter.captureSuccessfulTests = true;
+			Configuration.reportsFolder = "IMG";
 			break;
 		case 3:
 			break;
@@ -70,7 +82,7 @@ public class TestWebAction {
 			kb.setBrower("Chrome");
 			kb.setTestKind("Selenide");
 
-			System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
+			System.setProperty("webdriver.chrome.driver", "D:\\work\\git\\ads_dl\\adsTesting\\driver\\chromedriver.exe");
 			Configuration.timeout = 6000;
 			Configuration.browser = "chrome";
 //	        Configuration.browserSize ="1920x1080";
