@@ -14,10 +14,14 @@ public class CaseS03_002 extends BaseCase implements ADSCaseIFWeb {
 	public void action(KindBean kb) {
 		try {
 			HomePage cpObj = new HomePage();
+			
 			cpObj.kansaiElectric1Click("kansaiElectric1002");
-			Thread.sleep(1000);
+			
+			sleep(1000);
+			
 			cpObj.otherShrines2Click("otherShrines2Click");
 			cpObj.idPasswordElemClick("idPasswordClick002");
+			
 			saveReportInfo("既契約確認・エリア判定・申込みメニュー画面。", "idPasswordClick002.png");
 			super.outputExls(kb);
 		} catch (Exception ex) {

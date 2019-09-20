@@ -14,6 +14,7 @@ public class CaseS01_001 extends BaseCase implements ADSCaseIFWeb {
 	public void action(KindBean kb) {
 		try {
 			HomePage cpObj = new HomePage();
+			
 			cpObj.switchContractMsgElem("switchContractMsg");
 			saveReportInfo("既契約確認・エリア判定・申込みメニュー画面。", "switchContractMsg.png");
 

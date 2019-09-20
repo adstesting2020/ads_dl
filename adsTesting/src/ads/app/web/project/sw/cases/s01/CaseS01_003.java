@@ -15,15 +15,22 @@ public class CaseS01_003 extends BaseCase implements ADSCaseIFWeb {
 	public void action(KindBean kb) {
 		try {
 			HomePage cpObj = new HomePage();
+			
 			cpObj.customerNumElemClick();
 			cpObj.scheduleElem("01");
-			Thread.sleep(1000);
+			
+			sleep(1000);
+			
 			cpObj.placeElem("14");
-			Thread.sleep(1000);
+			
+			sleep(1000);
+			
 			cpObj.number1Elem("5122");
-			Thread.sleep(1000);
+			
+			sleep(1000);
+			
 			cpObj.number2Elem("130533", "number2");
-			saveReportInfo("既契約確認・エリア判定・申込みメニュー画面。", "number2.png");
+			saveReportInfo("鏃㈠绱勭⒑瑾嶃兓銈ㄣ儶銈㈠垽瀹氥兓鐢宠炯銇裤儭銉嬨儱銉肩敾闈€��", "number2.png");
 			
 			super.outputExls(kb);
 		} catch (Exception ex) {
