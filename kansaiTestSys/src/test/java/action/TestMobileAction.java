@@ -36,7 +36,7 @@ public class TestMobileAction {
 		kb.setHeight(Const.MOBILE_PICHEIGHT);
 
 		//
-		kb.setTestFlg("6");
+		kb.setTestFlg("2");
 
 		switch (Integer.parseInt(kb.getTestFlg())) {
 		case 1:
