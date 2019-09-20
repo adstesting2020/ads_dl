@@ -9,7 +9,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import common.Const;
 import dto.KindBean;
-import event.Task07Event;
+//import event.Task07Event;
+import event.TaskMobile;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
@@ -120,24 +121,32 @@ public class TestMobileAction {
 		}
 	}
 
-	@After
-	public void tearDown() throws Exception {
-		driver.quit();
-	}
+//	@After
+//	public void tearDown() throws Exception {
+//		driver.quit();
+//	}
 
 	@Test
 	public void testIOS() {
-		try {
-			driver.get("http://www.test-arts.cn/isms/");
-			Thread.sleep(2000);
-
-//			Task07Event cmd = new Task07Event(driver, kb);
+//		try {
+//			driver.get("http://www.test-arts.cn/isms/");
+//			Thread.sleep(2000);
 //
-//			cmd.testTask07();		
-			
-			
-		} catch (Exception ex) {
-			ex.printStackTrace();
+////			Task07Event cmd = new Task07Event(driver, kb);
+////
+////			cmd.testTask07();		
+//			
+//			
+//		} catch (Exception ex) {
+//			ex.printStackTrace();
+//		}
+		try {
+			new TaskMobile(driver, kb).runTask01();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 }

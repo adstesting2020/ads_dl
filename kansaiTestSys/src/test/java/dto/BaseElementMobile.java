@@ -67,6 +67,7 @@ public class BaseElementMobile {
 	 * 
 	 * 向右滑动屏幕
 	 * 
+	 * 
 	 */
 	public static void slideRight(AppiumDriver driver) {
 		int width = driver.manage().window().getSize().width;
@@ -77,7 +78,7 @@ public class BaseElementMobile {
 
 	}
 
-	public void screenShot(String imgName) {
+	public void screenShot(AppiumDriver driver,String imgName) {
 		File screenShot = driver.getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + imgName));

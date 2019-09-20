@@ -3,37 +3,36 @@ package project.sw.cases.task07.mobile.s01;
 import dto.BaseCase;
 import dto.ElementMobile;
 import dto.KindBean;
+import project.sw.pages.mobile.HomePage;
 import io.appium.java_client.AppiumDriver;
 
-/*
- * @author:Qin.SQ
- * @date:2019-09-16
- * */
 public class CaseS01_001 extends BaseCase {
 
 	public void action(AppiumDriver driver, KindBean kb) throws Exception {
-		//
-		ElementMobile userIdElem = new ElementMobile(driver);
-		userIdElem.setTab("用户名");
-		userIdElem.setIdAttr("//*[@id=\\\"Container\\\"]/form/section/div[2]/div/div[1]/label[1]/input");
-		userIdElem.sendKeys("test");
-
-		//
-		ElementMobile pswElem = new ElementMobile(driver);
-		pswElem.setTab("密码");
-		pswElem.setNameAttr("//*[@id=\\\"Container\\\"]/form/section/div[2]/div/div[1]/label[2]/input");
-		pswElem.sendKeys("test");
-
-		//
-		ElementMobile okBtnElem = new ElementMobile(driver);
-		okBtnElem.setTab("登录");
-		okBtnElem.setXpathAttr("//*[@id=\\\"Container\\\"]/form/section/div[2]/div/div[1]/label[2]/input");
-		okBtnElem.click();
-
-		//
-		okBtnElem.screenShot("InputIntoSchedule.jpg");
-		saveReportInfo("契約変更を希望されるご住所の、現在の電気とガスのご契約先を選択してください。", "InputIntoSchedule.jpg");
-
+		HomePage hpObj = new HomePage(driver);
+		
+		hpObj.mainHeadClick("mainHeadClick.jpg");
+		saveReportInfo("即契約確認・エリア判定・申込みメニュー画面", "mainHeadClick.jpg");
+		
+		hpObj.btn1_2Click("btn1_2Click.jpg");
+		saveReportInfo("", "btn1_2Click.jpg");
+		
+		hpObj.btn2_1Click("btn2_1Click.jpg");
+		saveReportInfo("", "btn2_1Click.jpg");
+		
+		hpObj.btn3_1Click("btn3_1Click.jpg");
+		saveReportInfo("", "btn3_1Click.jpg");
+		
+		hpObj.setInput1("input1.jpg", "01");
+		hpObj.setInput2("input2.jpg", "14");
+		hpObj.setInput3("input3.jpg", "5122");
+		hpObj.setInput4("input4.jpg", "130533");
+		saveReportInfo("", "input4.jpg");
+		
+		hpObj.clickNITTEI("Nittei.jpg");
+		saveReportInfo("", "Nittei.jpg");
+		// 
+		
 		// 输出报告
 		super.outputExls(kb);
 	}

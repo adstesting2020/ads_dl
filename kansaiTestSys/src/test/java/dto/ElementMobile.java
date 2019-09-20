@@ -20,6 +20,12 @@ public class ElementMobile extends BaseElementMobile {
 	public ElementMobile(AppiumDriver _driver) {
 		super(_driver);
 		this.driver = _driver;
+		this.title = "";
+		this.tab = "";
+		this.idAttr = "";
+		this.nameAttr = "";
+		this.xpathAttr = "";
+		this.linkTextAttr = "";
 	}
 
 	public AppiumDriver getDriver() {
@@ -99,7 +105,7 @@ public class ElementMobile extends BaseElementMobile {
 	 * 定位方式
 	 * @return
 	 */
-	private WebElement findElementBy() {
+	private WebElement findElementBy(AppiumDriver driver) {
 		if (!"".equals(idAttr)) {
 			return driver.findElementById(idAttr);
 		} else if (!"".equals(nameAttr)) {
@@ -115,21 +121,14 @@ public class ElementMobile extends BaseElementMobile {
 	/*
 	 * 鼠标点击事件
 	 **/
-	public void click() {
-		findElementBy().click();
+	public void click(AppiumDriver driver) {
+		findElementBy(driver).click();
 	}
 
 	/*
 	 * 键盘设值事件
 	 **/
-	public void sendKeys(String val) {
-		findElementBy().sendKeys(val);
-	}
-	
-	/*
-	 * 清空
-	 **/
-	public void clear() {
-		findElementBy().clear();
+	public void sendKeys(AppiumDriver driver, String val) {
+		findElementBy(driver).sendKeys(val);
 	}
 }
