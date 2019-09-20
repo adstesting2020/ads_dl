@@ -16,5 +16,6 @@ public class CaseS01_002 extends BaseCase {
 		cpObj.otherShrines2Click("otherShrines");
 		saveReportInfo("既契約確認・エリア判定・申込みメニュー画面。", "otherShrines.png");
 		super.outputExls(kb);
+		Thread.sleep(5000);
 	}
 }
