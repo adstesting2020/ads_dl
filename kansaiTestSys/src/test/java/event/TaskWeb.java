@@ -43,10 +43,10 @@ public class TaskWeb extends BaseCase {
 		close();
 	}
 	
-	public void runTask() throws Exception {
+	public void runTask01() throws Exception {
 		open("https://keiyaku.kepco.jp/switch/switch_01");
 		Thread.sleep(2000);
-		// S01-01-25 QsQ
+		// S01-01-12 QsQ
 		kb.setTestCaseId("S01-01-12");
 		new CaseS01_001().action(kb);
 
@@ -58,26 +58,37 @@ public class TaskWeb extends BaseCase {
 		kb.setTestCaseId("S01-16-25");
 		new CaseS01_003().action(kb);
 
-//		// S02-01-25 QsQ
-//		kb.setTestCaseId("S02-01-12");
-//		new CaseS01_001().action(kb);
-//
-//		// S02-13-15 QsQ
-//		kb.setTestCaseId("S02-13-15");
-//		new CaseS01_002().action(kb);
-//
-//		// S02-16-25 QsQ
-//		kb.setTestCaseId("S02-16-25");
-//		new CaseS01_003().action(kb);
+	}
+	
+	public void runTask02() throws Exception {
+		open("https://keiyaku.kepco.jp/switch/switch_01");
+		Thread.sleep(2000);
 		
-		//
-//		test01();
-//		
-//		//
-//		test02();
-//			
-//		//
-//		test03();
+		// S02-01-12 QsQ
+		kb.setTestCaseId("S02-01-12");
+		new CaseS01_001().action(kb);
+
+		// S02-13-15 QsQ
+		kb.setTestCaseId("S02-13-15");
+		new CaseS01_002().action(kb);
+
+		// S02-16-25 QsQ
+		kb.setTestCaseId("S02-16-25");
+		new CaseS01_003().action(kb);
+		
+
+	}
+	
+	public void runTask03() throws Exception {
+		
+		//S03-01&04 QsQ
+		test01();
+		
+		//S03-02&03&07 QsQ
+		test02();
+			
+		//S03-05&06&08-10 QsQ
+		test03();
 
 	}
 }

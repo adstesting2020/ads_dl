@@ -93,6 +93,6 @@ public class TestWebAction {
 
 	@Test
 	public void testIOS() throws Exception {
-		new TaskWeb(kb).runTask();
+		new TaskWeb(kb).runTask01();
 	}
 }
