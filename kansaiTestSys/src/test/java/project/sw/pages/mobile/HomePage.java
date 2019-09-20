@@ -31,6 +31,7 @@ public class HomePage {
 	ElementMobile h4_4 = new ElementMobile(driver);
 	ElementMobile introduction = new ElementMobile(driver);
 	ElementMobile close = new ElementMobile(driver);
+	ElementMobile bottomImg = new ElementMobile(driver);
 	
 	public void mainHeadClick(String imgName) throws IOException {
 		mainHeadElem.setTab("現在のご契約状況");
@@ -166,6 +167,14 @@ public class HomePage {
 	public void clickClose(String imgName) throws IOException {
 		close.setTab("閉じる");
 		close.setXpathAttr("/html/body/div[2]/div[2]/span");
+		close.click(driver);
+
+		mainHeadElem.screenShot(driver,imgName);
+	}
+	
+	public void clickBottomImg(String imgName) throws IOException {
+		close.setTab("底部图片");
+		close.setXpathAttr("html/body/div[18]");
 		close.click(driver);
 
 		mainHeadElem.screenShot(driver,imgName);
