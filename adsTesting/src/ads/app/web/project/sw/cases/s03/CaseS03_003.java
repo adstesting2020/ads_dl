@@ -19,11 +19,11 @@ public class CaseS03_003 extends BaseCaseWeb implements ADSCaseIFWeb {
 		HomePage cpObj = new HomePage();
 
 		// 点击「電気のご契約」-「関西電力」
-		cpObj.kansaiElectric1Click("kansaiElectric1");
+		cpObj.kansaiElectric1Click();
 		sleep(1000);
 
 		// 点击「ガスのご契約」-「他社（関西電力以外）」
-		cpObj.otherShrines2Click("otherShrines2Click");
+		cpObj.otherShrines2Click();
 		sleep(1000);
 
 		// 点击「お客さま番号を入力する」
@@ -31,11 +31,11 @@ public class CaseS03_003 extends BaseCaseWeb implements ADSCaseIFWeb {
 		sleep(1000);
 
 		// 点击「お客さま番号の確認方法」
-		cpObj.customerCodeSpanClick("customerCodeClick");
+		cpObj.customerCodeSpanClick();
 		sleep(1000);
 
 		// 「お客さま番号の確認方法」ダイアログを閉じる并截图
-		cpObj.closeDivClick("closeElemClick");
+		cpObj.closeDivClick();
 		saveReportInfo("既契約確認・エリア判定・申込みメニュー画面。", "closeElemClick.png");
 
 		// 「日程」设值"01"
@@ -51,15 +51,15 @@ public class CaseS03_003 extends BaseCaseWeb implements ADSCaseIFWeb {
 		sleep(1000);
 
 		// 「番号2」设值"130533"
-		cpObj.number2Input("130533", "number3");
+		cpObj.number2Input("130533");
 		saveReportInfo("既契約確認・エリア判定・申込みメニュー画面。", "number3.png");
 
 		// 点击「確 定」并截图
-		cpObj.confirmBtnClick("confirmElemClick");
+		cpObj.confirmBtnClick();
 		saveReportInfo("既契約確認・エリア判定・申込みメニュー画面。", "confirmElemClick.png");
 
 		// 滚动到「電気契約のお客さま番号」并截图
-		cpObj.scrollTocontuctSpan("scrollToContuct");
+		cpObj.scrollTocontuctSpan();
 		saveReportInfo("既契約確認・エリア判定・申込みメニュー画面。", "scrollToContuct.png");
 
 		super.outputExls(kb);

@@ -33,7 +33,7 @@ public class CaseS01_003 extends BaseCaseWeb implements ADSCaseIFWeb {
 		sleep(1000);
 
 		// 「番号2」设值"130533"并截图
-		cpObj.number2Input("130533", "number2");
+		cpObj.number2Input("130533");
 		saveReportInfo("既契約確認・エリア判定・申込みメニュー画面。", "number2.png");
 
 		super.outputExls(kb);

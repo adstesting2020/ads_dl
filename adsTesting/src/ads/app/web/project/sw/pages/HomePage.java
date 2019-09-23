@@ -58,7 +58,7 @@ public class HomePage {
 	 * @param imgName
 	 * @throws IOException
 	 */
-	public void switchContractMsgP(String imgName) {
+	public void switchContractMsgP() {
 		switchContractMsgP.setTab("契約切替を希望されるご住所の、現在の電気とガスのご契約先を選択してください。");
 		switchContractMsgP.setIdAttr("#switchContractMsgElem");
 	}
@@ -69,7 +69,7 @@ public class HomePage {
 	 * @param imgName
 	 * @throws IOException
 	 */
-	public void scrollToOtherShrines2(String imgName) {
+	public void scrollToOtherShrines2() {
 		otherShrinesLabel2.setXpathAttr("//*[@id=\"Container\"]/form/section/div[2]/div/div[4]/label[1]");
 		otherShrinesLabel2.scrollTo();
 	}
@@ -80,7 +80,7 @@ public class HomePage {
 	 * @param imgName
 	 * @throws IOException
 	 */
-	public void otherShrines1Click(String imgName) {
+	public void otherShrines1Click() {
 		otherShrinesLabel1.setTab("他社（関西電力以外）");
 		otherShrinesLabel1.setXpathAttr("//*[@id=\"Container\"]/form/section/div[2]/div/div[1]/label[1]");
 		otherShrinesLabel1.click();
@@ -92,7 +92,7 @@ public class HomePage {
 	 * @param imgName
 	 * @throws IOException
 	 */
-	public void kansaiElectric1Click(String imgName) {
+	public void kansaiElectric1Click() {
 		kansaiElectricLabel1.setTab("関西電力");
 		kansaiElectricLabel1.setXpathAttr("//*[@id=\"Container\"]/form/section/div[2]/div/div[1]/label[2]");
 		kansaiElectricLabel1.click();
@@ -104,7 +104,7 @@ public class HomePage {
 	 * @param imgName
 	 * @throws IOException
 	 */
-	public void otherShrines2Click(String imgName) {
+	public void otherShrines2Click() {
 		otherShrinesLabel2.setTab("他社（関西電力以外）");
 		otherShrinesLabel2.setXpathAttr("//*[@id=\"Container\"]/form/section/div[2]/div/div[4]/label[1]");
 		otherShrinesLabel2.click();
@@ -117,7 +117,7 @@ public class HomePage {
 	 * @param imgName
 	 * @throws IOException
 	 */
-	public void kansaiElectric2Click(String imgName) {
+	public void kansaiElectric2Click() {
 		kansaiElectricLabel2.setTab("関西電力");
 		kansaiElectricLabel2.setXpathAttr("//*[@id=\"Container\"]/form/section/div[2]/div/div[4]/label[2]");
 		kansaiElectricLabel2.click();
@@ -141,7 +141,7 @@ public class HomePage {
 	 * @param imgName
 	 * @throws IOException
 	 */
-	public void idPasswordAClick(String imgName) {
+	public void idPasswordAClick() {
 		idPasswordA.setTab("「はぴeみる電」のID・パスワードを入力する");
 		idPasswordA.setXpathAttr("//*[@id=\"div_agreement\"]/div/a");
 		idPasswordA.click();
@@ -153,7 +153,7 @@ public class HomePage {
 	 * @param imgName
 	 * @throws IOException
 	 */
-	public void customerCodeSpanClick(String imgName) {
+	public void customerCodeSpanClick() {
 		customerCodeSpan.setTab("お客さま番号の確認方法");
 		customerCodeSpan.setXpathAttr("//*[@id=\"Container\"]/form/section/div[2]/div/h4[4]/span[4]");
 		customerCodeSpan.click();
@@ -165,7 +165,7 @@ public class HomePage {
 	 * @param imgName
 	 * @throws IOException
 	 */
-	public void closeDivClick(String imgName) {
+	public void closeDivClick() {
 		closeDiv.setTab("閉じる");
 		closeDiv.setXpathAttr("/html/body/div[2]/div[2]");
 		closeDiv.click();
@@ -214,7 +214,7 @@ public class HomePage {
 	 * @param imgName
 	 * @throws IOException
 	 */
-	public void number2Input(String value, String imgName) {
+	public void number2Input(String value) {
 		number2Input.setTab("番号2");
 		number2Input.setXpathAttr("//*[@id=\"Container\"]/form/section/div[2]/div/div[11]/dl[4]/dd/input");
 		number2Input.sendKeys(value);
@@ -227,7 +227,7 @@ public class HomePage {
 	 * @throws IOException
 	 * @throws InterruptedException
 	 */
-	public void confirmBtnClick(String imgName) {
+	public void confirmBtnClick() {
 		confirmBtn.setTab("確 定");
 		confirmBtn.setXpathAttr("//*[@id=\"Container\"]/form/section/button[1]");
 		confirmBtn.click();
@@ -240,7 +240,7 @@ public class HomePage {
 	 * @throws IOException
 	 * @throws InterruptedException
 	 */
-	public void scrollTocontuctSpan(String imgName) {
+	public void scrollTocontuctSpan() {
 		contuctSpan.setTab("電気契約のお客さま番号");
 		contuctSpan.setXpathAttr("//*[@id=\"Container\"]/form/section/div[2]/div/h4[4]/span[1]");
 		contuctSpan.scrollTo();

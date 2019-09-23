@@ -19,11 +19,11 @@ public class CaseS02_001 extends BaseCaseWeb implements ADSCaseIFWeb {
 		HomePage cpObj = new HomePage();
 
 		// 在「契約切替を希望されるご住所の、現在の電気とガスのご契約先を選択してください」截图
-		cpObj.switchContractMsgP("switchContractMsg");
+		cpObj.switchContractMsgP();
 		saveReportInfo("既契約確認・エリア判定・申込みメニュー画面。", "switchContractMsg.png");
 
 		// 在「ガスのご契約」-「他社（関西電力以外）」截图
-		cpObj.scrollToOtherShrines2("scrollToOtherShrines2");
+		cpObj.scrollToOtherShrines2();
 		saveReportInfo("既契約確認・エリア判定・申込みメニュー画面。", "scrollToOtherShrines2.png");
 
 		super.outputExls(kb);
