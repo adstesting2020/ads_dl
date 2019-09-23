@@ -10,6 +10,11 @@ import ads.com.Const;
 public class TestWebAction {
 	@Before
 	public void setup() throws Exception {
+		Configuration.timeout = 6000;
+		Configuration.startMaximized = true;
+		ScreenShooter.captureSuccessfulTests = true;
+		Configuration.reportsFolder = "IMG";
+		
 		switch (Const.RUNFLG) {
 		case Const.WINDOWS7_IE:
 			break;
@@ -21,26 +26,14 @@ public class TestWebAction {
 			break;
 		case Const.WINDOWS10_EDGE:
 			System.setProperty("webdriver.edge.driver", "driver/MicrosoftWebDriver.exe");
-			Configuration.timeout = 6000;
 			Configuration.browser = "edge";
-			Configuration.startMaximized = true;
-			ScreenShooter.captureSuccessfulTests = true;
-			Configuration.reportsFolder = "IMG";
 			break;
 		case Const.MAC_SAFARI:
-			Configuration.timeout = 6000;
 			Configuration.browser = "Safari";
-			Configuration.startMaximized = true;
-			ScreenShooter.captureSuccessfulTests = true;
-			Configuration.reportsFolder = "IMG";
 			break;
 		case Const.MAC_CHROME:
 			System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
-			Configuration.timeout = 6000;
 			Configuration.browser = "chrome";
-			Configuration.startMaximized = true;
-			ScreenShooter.captureSuccessfulTests = true;
-			Configuration.reportsFolder = "IMG";
 			break;
 		}
 	}
