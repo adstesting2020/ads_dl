@@ -1,5 +1,6 @@
 package ads.app.web.task;
 
+import static com.codeborne.selenide.Selenide.close;
 import static com.codeborne.selenide.Selenide.open;
 
 import ads.app.web.project.sw.cases.s01.*;
@@ -31,5 +32,7 @@ public class Task001 extends BaseCase implements ADSTaskIF {
 		// S01-16-25 QsQ
 		kb.setTestCaseId("S01-16-25");
 		new CaseS01_003().action(kb);
+		
+		close();
 	}
 }
