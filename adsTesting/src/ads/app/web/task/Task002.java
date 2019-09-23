@@ -3,6 +3,7 @@ package ads.app.web.task;
 import static com.codeborne.selenide.Selenide.open;
 
 import ads.app.web.project.sw.cases.s01.*;
+import ads.app.web.project.sw.cases.s02.*;
 import ads.com.ADSTaskIF;
 import ads.com.BaseCase;
 import ads.com.Const;
@@ -22,7 +23,7 @@ public class Task002 extends BaseCase implements ADSTaskIF {
 
 		// S02-01-12 QsQ
 		kb.setTestCaseId("S02-01-12");
-		new CaseS01_001().action(kb);
+		new CaseS02_001().action(kb);
 
 		// S02-13-15 QsQ
 		kb.setTestCaseId("S02-13-15");

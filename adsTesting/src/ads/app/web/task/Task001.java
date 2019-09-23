@@ -18,7 +18,7 @@ public class Task001 extends BaseCase implements ADSTaskIF {
 	public void run() {
 		open(Const.SWURL);
 		
-		sleep(2000);
+		sleep(10000);
 
 		// S01-01-12 QsQ
 		kb.setTestCaseId("S01-01-12");
