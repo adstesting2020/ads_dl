@@ -2,7 +2,6 @@ package ads.app.web.action;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.testng.ScreenShooter;
 import ads.app.web.task.*;
@@ -11,8 +10,6 @@ import ads.com.Const;
 public class TestWebAction {
 	@Before
 	public void setup() throws Exception {
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-
 		switch (Const.RUNFLG) {
 		case Const.WINDOWS7_IE:
 			break;
