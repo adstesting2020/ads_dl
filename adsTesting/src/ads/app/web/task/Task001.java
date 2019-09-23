@@ -12,6 +12,7 @@ public class Task001 extends BaseTask implements BaseWebTaskIF {
 	public void run() {
 		open(Const.SWURL);
 
+		// 等待输入用户名和密码
 		sleep(10000);
 
 		// S01-01-12 QsQ

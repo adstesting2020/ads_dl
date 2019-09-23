@@ -36,20 +36,10 @@ import ads.com.KindBean;
 public class BaseWebCase {
 	private String separator = java.io.File.separator;
 	private ArrayList<DataBean> reportList = new ArrayList<DataBean>();
-	private ArrayList<DataBean> dataList = new ArrayList<DataBean>();
 
 	public BaseWebCase() {
-		System.out.println("data list clear");
-		dataList.clear();
-	}
-
-	public void setDataInfo(String msg, String img) {
-		DataBean data = new DataBean();
-
-		data.setMsg(msg);
-		data.setImgPath(img);
-
-		dataList.add(data);
+		System.out.println("reportList clear");
+		reportList.clear();
 	}
 
 	private void screenShot(String imgName) {
