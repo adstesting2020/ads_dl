@@ -16,6 +16,7 @@ public class Task003 extends BaseCase implements ADSTaskIF {
 		this.kb = _kb;
 	}
 
+	// 1-1 -> 1-6 & 1-10
 	private void task0301() {
 		driver.get(Const.SWURL);
 		sleep(2000);
@@ -23,7 +24,8 @@ public class Task003 extends BaseCase implements ADSTaskIF {
 		kb.setTestCaseId("S03-1-1");
 		new CaseS03_001().action(driver, kb);
 	}
-
+	
+	// 1-7
 	private void task0302() {
 		driver.get(Const.SWURL);
 		sleep(2000);
@@ -32,6 +34,7 @@ public class Task003 extends BaseCase implements ADSTaskIF {
 		new CaseS03_002().action(driver, kb);
 	}
 
+	// 1-8 & 1-9
 	private void task0303() {
 		driver.get(Const.SWURL);
 		sleep(2000);

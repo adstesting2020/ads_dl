@@ -8,7 +8,7 @@ import io.appium.java_client.AppiumDriver;
 
 public class CaseS01_001 extends BaseCase implements ADSCaseIFMobile {
 	public void action(AppiumDriver driver, KindBean kb) {
-		try {
+
 			HomePage hpObj = new HomePage(driver);
 
 			hpObj.mainHeadClick("mainHeadClick.jpg");
@@ -34,8 +34,5 @@ public class CaseS01_001 extends BaseCase implements ADSCaseIFMobile {
 
 			// 输出报告
 			super.outputExls(kb);
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
 	}
 }
