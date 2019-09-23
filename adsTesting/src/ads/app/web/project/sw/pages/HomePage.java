@@ -2,55 +2,54 @@ package ads.app.web.project.sw.pages;
 
 import java.io.IOException;
 import ads.app.web.bean.ElementWeb;
-import ads.com.BaseCase;
 
-public class HomePage extends BaseCase {
-
+public class HomePage {
 	public HomePage() {
 	}
-	//「電気のご契約」-「他社（関西電力以外）」
+
+	// 「電気のご契約」-「他社（関西電力以外）」
 	ElementWeb otherShrinesLabel1 = new ElementWeb();
-	
-	//「電気のご契約」-「関西電力」
+
+	// 「電気のご契約」-「関西電力」
 	ElementWeb kansaiElectricLabel1 = new ElementWeb();
-	
-	//「電気のご契約」-「他社（関西電力以外）」
+
+	// 「電気のご契約」-「他社（関西電力以外）」
 	ElementWeb otherShrinesLabel2 = new ElementWeb();
-	
-	//「電気のご契約」-「関西電力」
+
+	// 「電気のご契約」-「関西電力」
 	ElementWeb kansaiElectricLabel2 = new ElementWeb();
-	
-	//契約切替を希望されるご住所の、現在の電気とガスのご契約先を選択してください。
+
+	// 契約切替を希望されるご住所の、現在の電気とガスのご契約先を選択してください。
 	ElementWeb switchContractMsgP = new ElementWeb();
-	
-	//「お客さま番号を入力する」
+
+	// 「お客さま番号を入力する」
 	ElementWeb customerNumLabel = new ElementWeb();
-	
-	//「「はぴeみる電」のID・パスワードを入力する」
+
+	// 「「はぴeみる電」のID・パスワードを入力する」
 	ElementWeb idPasswordA = new ElementWeb();
-	
-	//「日程」
+
+	// 「日程」
 	ElementWeb scheduleInput = new ElementWeb();
-	
-	//「所」
+
+	// 「所」
 	ElementWeb placeInput = new ElementWeb();
-	
-	//「番号1」
+
+	// 「番号1」
 	ElementWeb number1Input = new ElementWeb();
-	
-	//「番号2」
+
+	// 「番号2」
 	ElementWeb number2Input = new ElementWeb();
-	
-	//「お客さま番号の確認方法」
+
+	// 「お客さま番号の確認方法」
 	ElementWeb customerCodeSpan = new ElementWeb();
-	
-	//「確 定」
+
+	// 「確 定」
 	ElementWeb confirmBtn = new ElementWeb();
-	
-	//「お客さま番号の確認方法」ダイアログを閉じる
+
+	// 「お客さま番号の確認方法」ダイアログを閉じる
 	ElementWeb closeDiv = new ElementWeb();
-	
-	//「電気契約のお客さま番号」
+
+	// 「電気契約のお客さま番号」
 	ElementWeb contuctSpan = new ElementWeb();
 
 	/**
@@ -62,7 +61,6 @@ public class HomePage extends BaseCase {
 	public void switchContractMsgP(String imgName) {
 		switchContractMsgP.setTab("契約切替を希望されるご住所の、現在の電気とガスのご契約先を選択してください。");
 		switchContractMsgP.setIdAttr("#switchContractMsgElem");
-		switchContractMsgP.screenShot(imgName);
 	}
 
 	/**
@@ -74,7 +72,6 @@ public class HomePage extends BaseCase {
 	public void scrollToOtherShrines2(String imgName) {
 		otherShrinesLabel2.setXpathAttr("//*[@id=\"Container\"]/form/section/div[2]/div/div[4]/label[1]");
 		otherShrinesLabel2.scrollTo();
-		otherShrinesLabel2.screenShot(imgName);
 	}
 
 	/**
@@ -99,7 +96,6 @@ public class HomePage extends BaseCase {
 		kansaiElectricLabel1.setTab("関西電力");
 		kansaiElectricLabel1.setXpathAttr("//*[@id=\"Container\"]/form/section/div[2]/div/div[1]/label[2]");
 		kansaiElectricLabel1.click();
-		kansaiElectricLabel1.screenShot(imgName);
 	}
 
 	/**
@@ -113,7 +109,6 @@ public class HomePage extends BaseCase {
 		otherShrinesLabel2.setXpathAttr("//*[@id=\"Container\"]/form/section/div[2]/div/div[4]/label[1]");
 		otherShrinesLabel2.click();
 		otherShrinesLabel2.scrollTo();
-		otherShrinesLabel2.screenShot(imgName);
 	}
 
 	/**
@@ -126,7 +121,6 @@ public class HomePage extends BaseCase {
 		kansaiElectricLabel2.setTab("関西電力");
 		kansaiElectricLabel2.setXpathAttr("//*[@id=\"Container\"]/form/section/div[2]/div/div[4]/label[2]");
 		kansaiElectricLabel2.click();
-		kansaiElectricLabel2.screenShot(imgName);
 	}
 
 	/**
@@ -151,7 +145,6 @@ public class HomePage extends BaseCase {
 		idPasswordA.setTab("「はぴeみる電」のID・パスワードを入力する");
 		idPasswordA.setXpathAttr("//*[@id=\"div_agreement\"]/div/a");
 		idPasswordA.click();
-		idPasswordA.screenShot(imgName);
 	}
 
 	/**
@@ -173,7 +166,6 @@ public class HomePage extends BaseCase {
 	 * @throws IOException
 	 */
 	public void closeDivClick(String imgName) {
-		closeDiv.screenShot(imgName);
 		closeDiv.setTab("閉じる");
 		closeDiv.setXpathAttr("/html/body/div[2]/div[2]");
 		closeDiv.click();
@@ -226,7 +218,6 @@ public class HomePage extends BaseCase {
 		number2Input.setTab("番号2");
 		number2Input.setXpathAttr("//*[@id=\"Container\"]/form/section/div[2]/div/div[11]/dl[4]/dd/input");
 		number2Input.sendKeys(value);
-		number2Input.screenShot(imgName);
 	}
 
 	/**
@@ -240,8 +231,6 @@ public class HomePage extends BaseCase {
 		confirmBtn.setTab("確 定");
 		confirmBtn.setXpathAttr("//*[@id=\"Container\"]/form/section/button[1]");
 		confirmBtn.click();
-		sleep(3000);
-		confirmBtn.screenShot(imgName);
 	}
 
 	/**
@@ -255,8 +244,6 @@ public class HomePage extends BaseCase {
 		contuctSpan.setTab("電気契約のお客さま番号");
 		contuctSpan.setXpathAttr("//*[@id=\"Container\"]/form/section/div[2]/div/h4[4]/span[1]");
 		contuctSpan.scrollTo();
-		sleep(3000);
-		contuctSpan.screenShot(imgName);
 	}
 
 }

@@ -1,5 +1,7 @@
 package ads.app.mobile.project.isms.cases.s01;
 
+import ads.app.mobile.bean.ADSCaseIFMobile;
+import ads.app.mobile.bean.BaseCaseMobile;
 import ads.app.mobile.bean.ElementMobile;
 import ads.com.*;
 import io.appium.java_client.AppiumDriver;
@@ -8,8 +10,15 @@ import io.appium.java_client.AppiumDriver;
  * @author:Qin.SQ
  * @date:2019-09-16
  * */
-public class Case_001 extends BaseCase implements ADSCaseIFMobile {
-	public void action(AppiumDriver driver, KindBean kb) {
+public class Case_001 extends BaseCaseMobile implements ADSCaseIFMobile {
+	AppiumDriver driver;
+
+	public Case_001(AppiumDriver _driver) {
+		super(_driver);
+		this.driver = _driver;
+	}
+
+	public void action(KindBean kb) {
 		//
 		ElementMobile userIdElem = new ElementMobile(driver);
 		userIdElem.setTab("用户名");

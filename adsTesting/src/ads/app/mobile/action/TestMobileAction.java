@@ -128,9 +128,9 @@ public class TestMobileAction {
 	@Test
 	public void testMobile() {
 		try {
-			new Task001(driver, kb).run();
-//			new Task002(driver, kb).run();
-//			new Task003(driver, kb).run();
+			new Task001().run(driver, kb);
+//			new Task002().run(driver, kb);
+//			new Task003().run(driver, kb);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

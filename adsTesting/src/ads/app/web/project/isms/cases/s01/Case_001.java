@@ -1,11 +1,15 @@
 package ads.app.web.project.isms.cases.s01;
 
+import ads.app.web.bean.ADSCaseIFWeb;
+import ads.app.web.bean.BaseCaseWeb;
 import ads.app.web.project.isms.pages.LoginPage;
-import ads.com.ADSCaseIFWeb;
-import ads.com.BaseCase;
 import ads.com.KindBean;
 
-public class Case_001 extends BaseCase implements ADSCaseIFWeb {
+public class Case_001 extends BaseCaseWeb implements ADSCaseIFWeb {
+	public Case_001() {
+		super();
+	}
+
 	/*
 	 * @author:Qin.SQ
 	 * 
@@ -14,7 +18,7 @@ public class Case_001 extends BaseCase implements ADSCaseIFWeb {
 	public void action(KindBean kb) {
 		try {
 			LoginPage chp = new LoginPage();
-			
+
 			chp.setUserId("test");
 			chp.setPassword("test");
 			chp.okBtnClick();

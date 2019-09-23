@@ -3,22 +3,16 @@ package ads.app.web.task;
 import static com.codeborne.selenide.Selenide.close;
 import static com.codeborne.selenide.Selenide.open;
 
+import ads.app.web.bean.ADSWebTaskIF;
 import ads.app.web.project.sw.cases.s01.*;
-import ads.com.ADSTaskIF;
-import ads.com.BaseCase;
+import ads.com.BaseTask;
 import ads.com.Const;
 import ads.com.KindBean;
 
-public class Task001 extends BaseCase implements ADSTaskIF {
-	private KindBean kb;
-
-	public Task001(KindBean _kb) {
-		this.kb = _kb;
-	}
-
-	public void run() {
+public class Task001 extends BaseTask implements ADSWebTaskIF {
+	public void run(KindBean kb) {
 		open(Const.SWURL);
-		
+
 		sleep(10000);
 
 		// S01-01-12 QsQ
@@ -32,7 +26,7 @@ public class Task001 extends BaseCase implements ADSTaskIF {
 		// S01-16-25 QsQ
 		kb.setTestCaseId("S01-16-25");
 		new CaseS01_003().action(kb);
-		
+
 		close();
 	}
 }

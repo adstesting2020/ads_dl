@@ -1,4 +1,6 @@
-package ads.com;
+package ads.app.web.bean;
+
+import static com.codeborne.selenide.Selenide.screenshot;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -26,23 +28,32 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class BaseCase {
+import ads.com.Const;
+import ads.com.DataBean;
+import ads.com.ExcelUtil;
+import ads.com.KindBean;
+
+public class BaseCaseWeb {
 	private String separator = java.io.File.separator;
 	private ArrayList<DataBean> reportList = new ArrayList<DataBean>();
-	public static ArrayList<DataBean> DATALIST = new ArrayList<DataBean>();
+	private ArrayList<DataBean> dataList = new ArrayList<DataBean>();
 
-	public BaseCase() {
+	public BaseCaseWeb() {
 		System.out.println("data list clear");
-		DATALIST.clear();
+		dataList.clear();
 	}
 
-	public static void setDataInfo(String msg, String img) {
+	public void setDataInfo(String msg, String img) {
 		DataBean data = new DataBean();
 
 		data.setMsg(msg);
 		data.setImgPath(img);
 
-		DATALIST.add(data);
+		dataList.add(data);
+	}
+
+	private void screenShot(String imgName) {
+		screenshot(imgName);
 	}
 
 	public void sleep(int ms) {
@@ -54,6 +65,9 @@ public class BaseCase {
 	}
 
 	public void saveReportInfo(String msg, String img) {
+		// 截图
+		screenShot(img);
+
 		DataBean data = new DataBean();
 
 		data.setMsg(msg);
@@ -197,7 +211,7 @@ public class BaseCase {
 	}
 
 	// 解决图片背景变为黑色
-	public BufferedImage toBufferedImage(File file) {
+	private BufferedImage toBufferedImage(File file) {
 		try {
 			BufferedImage bimage = ImageIO.read(file);
 			int width = bimage.getWidth();

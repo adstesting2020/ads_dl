@@ -1,11 +1,6 @@
 package ads.app.mobile.bean;
 
-import java.io.File;
-import java.io.IOException;
 import java.time.Duration;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
@@ -76,14 +71,5 @@ public class BaseElementMobile {
 		new TouchAction(driver).press(PointOption.point(width / 10, height / 2))
 				.moveTo(PointOption.point(width * 3 / 4, height / 2)).release().perform();
 
-	}
-
-	public void screenShot(AppiumDriver driver,String imgName) {
-		File screenShot = driver.getScreenshotAs(OutputType.FILE);
-		try {
-			FileUtils.copyFile(screenShot, new File("IMG" + File.separator + imgName));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 	}
 }

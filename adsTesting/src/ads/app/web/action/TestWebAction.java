@@ -83,9 +83,9 @@ public class TestWebAction {
 	@Test
 	public void testWeb() {
 		try {
-			new Task001(kb).run();
-//			new Task002(kb).run();
-//			new Task003(kb).run();
+			new Task001().run(kb);
+//			new Task002().run(kb);
+//			new Task003().run(kb);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

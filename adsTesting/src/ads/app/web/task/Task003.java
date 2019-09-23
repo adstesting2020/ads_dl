@@ -2,20 +2,15 @@ package ads.app.web.task;
 
 import static com.codeborne.selenide.Selenide.close;
 import static com.codeborne.selenide.Selenide.open;
+
+import ads.app.web.bean.ADSWebTaskIF;
 import ads.app.web.project.sw.cases.s03.*;
-import ads.com.ADSTaskIF;
-import ads.com.BaseCase;
+import ads.com.BaseTask;
 import ads.com.Const;
 import ads.com.KindBean;
 
-public class Task003 extends BaseCase implements ADSTaskIF {
-	private KindBean kb;
-
-	public Task003(KindBean _kb) {
-		this.kb = _kb;
-	}
-
-	private void test01() {
+public class Task003 extends BaseTask implements ADSWebTaskIF {
+	private void test01(KindBean kb) {
 		open(Const.SWURL);
 		sleep(10000);
 
@@ -25,7 +20,7 @@ public class Task003 extends BaseCase implements ADSTaskIF {
 		close();
 	}
 
-	private void test02() {
+	private void test02(KindBean kb) {
 		open(Const.SWURL);
 		sleep(10000);
 
@@ -35,24 +30,24 @@ public class Task003 extends BaseCase implements ADSTaskIF {
 		close();
 	}
 
-	private void test03() {
+	private void test03(KindBean kb) {
 		open(Const.SWURL);
 		sleep(10000);
 
-		//S03-05&06&08-10 QsQ
+		// S03-05&06&08-10 QsQ
 		kb.setTestCaseId("S03-05&06&08-10");
 		new CaseS03_003().action(kb);
 		close();
 	}
 
-	public void run() {
+	public void run(KindBean kb) {
 		// S03-01&04 QsQ
-		test01();
+		test01(kb);
 
 		// S03-02&03&07 QsQ
-		test02();
+		test02(kb);
 
 		// S03-05&06&08-10 QsQ
-		test03();
+		test03(kb);
 	}
 }
