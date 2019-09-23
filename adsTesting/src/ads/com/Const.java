@@ -40,6 +40,7 @@ public class Const {
 	public static KindBean getRunKindBean() {
 		KindBean kb = new KindBean();
 
+		//
 		switch (Const.RUNFLG) {
 		case Const.ANDROID_5:
 		case Const.ANDROID_6:
@@ -49,6 +50,8 @@ public class Const {
 		case Const.IPHONE_7PLUS:
 		case Const.IPHONE_8:
 		case Const.IPHONE_X:
+			kb.setKind1("スマホ");
+			kb.setTestKind("Appium");
 			kb.setWidth(Const.MOBILE_PICWIDTH);
 			kb.setHeight(Const.MOBILE_PICHEIGHT);
 			break;
@@ -59,130 +62,74 @@ public class Const {
 		case Const.WINDOWS10_EDGE:
 		case Const.MAC_SAFARI:
 		case Const.MAC_CHROME:
+			kb.setKind1("PC");
+			kb.setTestKind("Selenide");
 			kb.setWidth(Const.WEB_PICWIDTH);
 			kb.setHeight(Const.WEB_PICHEIGHT);
 			break;
 		}
 
+		//
 		switch (Const.RUNFLG) {
 		case Const.ANDROID_5:
-			kb.setKind1("スマホ");
 			kb.setKind2("Android 5.0");
 			kb.setBrower("Chrome");
-			kb.setTestKind("Appium");
 			break;
 		case Const.ANDROID_6:
-			kb.setKind1("スマホ");
 			kb.setKind2("Android 6.0");
 			kb.setBrower("Chrome");
-			kb.setTestKind("Appium");
 			break;
 		case Const.ANDROID_7:
+			kb.setKind2("Android 7.0");
+			kb.setBrower("Chrome");
 			break;
 		case Const.ANDROID_8:
+			kb.setKind2("Android 8.0");
+			kb.setBrower("Chrome");
 			break;
 		case Const.ANDROID_9:
-			kb.setKind1("スマホ");
 			kb.setKind2("Android 9.0");
 			kb.setBrower("Chrome");
-			kb.setTestKind("Appium");
 			break;
 		case Const.IPHONE_7PLUS:
-			kb.setKind1("スマホ");
-			kb.setKind2("iOS 12.4");
+			kb.setKind2("iPhone 7 Plus");
 			kb.setBrower("Safari");
-			kb.setTestKind("Appium");
 			break;
 		case Const.IPHONE_8:
+			kb.setKind2("iPhone 8");
+			kb.setBrower("Safari");
 			break;
 		case Const.IPHONE_X:
+			kb.setKind2("iPhone X");
+			kb.setBrower("Safari");
 			break;
 		case Const.WINDOWS7_IE:
+			kb.setKind2("Windows7");
+			kb.setBrower("IE");
 			break;
 		case Const.WINDOWS7_CHROME:
+			kb.setKind2("Windows7");
+			kb.setBrower("Chrome");
 			break;
 		case Const.WINDOWS10_IE:
+			kb.setKind2("Windows10");
+			kb.setBrower("IE");
 			break;
 		case Const.WINDOWS10_CHROME:
+			kb.setKind2("Windows10");
+			kb.setBrower("Chrome");
 			break;
 		case Const.WINDOWS10_EDGE:
-			kb.setKind1("Win10");
-			kb.setKind2("17.17134");
+			kb.setKind2("Win10");
 			kb.setBrower("Edge");
-			kb.setTestKind("Selenide");
 			break;
 		case Const.MAC_SAFARI:
-			kb.setKind1("Mac");
-			kb.setKind2("12.1.2");
+			kb.setKind2("Mac");
 			kb.setBrower("Safari");
-			kb.setTestKind("Selenide");
 			break;
 		case Const.MAC_CHROME:
-			kb.setKind1("Mac");
-			kb.setKind2("76");
+			kb.setKind2("Mac");
 			kb.setBrower("Chrome");
-			kb.setTestKind("Selenide");
-			break;
-		}
-
-		switch (Const.RUNFLG) {
-		case Const.ANDROID_5:
-			kb.setKind1("スマホ");
-			kb.setKind2("Android 5.0");
-			kb.setBrower("Chrome");
-			kb.setTestKind("Appium");
-			break;
-		case Const.ANDROID_6:
-			kb.setKind1("スマホ");
-			kb.setKind2("Android 6.0");
-			kb.setBrower("Chrome");
-			kb.setTestKind("Appium");
-			break;
-		case Const.ANDROID_7:
-			break;
-		case Const.ANDROID_8:
-			break;
-		case Const.ANDROID_9:
-			kb.setKind1("スマホ");
-			kb.setKind2("Android 9.0");
-			kb.setBrower("Chrome");
-			kb.setTestKind("Appium");
-			break;
-		case Const.IPHONE_7PLUS:
-			kb.setKind1("スマホ");
-			kb.setKind2("iOS 12.4");
-			kb.setBrower("Safari");
-			kb.setTestKind("Appium");
-			break;
-		case Const.IPHONE_8:
-			break;
-		case Const.IPHONE_X:
-			break;
-		case Const.WINDOWS7_IE:
-			break;
-		case Const.WINDOWS7_CHROME:
-			break;
-		case Const.WINDOWS10_IE:
-			break;
-		case Const.WINDOWS10_CHROME:
-			break;
-		case Const.WINDOWS10_EDGE:
-			kb.setKind1("Win10");
-			kb.setKind2("17.17134");
-			kb.setBrower("Edge");
-			kb.setTestKind("Selenide");
-			break;
-		case Const.MAC_SAFARI:
-			kb.setKind1("Mac");
-			kb.setKind2("12.1.2");
-			kb.setBrower("Safari");
-			kb.setTestKind("Selenide");
-			break;
-		case Const.MAC_CHROME:
-			kb.setKind1("Mac");
-			kb.setKind2("76");
-			kb.setBrower("Chrome");
-			kb.setTestKind("Selenide");
 			break;
 		}
 

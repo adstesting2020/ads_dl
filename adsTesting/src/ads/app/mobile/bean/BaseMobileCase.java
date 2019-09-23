@@ -78,9 +78,7 @@ public class BaseMobileCase {
 	public void outputExls(String caseId) {
 		KindBean kb = Const.getRunKindBean();
 
-		kb.setTestCaseId(caseId);
-		
-		String reportFileName = "Report_" + kb.getTestCaseId() + ".xlsx";
+		String reportFileName = "Report_" + caseId + ".xlsx";
 
 		XSSFColor color1 = new XSSFColor(new java.awt.Color(64, 224, 208));
 		XSSFColor color2 = new XSSFColor(new java.awt.Color(255, 255, 255));
@@ -91,7 +89,7 @@ public class BaseMobileCase {
 			ExcelUtil xlsInstance = ExcelUtil.getInstance();
 
 			XSSFWorkbook wb = new XSSFWorkbook();
-			XSSFSheet sheet = wb.createSheet(kb.getTestCaseId());
+			XSSFSheet sheet = wb.createSheet(caseId);
 
 			XSSFCellStyle style1 = xlsInstance.getCellStyle(wb, color1, font_size_normal, true, "RIGHT", false, false);
 			XSSFCellStyle style2 = xlsInstance.getCellStyle(wb, color2, font_size_normal, true, "", false, false);
@@ -113,7 +111,7 @@ public class BaseMobileCase {
 			//
 			XSSFRow row1 = sheet.createRow(0);
 			xlsInstance.createCell(style1, row1, 0, 1, "テストケースID");
-			xlsInstance.createCell(style2, row1, 2, 3, kb.getTestCaseId());
+			xlsInstance.createCell(style2, row1, 2, 3, caseId);
 
 			//
 			XSSFRow row2 = sheet.createRow(1);

@@ -8,7 +8,6 @@ public class KindBean {
 	private String kind2;
 	private String brower;
 	private String testKind;
-	private String testCaseId;
 
 	public KindBean() {
 	}
@@ -27,14 +26,6 @@ public class KindBean {
 
 	public void setHeight(int height) {
 		this.height = height;
-	}
-
-	public String getTestCaseId() {
-		return testCaseId;
-	}
-
-	public void setTestCaseId(String testCaseId) {
-		this.testCaseId = testCaseId;
 	}
 
 	public String getKind1() {
