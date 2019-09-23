@@ -76,7 +76,11 @@ public class BaseWebCase {
 		reportList.add(data);
 	}
 
-	public void outputExls(KindBean kb) {
+	public void outputExls(String caseId) {
+		KindBean kb = Const.getRunKindBean();
+
+		kb.setTestCaseId(caseId);
+
 		String reportFileName = "Report_" + kb.getTestCaseId() + ".xlsx";
 
 		XSSFColor color1 = new XSSFColor(new java.awt.Color(64, 224, 208));

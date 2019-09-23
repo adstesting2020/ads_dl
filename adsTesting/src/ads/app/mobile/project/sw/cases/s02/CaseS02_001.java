@@ -3,7 +3,6 @@ package ads.app.mobile.project.sw.cases.s02;
 import ads.app.mobile.bean.BaseMobileCaseIF;
 import ads.app.mobile.bean.BaseMobileCase;
 import ads.app.mobile.project.sw.pages.HomePage;
-import ads.com.KindBean;
 import io.appium.java_client.AppiumDriver;
 
 public class CaseS02_001 extends BaseMobileCase implements BaseMobileCaseIF {
@@ -14,7 +13,7 @@ public class CaseS02_001 extends BaseMobileCase implements BaseMobileCaseIF {
 		this.driver = _driver;
 	}
 
-	public void action(KindBean kb) {
+	public void action(String caseId) {
 		HomePage hpObj = new HomePage(driver);
 
 		hpObj.mainHeadClick();
@@ -40,6 +39,6 @@ public class CaseS02_001 extends BaseMobileCase implements BaseMobileCaseIF {
 		//
 
 		// 输出报告
-		super.outputExls(kb);
+		super.outputExls(caseId);
 	}
 }

@@ -14,7 +14,7 @@ public class CaseS01_001 extends BaseMobileCase implements BaseMobileCaseIF {
 		this.driver = _driver;
 	}
 
-	public void action(KindBean kb) {
+	public void action(String caseId) {
 		HomePage hpObj = new HomePage(driver);
 
 		hpObj.mainHeadClick();
@@ -39,6 +39,6 @@ public class CaseS01_001 extends BaseMobileCase implements BaseMobileCaseIF {
 		saveReportInfo("", "Nittei.jpg");
 
 		// 输出报告
-		super.outputExls(kb);
+		super.outputExls(caseId);
 	}
 }

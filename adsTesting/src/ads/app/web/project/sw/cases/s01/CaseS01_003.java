@@ -3,7 +3,6 @@ package ads.app.web.project.sw.cases.s01;
 import ads.app.web.bean.BaseWebCaseIF;
 import ads.app.web.bean.BaseWebCase;
 import ads.app.web.project.sw.pages.HomePage;
-import ads.com.KindBean;
 
 public class CaseS01_003 extends BaseWebCase implements BaseWebCaseIF {
 	public CaseS01_003() {
@@ -15,7 +14,7 @@ public class CaseS01_003 extends BaseWebCase implements BaseWebCaseIF {
 	 * 
 	 * @date:2019-09-23
 	 */
-	public void action(KindBean kb) {
+	public void action(String caseId) {
 		HomePage cpObj = new HomePage();
 		// 点击「お客さま番号を入力する」
 		cpObj.customerNumLabelClick();
@@ -36,6 +35,6 @@ public class CaseS01_003 extends BaseWebCase implements BaseWebCaseIF {
 		cpObj.number2Input("130533");
 		saveReportInfo("既契約確認・エリア判定・申込みメニュー画面。", "number2.png");
 
-		super.outputExls(kb);
+		super.outputExls(caseId);
 	}
 }

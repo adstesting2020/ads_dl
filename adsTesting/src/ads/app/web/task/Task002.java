@@ -8,7 +8,6 @@ import ads.app.web.project.sw.cases.s01.*;
 import ads.app.web.project.sw.cases.s02.*;
 import ads.com.BaseTask;
 import ads.com.Const;
-import ads.com.KindBean;
 
 public class Task002 extends BaseTask implements BaseWebTaskIF {
 	public void run() {
@@ -16,19 +15,14 @@ public class Task002 extends BaseTask implements BaseWebTaskIF {
 
 		sleep(2000);
 
-		KindBean kb = Const.getRunKindBean();
-
 		// S02-01-12 QsQ
-		kb.setTestCaseId("S02-01-12");
-		new CaseS02_001().action(kb);
+		new CaseS02_001().action("S02-01-12");
 
 		// S02-13-15 QsQ
-		kb.setTestCaseId("S02-13-15");
-		new CaseS01_002().action(kb);
+		new CaseS01_002().action("S02-13-15");
 
 		// S02-16-25 QsQ
-		kb.setTestCaseId("S02-16-25");
-		new CaseS01_003().action(kb);
+		new CaseS01_003().action("S02-16-25");
 
 		close();
 	}

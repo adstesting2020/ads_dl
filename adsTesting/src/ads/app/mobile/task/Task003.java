@@ -13,8 +13,7 @@ public class Task003 extends BaseTask implements BaseMobileTaskIF {
 		driver.get(Const.SWURL);
 		sleep(2000);
 
-		kb.setTestCaseId("S03-1-1");
-		new CaseS03_001(driver).action(kb);
+		new CaseS03_001(driver).action("S03-1-1");
 	}
 
 	// 1-7
@@ -22,8 +21,7 @@ public class Task003 extends BaseTask implements BaseMobileTaskIF {
 		driver.get(Const.SWURL);
 		sleep(2000);
 
-		kb.setTestCaseId("S03-1-2");
-		new CaseS03_002(driver).action(kb);
+		new CaseS03_002(driver).action("S03-1-2");
 	}
 
 	// 1-8 & 1-9
@@ -31,13 +29,12 @@ public class Task003 extends BaseTask implements BaseMobileTaskIF {
 		driver.get(Const.SWURL);
 		sleep(2000);
 
-		kb.setTestCaseId("S03-1-3");
-		new CaseS03_003(driver).action(kb);
+		new CaseS03_003(driver).action("S03-1-3");
 	}
 
 	public void run(AppiumDriver driver) {
 		KindBean kb = Const.getRunKindBean();
-		
+
 		task0301(driver, kb);
 		task0302(driver, kb);
 		task0303(driver, kb);

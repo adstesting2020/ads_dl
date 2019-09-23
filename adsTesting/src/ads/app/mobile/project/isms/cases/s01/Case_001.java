@@ -3,7 +3,6 @@ package ads.app.mobile.project.isms.cases.s01;
 import ads.app.mobile.bean.BaseMobileCaseIF;
 import ads.app.mobile.bean.BaseMobileCase;
 import ads.app.mobile.bean.ElementMobile;
-import ads.com.*;
 import io.appium.java_client.AppiumDriver;
 
 /*
@@ -18,7 +17,7 @@ public class Case_001 extends BaseMobileCase implements BaseMobileCaseIF {
 		this.driver = _driver;
 	}
 
-	public void action(KindBean kb) {
+	public void action(String caseId) {
 		//
 		ElementMobile userIdElem = new ElementMobile(driver);
 		userIdElem.setTab("用户名");
@@ -35,6 +34,6 @@ public class Case_001 extends BaseMobileCase implements BaseMobileCaseIF {
 		okBtnElem.setIdAttr("loginBtn");
 
 		// 输出报告
-		super.outputExls(kb);
+		super.outputExls(caseId);
 	}
 }

@@ -15,7 +15,7 @@ public class CaseS03_003 extends BaseWebCase implements BaseWebCaseIF {
 	 * 
 	 * @date:2019-09-23
 	 */
-	public void action(KindBean kb) {
+	public void action(String caseId) {
 		HomePage cpObj = new HomePage();
 
 		// 点击「電気のご契約」-「関西電力」
@@ -62,6 +62,6 @@ public class CaseS03_003 extends BaseWebCase implements BaseWebCaseIF {
 		cpObj.scrollTocontuctSpan();
 		saveReportInfo("既契約確認・エリア判定・申込みメニュー画面。", "scrollToContuct.png");
 
-		super.outputExls(kb);
+		super.outputExls(caseId);
 	}
 }

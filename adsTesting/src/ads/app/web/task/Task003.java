@@ -15,8 +15,7 @@ public class Task003 extends BaseTask implements BaseWebTaskIF {
 		sleep(10000);
 
 		// S03-01&04 QsQ
-		kb.setTestCaseId("S03-01&04");
-		new CaseS03_001().action(kb);
+		new CaseS03_001().action("S03-01&04");
 		close();
 	}
 
@@ -25,8 +24,7 @@ public class Task003 extends BaseTask implements BaseWebTaskIF {
 		sleep(10000);
 
 		// S03-02&03&07 QsQ
-		kb.setTestCaseId("S03-02&03&07");
-		new CaseS03_002().action(kb);
+		new CaseS03_002().action("S03-02&03&07");
 		close();
 	}
 
@@ -35,8 +33,7 @@ public class Task003 extends BaseTask implements BaseWebTaskIF {
 		sleep(10000);
 
 		// S03-05&06&08-10 QsQ
-		kb.setTestCaseId("S03-05&06&08-10");
-		new CaseS03_003().action(kb);
+		new CaseS03_003().action("S03-05&06&08-10");
 		close();
 	}
 

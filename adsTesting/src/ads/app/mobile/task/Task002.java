@@ -4,7 +4,6 @@ import ads.app.mobile.bean.BaseMobileTaskIF;
 import ads.app.mobile.project.sw.cases.s02.*;
 import ads.com.BaseTask;
 import ads.com.Const;
-import ads.com.KindBean;
 import io.appium.java_client.AppiumDriver;
 
 public class Task002 extends BaseTask implements BaseMobileTaskIF {
@@ -12,9 +11,6 @@ public class Task002 extends BaseTask implements BaseMobileTaskIF {
 		driver.get(Const.SWURL);
 		sleep(2000);
 
-		KindBean kb = Const.getRunKindBean();
-
-		kb.setTestCaseId("S02-1-1");
-		new CaseS02_001(driver).action(kb);
+		new CaseS02_001(driver).action("S02-1-1");
 	}
 }

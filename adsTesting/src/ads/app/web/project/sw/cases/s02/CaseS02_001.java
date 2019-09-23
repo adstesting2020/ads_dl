@@ -3,7 +3,6 @@ package ads.app.web.project.sw.cases.s02;
 import ads.app.web.bean.BaseWebCaseIF;
 import ads.app.web.bean.BaseWebCase;
 import ads.app.web.project.sw.pages.HomePage;
-import ads.com.KindBean;
 
 public class CaseS02_001 extends BaseWebCase implements BaseWebCaseIF {
 	public CaseS02_001() {
@@ -15,7 +14,7 @@ public class CaseS02_001 extends BaseWebCase implements BaseWebCaseIF {
 	 * 
 	 * @date:2019-09-23
 	 */
-	public void action(KindBean kb) {
+	public void action(String caseId) {
 		HomePage cpObj = new HomePage();
 
 		// 在「契約切替を希望されるご住所の、現在の電気とガスのご契約先を選択してください」截图
@@ -26,6 +25,6 @@ public class CaseS02_001 extends BaseWebCase implements BaseWebCaseIF {
 		cpObj.scrollToOtherShrines2();
 		saveReportInfo("既契約確認・エリア判定・申込みメニュー画面。", "scrollToOtherShrines2.png");
 
-		super.outputExls(kb);
+		super.outputExls(caseId);
 	}
 }
