@@ -7,11 +7,11 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class BaseElementMobile {
+public class BaseMobileElement {
 	private AppiumDriver driver;
 	static Duration duration = Duration.ofSeconds(1);
 
-	public BaseElementMobile(AppiumDriver _driver) {
+	public BaseMobileElement(AppiumDriver _driver) {
 		this.driver = _driver;
 	}
 

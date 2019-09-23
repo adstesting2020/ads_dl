@@ -1,12 +1,12 @@
 package ads.app.mobile.project.sw.cases.s03;
 
-import ads.app.mobile.bean.ADSCaseIFMobile;
-import ads.app.mobile.bean.BaseCaseMobile;
+import ads.app.mobile.bean.BaseMobileCaseIF;
+import ads.app.mobile.bean.BaseMobileCase;
 import ads.app.mobile.project.sw.pages.HomePage;
 import ads.com.KindBean;
 import io.appium.java_client.AppiumDriver;
 
-public class CaseS03_003 extends BaseCaseMobile implements ADSCaseIFMobile {
+public class CaseS03_003 extends BaseMobileCase implements BaseMobileCaseIF {
 	AppiumDriver driver;
 
 	public CaseS03_003(AppiumDriver _driver) {

@@ -1,7 +1,7 @@
 package ads.app.mobile.project.isms.cases.s01;
 
-import ads.app.mobile.bean.ADSCaseIFMobile;
-import ads.app.mobile.bean.BaseCaseMobile;
+import ads.app.mobile.bean.BaseMobileCaseIF;
+import ads.app.mobile.bean.BaseMobileCase;
 import ads.app.mobile.bean.ElementMobile;
 import ads.com.*;
 import io.appium.java_client.AppiumDriver;
@@ -10,7 +10,7 @@ import io.appium.java_client.AppiumDriver;
  * @author:Qin.SQ
  * @date:2019-09-16
  * */
-public class Case_001 extends BaseCaseMobile implements ADSCaseIFMobile {
+public class Case_001 extends BaseMobileCase implements BaseMobileCaseIF {
 	AppiumDriver driver;
 
 	public Case_001(AppiumDriver _driver) {

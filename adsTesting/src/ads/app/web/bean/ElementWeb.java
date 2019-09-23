@@ -6,7 +6,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class ElementWeb extends BaseElementWeb {
+public class ElementWeb extends BaseWebElement {
 
 	private String title;// 标题
 	private String tab;// 标签

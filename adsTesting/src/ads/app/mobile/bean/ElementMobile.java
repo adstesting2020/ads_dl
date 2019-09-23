@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 
 import io.appium.java_client.AppiumDriver;
 
-public class ElementMobile extends BaseElementMobile {
+public class ElementMobile extends BaseMobileElement {
 	private AppiumDriver driver;
 	
 	private String title;// 标题

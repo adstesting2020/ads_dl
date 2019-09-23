@@ -33,12 +33,12 @@ import ads.com.DataBean;
 import ads.com.ExcelUtil;
 import ads.com.KindBean;
 
-public class BaseCaseWeb {
+public class BaseWebCase {
 	private String separator = java.io.File.separator;
 	private ArrayList<DataBean> reportList = new ArrayList<DataBean>();
 	private ArrayList<DataBean> dataList = new ArrayList<DataBean>();
 
-	public BaseCaseWeb() {
+	public BaseWebCase() {
 		System.out.println("data list clear");
 		dataList.clear();
 	}

@@ -1,11 +1,11 @@
 package ads.app.web.project.sw.cases.s03;
 
-import ads.app.web.bean.ADSCaseIFWeb;
-import ads.app.web.bean.BaseCaseWeb;
+import ads.app.web.bean.BaseWebCaseIF;
+import ads.app.web.bean.BaseWebCase;
 import ads.app.web.project.sw.pages.HomePage;
 import ads.com.KindBean;
 
-public class CaseS03_002 extends BaseCaseWeb implements ADSCaseIFWeb {
+public class CaseS03_002 extends BaseWebCase implements BaseWebCaseIF {
 	public CaseS03_002() {
 		super();
 	}

@@ -1,13 +1,13 @@
 package ads.app.mobile.task;
 
-import ads.app.mobile.bean.ADSMobileTaskIF;
+import ads.app.mobile.bean.BaseMobileTaskIF;
 import ads.app.mobile.project.sw.cases.s03.*;
 import ads.com.BaseTask;
 import ads.com.Const;
 import ads.com.KindBean;
 import io.appium.java_client.AppiumDriver;
 
-public class Task003 extends BaseTask implements ADSMobileTaskIF {
+public class Task003 extends BaseTask implements BaseMobileTaskIF {
 	// 1-1 -> 1-6 & 1-10
 	private void task0301(AppiumDriver driver, KindBean kb) {
 		driver.get(Const.SWURL);

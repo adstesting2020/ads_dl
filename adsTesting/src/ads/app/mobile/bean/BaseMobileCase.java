@@ -35,13 +35,13 @@ import ads.com.ExcelUtil;
 import ads.com.KindBean;
 import io.appium.java_client.AppiumDriver;
 
-public class BaseCaseMobile {
+public class BaseMobileCase {
 	private AppiumDriver driver;
 	private String separator = java.io.File.separator;
 	private ArrayList<DataBean> reportList = new ArrayList<DataBean>();
 	private ArrayList<DataBean> dataList = new ArrayList<DataBean>();
 
-	public BaseCaseMobile(AppiumDriver _driver) {
+	public BaseMobileCase(AppiumDriver _driver) {
 		this.driver = _driver;
 		System.out.println("data list clear");
 		dataList.clear();

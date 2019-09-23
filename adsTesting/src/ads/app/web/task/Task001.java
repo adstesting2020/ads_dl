@@ -3,13 +3,13 @@ package ads.app.web.task;
 import static com.codeborne.selenide.Selenide.close;
 import static com.codeborne.selenide.Selenide.open;
 
-import ads.app.web.bean.ADSWebTaskIF;
+import ads.app.web.bean.BaseWebTaskIF;
 import ads.app.web.project.sw.cases.s01.*;
 import ads.com.BaseTask;
 import ads.com.Const;
 import ads.com.KindBean;
 
-public class Task001 extends BaseTask implements ADSWebTaskIF {
+public class Task001 extends BaseTask implements BaseWebTaskIF {
 	public void run(KindBean kb) {
 		open(Const.SWURL);
 
