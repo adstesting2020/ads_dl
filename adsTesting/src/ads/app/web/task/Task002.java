@@ -11,10 +11,12 @@ import ads.com.Const;
 import ads.com.KindBean;
 
 public class Task002 extends BaseTask implements BaseWebTaskIF {
-	public void run(KindBean kb) {
+	public void run() {
 		open(Const.SWURL);
 
 		sleep(2000);
+
+		KindBean kb = Const.getRunKindBean();
 
 		// S02-01-12 QsQ
 		kb.setTestCaseId("S02-01-12");

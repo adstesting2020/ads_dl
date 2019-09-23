@@ -35,7 +35,9 @@ public class Task003 extends BaseTask implements BaseMobileTaskIF {
 		new CaseS03_003(driver).action(kb);
 	}
 
-	public void run(AppiumDriver driver, KindBean kb) {
+	public void run(AppiumDriver driver) {
+		KindBean kb = Const.getRunKindBean();
+		
 		task0301(driver, kb);
 		task0302(driver, kb);
 		task0303(driver, kb);

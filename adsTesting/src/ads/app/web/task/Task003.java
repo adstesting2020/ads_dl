@@ -40,7 +40,9 @@ public class Task003 extends BaseTask implements BaseWebTaskIF {
 		close();
 	}
 
-	public void run(KindBean kb) {
+	public void run() {
+		KindBean kb = Const.getRunKindBean();
+		
 		// S03-01&04 QsQ
 		test01(kb);
 

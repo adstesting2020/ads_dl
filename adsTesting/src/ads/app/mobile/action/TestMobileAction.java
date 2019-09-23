@@ -9,46 +9,21 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import ads.app.mobile.task.*;
 import ads.com.Const;
-import ads.com.KindBean;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 
 public class TestMobileAction {
 	private AppiumDriver driver;
-	private KindBean kb;
 
 	@Before
 	public void setup() throws Exception {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-		kb = new KindBean();
 
-		kb.setWidth(Const.MOBILE_PICWIDTH);
-		kb.setHeight(Const.MOBILE_PICHEIGHT);
-
-		// 1 - Android 5.0
-		// 2 - Android 6.0
-		// 3 - Android 7.0
-		// 4 - Android 8.0
-		// 5 - Android 9.0
-		// 6 - iPhone7Plus
-		// 7 - iPhone8
-		// 8 - iPhoneX
-		kb.setTestFlg("2");
-
-		switch (Integer.parseInt(kb.getTestFlg())) {
-		case 1:
-			kb.setKind1("スマホ");
-			kb.setKind2("Android 5.0");
-			kb.setBrower("Chrome");
-			kb.setTestKind("Appium");
+		switch (Const.RUNFLG) {
+		case Const.ANDROID_5:
 			break;
-		case 2:
-			kb.setKind1("スマホ");
-			kb.setKind2("Android 6.0");
-			kb.setBrower("Chrome");
-			kb.setTestKind("Appium");
-
+		case Const.ANDROID_6:
 			capabilities.setCapability("platformName", "Android");
 			capabilities.setCapability("deviceName", "72V7N16C20002047");
 			capabilities.setCapability("browserName", "Chrome");
@@ -57,16 +32,11 @@ public class TestMobileAction {
 
 			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 			break;
-		case 3:
+		case Const.ANDROID_7:
 			break;
-		case 4:
+		case Const.ANDROID_8:
 			break;
-		case 5:
-			kb.setKind1("スマホ");
-			kb.setKind2("Android 9.0");
-			kb.setBrower("Chrome");
-			kb.setTestKind("Appium");
-
+		case Const.ANDROID_9:
 			capabilities.setCapability("platformName", "Android");
 			capabilities.setCapability("deviceName", "X5LG97f5bb7f");
 			capabilities.setCapability("browserName", "Chrome");
@@ -76,12 +46,7 @@ public class TestMobileAction {
 
 			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 			break;
-		case 6:
-			kb.setKind1("スマホ");
-			kb.setKind2("iOS 12.4");
-			kb.setBrower("Safari");
-			kb.setTestKind("Appium");
-
+		case Const.IPHONE_7PLUS:
 			capabilities.setCapability("automationName", "XCUITest");
 			capabilities.setCapability("platformName", "iOS");
 			capabilities.setCapability("platformVersion", "12.4");
@@ -93,7 +58,7 @@ public class TestMobileAction {
 
 			driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 			break;
-		case 7:
+		case Const.IPHONE_8:
 			capabilities.setCapability("automationName", "XCUITest");
 			capabilities.setCapability("platformName", "iOS");
 			capabilities.setCapability("platformVersion", "12.4");
@@ -105,7 +70,7 @@ public class TestMobileAction {
 
 			driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 			break;
-		case 8:
+		case Const.IPHONE_X:
 			capabilities.setCapability("automationName", "XCUITest");
 			capabilities.setCapability("platformName", "iOS");
 			capabilities.setCapability("platformVersion", "12.4");
@@ -128,9 +93,9 @@ public class TestMobileAction {
 	@Test
 	public void testMobile() {
 		try {
-			new Task001().run(driver, kb);
-//			new Task002().run(driver, kb);
-//			new Task003().run(driver, kb);
+			new Task001().run(driver);
+//			new Task002().run(driver);
+//			new Task003().run(driver);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
